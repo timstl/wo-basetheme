@@ -1,0 +1,14 @@
+{
+	"name": "acf/sociallinks",
+	"title": "Social Links",
+	"description": "Output social account links from Site Settings.",
+	"style": [],
+	"category": "formatting",
+	"icon": "share-alt2",
+	"keywords": ["social", "connect"],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "block-sociallinks.php"
+	},
+	"supports": {}
+}

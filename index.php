@@ -10,7 +10,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Basetheme
+ * @subpackage wo
  * @since 1.0
  * @version 2.7
  */
@@ -42,9 +42,9 @@ get_header(); ?>
 		// Previous/next page navigation.
 		the_posts_pagination(
 			array(
-				'prev_text'          => esc_attr__( 'Previous page', 'basetheme' ),
-				'next_text'          => esc_attr__( 'Next page', 'basetheme' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_attr__( 'Page', 'basetheme' ) . ' </span>',
+				'prev_text'          => esc_attr__( 'Previous page', 'wo' ),
+				'next_text'          => esc_attr__( 'Next page', 'wo' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_attr__( 'Page', 'wo' ) . ' </span>',
 			)
 		);
 

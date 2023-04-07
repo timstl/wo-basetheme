@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  * @package WordPress
- * @subpackage Basetheme
+ * @subpackage wo
  * @since 1.0
  * @version 2.7
  */
@@ -16,7 +16,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php esc_attr_e( 'Search results:', 'basetheme' ); ?> <?php printf( '%s', '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php esc_attr_e( 'Search results:', 'wo' ); ?> <?php printf( '%s', '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php
@@ -37,9 +37,9 @@ get_header(); ?>
 			// Previous/next page navigation.
 			the_posts_pagination(
 				array(
-					'prev_text'          => esc_attr__( 'Previous page', 'basetheme' ),
-					'next_text'          => esc_attr__( 'Next page', 'basetheme' ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_attr__( 'Page', 'basetheme' ) . ' </span>',
+					'prev_text'          => esc_attr__( 'Previous page', 'wo' ),
+					'next_text'          => esc_attr__( 'Next page', 'wo' ),
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_attr__( 'Page', 'wo' ) . ' </span>',
 				)
 			);
 

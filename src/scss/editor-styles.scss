@@ -60,7 +60,7 @@ body.acf_content,
 	@import "bootstrap/utilities/api";
 	// scss-docs-end import-stack
 
-	// Basetheme SCSS files. Add additional templates here.
+	// wo SCSS files. Add additional templates here.
 	@import "mixins";
 
 	// Common styles
@@ -68,14 +68,14 @@ body.acf_content,
 	@import "common";
 
 	// woocommerce
-	@import "woocommerce";
+	// @import "woocommerce";
 
 	// Blocks and widgets
 	@import "wordpress";
 	@import "blocks";
 	@import "widgets";
 	@import "alertmessage";
-	@import "cf7";
+	// @import "cf7";
 
 	// Template parts and templates
 	@import "site-header";

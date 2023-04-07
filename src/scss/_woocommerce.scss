@@ -62,32 +62,6 @@
 					margin-bottom: 0;
 				}
 			}
-
-			.cpw {
-				.cwp-input-wrapper {
-					display: flex;
-					gap: calc($grid-gutter-width / 2);
-					align-items: center;
-					flex-wrap: wrap;
-					margin-bottom: 0;
-
-					label {
-						@extend .form-label;
-						margin-bottom: 0;
-						font-weight: 400;
-						font-size: $font-size-base;
-						display: inline-block;
-						white-space: nowrap;
-					}
-
-					.cpw-input {
-						@extend .form-control;
-						margin-bottom: 0;
-						min-width: 2em;
-						width: auto;
-					}
-				}
-			}
 		}
 
 		p.price {
@@ -164,10 +138,4 @@
 	#place_order ~ #place_order {
 		display: none;
 	}
-}
-
-.woo-product-disclaimer {
-	color: $gray-700;
-	font-size: $font-size-base;
-	font-style: italic;
 }

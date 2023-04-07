@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Basetheme
+ * @subpackage wo
  * @since 1.0
  * @version 2.7
  */
@@ -33,6 +33,3 @@ require get_template_directory() . '/lib/theme-functions.php';
 
 /* Register theme shortcodes */
 require get_template_directory() . '/lib/theme-shortcodes.php';
-
-/* Register theme ACF blocks */
-require get_template_directory() . '/lib/theme-acfblocks.php';

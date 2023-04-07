@@ -5,15 +5,15 @@
  *
  * ACF Class
  */
-class BT_ACF {
+class WO_ACF {
 
 	/**
 	 * Add actions.
 	 */
 	public static function hooks() {
-		add_action( 'wp_head', array( 'BT_ACF', 'custom_output_prewphead' ), apply_filters( 'bth_custom_output_prewphead_priority', 0 ) );
-		add_action( 'wp_head', array( 'BT_ACF', 'custom_output_wphead' ), apply_filters( 'bth_custom_output_head_priority', 9999 ) );
-		add_action( 'wp_footer', array( 'BT_ACF', 'custom_output_wpfooter' ), apply_filters( 'bth_custom_output_footer_priority', 9999 ) );
+		add_action( 'wp_head', array( 'WO_ACF', 'custom_output_prewphead' ), apply_filters( 'bth_custom_output_prewphead_priority', 0 ) );
+		add_action( 'wp_head', array( 'WO_ACF', 'custom_output_wphead' ), apply_filters( 'bth_custom_output_head_priority', 9999 ) );
+		add_action( 'wp_footer', array( 'WO_ACF', 'custom_output_wpfooter' ), apply_filters( 'bth_custom_output_footer_priority', 9999 ) );
 	}
 
 	/**
@@ -34,7 +34,7 @@ class BT_ACF {
 	 * Output after opening body tag.
 	 * This function isn't tied to a hook; Call from template partial:
 	 * ./template-parts/header/part-scripts.php
-	 * BT_ACF::custom_output_body();
+	 * WO_ACF::custom_output_body();
 	 */
 	public static function custom_output_body() {
 		self::custom_output( 'body' );

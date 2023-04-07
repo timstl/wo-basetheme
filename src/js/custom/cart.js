@@ -15,8 +15,8 @@ jQuery(document).ready(function ($) {
 
 	$.ajax({
 		// eslint-disable-next-line no-undef
-		url: bt_params.ajax_url,
-		data: { action: 'bt_get_woocommerce_cart' },
+		url: wo_params.ajax_url,
+		data: { action: 'wo_get_woocommerce_cart' },
 		dataType: 'html',
 	}).done(function (response) {
 		if (!response || 0 === response || '0' === response) {

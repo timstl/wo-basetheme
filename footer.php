@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Basetheme
+ * @subpackage wo
  * @since 1.0
  * @version 2.7
  */

@@ -15,8 +15,8 @@ if ( ! empty( $block['className'] ) ) {
 }
 
 $links = '';
-if ( function_exists( 'bt_social_accounts_shortcode' ) ) {
-	$links = bt_social_accounts_shortcode();
+if ( function_exists( 'wo_social_accounts_shortcode' ) ) {
+	$links = wo_social_accounts_shortcode();
 }
 if ( $links ) : ?>
 	<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" id="<?php echo esc_attr( $block_id ); ?>">

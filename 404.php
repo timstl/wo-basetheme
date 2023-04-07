@@ -5,7 +5,7 @@
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package WordPress
- * @subpackage Basetheme
+ * @subpackage wo
  * @since 1.0
  * @version 2.7
  */

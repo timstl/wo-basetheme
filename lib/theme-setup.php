@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Basetheme
+ * @subpackage wo
  * @since 1.0
  * @version 2.7
  */
@@ -14,54 +14,44 @@
  * Set the content width.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 960;
+	$content_width = 992;
 }
 
-if ( ! function_exists( 'bt_setup_acf' ) ) {
+if ( ! function_exists( 'wo_setup_acf' ) ) {
 	/**
-	 * Require BT_ACF class, setup options page and hooks.
+	 * Require WO_ACF class, setup options page and hooks.
 	 */
-	function bt_setup_acf() {
+	function wo_setup_acf() {
 		/**
 		 * ACF Fields for theme.
 		 * Create Site Settings options page + some hooks for outputting ACF fields.
 		 * Does NOT include block functionality (see theme-acfblocks.php).
 		 */
-		require_once get_template_directory() . '/lib/class-bt-acf.php';
-		BT_ACF::create_acf_pages();
-		BT_ACF::hooks();
+		require_once get_template_directory() . '/lib/class-wo-acf.php';
+		WO_ACF::create_acf_pages();
+		WO_ACF::hooks();
 	}
-}
-add_action( 'after_setup_theme', 'bt_setup_acf' );
 
-if ( ! function_exists( 'bt_setup' ) ) {
+	add_action( 'after_setup_theme', 'wo_setup_acf' );
+}
+
+if ( ! function_exists( 'wo_setup' ) ) {
 	/**
 	 * Setup scripts, sidebars, menus, etc.
 	 */
-	function bt_setup() {
-		/**
-		 * Text domain
-		 */
-		load_theme_textdomain( 'basetheme', get_template_directory() . '/languages' );
-
-		/**
-		 * Match the default post thumbnail size to the $content_width.
-		 * Add additional image sizes here if desired.
-		 */
-		global $content_width;
+	function wo_setup() {
+		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'title-tag' );
+
+		global $content_width;
 		set_post_thumbnail_size( $content_width, 9999, false );
 		// add_image_size( 'another-image-size', '250', '250', true );
 
 		/**
-		 * Class to handle bootstrap-style breadacrumbs.
-		 * You can modify this class as needed if using breadcrumbs on this site.
-		 *
-		 * Usage:
-		 * $breadcrumbs = new Bootstrap_Breadcrumbs();
-		 * echo $breadcrumbs->bootstrap_breadcrumb();
+		 * Text domain
 		 */
-		require_once get_template_directory() . '/lib/class-wp-bootstrap-breadcrumbs.php';
+		//load_theme_textdomain( 'wo', get_template_directory() . '/languages' );
 
 		/**
 		 * Bootstrap Nav Walker
@@ -74,55 +64,29 @@ if ( ! function_exists( 'bt_setup' ) ) {
 		 */
 		register_nav_menus(
 			array(
-				'site-header-main-nav'    => esc_attr__( 'Main Navigation', 'basetheme' ),
-				'site-header-utility-nav' => esc_attr__( 'Utility Navigation', 'basetheme' ),
-				'site-footer-main-nav'    => esc_attr__( 'Footer Navigation', 'basetheme' ),
-				'site-footer-utility-nav'    => esc_attr__( 'Footer Utility Navigation', 'basetheme' ),
+				'site-header-main-nav'    => esc_attr__( 'Main Navigation', 'wo' ),
+				'site-header-utility-nav' => esc_attr__( 'Utility Navigation', 'wo' ),
+				'site-footer-main-nav'    => esc_attr__( 'Footer Navigation', 'wo' ),
+				'site-footer-utility-nav'    => esc_attr__( 'Footer Utility Navigation', 'wo' ),
 			)
 		);
-
-		/**
-		 * Add HTML5 theme support.
-		 */
-		add_theme_support(
-			'html5',
-			array(
-				'search-form',
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-			)
-		);
-
-		/**
-		 * Post Formats example. Not in use.
-		 * add_theme_support( 'post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat') );
-		 */
-
-		/**
-		 * Add Automatic Feed Links.
-		 */
-		add_theme_support( 'automatic-feed-links' );
-
-		/**
-		 * WordPress should handle <title></title>, not our header.php.
-		 */
-		add_theme_support( 'title-tag' );
 	}
-}
-add_action( 'after_setup_theme', 'bt_setup' );
 
-if ( ! function_exists( 'bt_widgets_init' ) ) {
+	add_action( 'after_setup_theme', 'wo_setup' );
+}
+
+if ( ! function_exists( 'wo_widgets_init' ) ) {
 	/**
 	 *  Register widgetized areas.
+	 * 
+	 * Disabled by default but left here in case needed.
 	 */
-	function bt_widgets_init() {
+	function wo_widgets_init() {
 		register_sidebar(
 			array(
-				'name'          => esc_attr__( 'Blog Sidebar Widget Area', 'basetheme' ),
+				'name'          => esc_attr__( 'Blog Sidebar Widget Area', 'wo' ),
 				'id'            => 'blog-sidebar-widget-area',
-				'description'   => esc_attr__( 'The blog widget area', 'basetheme' ),
+				'description'   => esc_attr__( 'The blog widget area', 'wo' ),
 				'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 				'after_widget'  => '</li>',
 				'before_title'  => '<h4 class="widget-title">',
@@ -131,9 +95,9 @@ if ( ! function_exists( 'bt_widgets_init' ) ) {
 		);
 		register_sidebar(
 			array(
-				'name'          => esc_attr__( 'Page Sidebar Widget Area', 'basetheme' ),
+				'name'          => esc_attr__( 'Page Sidebar Widget Area', 'wo' ),
 				'id'            => 'page-sidebar-widget-area',
-				'description'   => esc_attr__( 'The page widget area', 'basetheme' ),
+				'description'   => esc_attr__( 'The page widget area', 'wo' ),
 				'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 				'after_widget'  => '</li>',
 				'before_title'  => '<h4 class="widget-title">',
@@ -141,16 +105,17 @@ if ( ! function_exists( 'bt_widgets_init' ) ) {
 			)
 		);
 	}
+	
+	//add_action( 'widgets_init', 'wo_widgets_init' );
 }
-add_action( 'widgets_init', 'bt_widgets_init' );
 
-if ( ! function_exists( 'bt_fonts' ) ) {
+if ( ! function_exists( 'wo_fonts' ) ) {
 	/**
 	 * Enqueue fonts by adding URLs to the $fonts array.
 	 * Use a single function because these will load in the admin and front-end.
 	 * Call this function from your enqueue functions.
 	 */
-	function bt_fonts() {
+	function wo_fonts() {
 		/**
 		 * An array of URLs.
 		 */
@@ -161,81 +126,66 @@ if ( ! function_exists( 'bt_fonts' ) ) {
 		if ( ! empty( $fonts ) ) {
 			$i = 1;
 			foreach ( $fonts as $url ) {
-				wp_enqueue_style( 'bt-fonts-' . $i, $url, array(), '1.0' );
+				wp_enqueue_style( 'wo-fonts-' . $i, $url, array(), '1.0' );
 				$i++;
 			}
 		}
 	}
 }
 
-if ( ! function_exists( 'bt_enqueue' ) ) {
+if ( ! function_exists( 'wo_enqueue' ) ) {
 	/**
 	 * Enqueue scripts and styles.
 	 */
-	function bt_enqueue() {
+	function wo_enqueue() {
 
 		/**
 		 * Enqueue fonts. Add wp_enqueue_style lines above.
 		 */
-		bt_fonts();
+		wo_fonts();
 
-		wp_enqueue_style( 'bt-base-style', get_template_directory_uri() . '/dist/css/style.css', array(), '1.0' );
-
-		/**
-		 * Use latest jQuery.
-		 */
-		//wp_deregister_script( 'jquery' );
-		//wp_register_script( 'jquery', get_template_directory_uri() . '/dist/js/jquery.min.js', array(), '3.4.1', false );
-		wp_enqueue_script( 'jquery' );
-
-		/**
-		 * Previously, Gravity Forms would throw an error without jQuery Migrate.
-		 * That doesn't seem to be the case any longer? Leaving this comment here until it's confirmed there are no issues.
-		 */
-		// wp_enqueue_script( 'jquery-migrate' );
+		wp_enqueue_style( 'wo-base-style', get_template_directory_uri() . '/dist/css/style.css', array(), '1.0' );
 
 		/**
 		 * Enqueue comment-reply script if needed.
 		 */
-		if ( is_singular() && get_option( 'thread_comments' ) ) {
-			wp_enqueue_script( 'comment-reply' );
-		}
-
-		/**
-		 * Enqueue scripts in head.
-		 * This is a concatinated, minified file of scripts from ./src/js/head/
-		 */
-		//wp_enqueue_script( 'bt-head', get_template_directory_uri() . '/dist/js/head.min.js', array(), '1.0', false );
+		//if ( is_singular() && get_option( 'thread_comments' ) ) {
+		//	wp_enqueue_script( 'comment-reply' );
+		//}
 
 		/**
 		 * Enqueue scripts in footer.
-		 * This is a concatinated, minified file of scripts from ./src/js/footer/
 		 */
+		wp_enqueue_script( 'jquery' );
+		// wp_enqueue_script( 'jquery-migrate' );
+		
 		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/dist/js/bootstrap.min.js', array('jquery'), '1.0', true );
-		wp_enqueue_script( 'bt-scripts', get_template_directory_uri() . '/dist/js/theme.js', array('jquery', 'bootstrap'), '1.0', true );
+		wp_enqueue_script( 'wo-scripts', get_template_directory_uri() . '/dist/js/theme.js', array('jquery', 'bootstrap'), '1.0', true );
 
-		wp_localize_script( 'bt-scripts', 'bt_params', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+		//wp_localize_script( 'wo-scripts', 'wo_params', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 	}
+	
+	add_action( 'wp_enqueue_scripts', 'wo_enqueue' );
 }
-add_action( 'wp_enqueue_scripts', 'bt_enqueue' );
 
-if ( ! function_exists( 'bt_enqueue_block_editor_assets' ) ) {
+if ( ! function_exists( 'wo_enqueue_block_editor_assets' ) ) {
 	/**
 	 * Enqueue scripts and styles in admin.
 	 */
-	function bt_enqueue_block_editor_assets() {
+	function wo_enqueue_block_editor_assets() {
 		// Enqueue fonts.
-		bt_fonts();
-		wp_enqueue_style( 'bt-editor-styles', get_template_directory_uri() . '/dist/css/editor-styles.css', null, '1.0' );
+		wo_fonts();
+		wp_enqueue_style( 'wo-editor-styles', get_template_directory_uri() . '/dist/css/editor-styles.css', null, '1.0' );
 	}
-}
-add_action( 'enqueue_block_editor_assets', 'bt_enqueue_block_editor_assets' );
 
-if ( ! function_exists( 'bt_override_mp6_tinymce_styles' ) ) {
+	add_action( 'enqueue_block_editor_assets', 'wo_enqueue_block_editor_assets' );
+}
+
+if ( ! function_exists( 'wo_override_mp6_tinymce_styles' ) ) {
 	/**
 	 * Add custom styles to ACF wysiwyg editor.
 	 */
-	function bt_override_mp6_tinymce_styles( $mce_init ) {
+	function wo_override_mp6_tinymce_styles( $mce_init ) {
 
 		// make sure we don't override other custom <code>content_css</code> files
 		$content_css = get_template_directory_uri() . '/dist/css/editor-styles.css';
@@ -247,5 +197,64 @@ if ( ! function_exists( 'bt_override_mp6_tinymce_styles' ) ) {
 
 		return $mce_init;
 	}
-	add_filter( 'tiny_mce_before_init', 'bt_override_mp6_tinymce_styles' );
+	add_filter( 'tiny_mce_before_init', 'wo_override_mp6_tinymce_styles' );
+}
+
+if ( ! function_exists( 'wo_yoasttobottom' ) ) {
+	/**
+	 *  Move Yoast to bottom
+	 */
+	function wo_yoasttobottom() {
+		return 'low';
+	}
+	
+	add_filter( 'wpseo_metabox_prio', 'wo_yoasttobottom' );
+}
+
+if ( ! function_exists( 'wo_mime_types' ) ) {
+	/**
+	 * Allow upload of SVGs to media library.
+	 */
+	function wo_mime_types( $mimes ) {
+		$mimes['svg'] = 'image/svg+xml';
+		return $mimes;
+	}
+
+	// add_filter( 'upload_mimes', 'wo_mime_types' );
+}
+
+if ( ! function_exists( 'wo_custom_body_class' ) ) {
+	/**
+	 * AAppend class to body if one added to the admin.
+	 *
+	 * @param array $classes Classes passed into hook.
+	 */
+	function wo_custom_body_class( $classes ) {
+		global $post;
+		if ( ! isset( $post->ID ) ) {
+			return $classes;
+		}
+		if ( function_exists( 'get_field' ) ) {
+			$page_class = get_field( 'page_class', $post->ID );
+			if ( $page_class ) {
+				$classes[] = esc_attr( $page_class );
+			}
+		}
+		return $classes;
+	}
+	
+	add_filter( 'body_class', 'wo_custom_body_class' );
+}
+
+if ( ! function_exists( 'wo_custom_oembed_filter' ) ) {
+	/**
+	 * Responsive Embed filter. Assumes 16:9
+	 *
+	 * @param string $html HTML passed into filter.
+	 */
+	function wo_custom_oembed_filter( $html ) {
+		return '<div class="embed-responsive embed-responsive-16by9">' . $html . '</div>';
+	}
+
+	//add_filter( 'embed_oembed_html', 'wo_custom_oembed_filter', 10, 4 );
 }

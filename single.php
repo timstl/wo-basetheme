@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
- * @subpackage Basetheme
+ * @subpackage wo
  * @since 1.0
  * @version 2.7
  */
@@ -28,18 +28,18 @@ get_header(); ?>
 			// Parent post navigation.
 			the_post_navigation(
 				array(
-					'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'basetheme' ),
+					'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'wo' ),
 				)
 			);
 		} elseif ( is_singular( 'post' ) ) {
 			// Previous/next post navigation.
 			the_post_navigation(
 				array(
-					'next_text' => '<span class="meta-nav" aria-hidden="true">' . esc_attr__( 'Next', 'basetheme' ) . '</span> ' .
-					'<span class="screen-reader-text">' . esc_attr__( 'Next post:', 'basetheme' ) . '</span> ' .
+					'next_text' => '<span class="meta-nav" aria-hidden="true">' . esc_attr__( 'Next', 'wo' ) . '</span> ' .
+					'<span class="screen-reader-text">' . esc_attr__( 'Next post:', 'wo' ) . '</span> ' .
 					'<span class="post-title">%title</span>',
-					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . esc_attr__( 'Previous', 'basetheme' ) . '</span> ' .
-					'<span class="screen-reader-text">' . esc_attr__( 'Previous post:', 'basetheme' ) . '</span> ' .
+					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . esc_attr__( 'Previous', 'wo' ) . '</span> ' .
+					'<span class="screen-reader-text">' . esc_attr__( 'Previous post:', 'wo' ) . '</span> ' .
 					'<span class="post-title">%title</span>',
 				)
 			);

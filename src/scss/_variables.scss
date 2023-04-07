@@ -4,16 +4,15 @@
 
 /* 	
 	Grid 
-	If You change breakpoints, be sure to update theme-helpers.php -> bt_get_breakpoint();
 */
-$grid-breakpoints: (
+/*$grid-breakpoints: (
 	xs: 0,
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
 	xl: 1200px,
 	xxl: 1400px,
-);
+);*/
 
 $grid-columns: 24;
 //$grid-gutter-width: 30px;
@@ -60,7 +59,7 @@ $paragraph-margin-bottom: 1.5em;
 
 /* 
 	Colors
-	Update the color palette in theme-functions.php -> bt_editor_add_theme_support()
+	Update the color palette in theme-functions.php -> wo_editor_add_theme_support()
 */
 
 /*$primary: #000;

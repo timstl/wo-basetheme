@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Basetheme
+ * @subpackage wo
  * @since 1.0
  * @version 2.7
  */
@@ -29,13 +29,13 @@
 get_template_part( 'template-parts/header/part', 'bodyscripts' );
 ?>
 <div id="wrapper">
-	<a href="#site-main" class="sr-only sr-only-focusable skipnav"><?php esc_attr_e( 'Skip to main content', 'basetheme' ); ?></a>
+	<a href="#site-main" class="sr-only sr-only-focusable skipnav"><?php esc_attr_e( 'Skip to main content', 'wo' ); ?></a>
 	<?php get_template_part( 'template-parts/header/part', 'alert' ); ?>
 	<header id="site-header">
 		<div class="container-wide container-md-none">
 			<?php if ( function_exists( 'get_field' ) && get_field( 'logo', 'options' ) ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo get_bloginfo( 'name', 'display' ); ?>" rel="Home" class="logo-set" aria-label="<?php echo get_bloginfo( 'name', 'display' ); ?> logo">
-				<span class="logo"><?php echo bt_load_svg_from_media( get_field( 'logo', 'options' )['url'] ); ?></span>
+				<span class="logo"><?php echo wo_load_svg_from_media( get_field( 'logo', 'options' )['url'] ); ?></span>
 			</a>
 			<?php endif; ?>
 			<?php

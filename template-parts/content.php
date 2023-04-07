@@ -3,7 +3,7 @@
  * The template part for displaying content
  *
  * @package WordPress
- * @subpackage Basetheme
+ * @subpackage wo
  * @since 1.0
  * @version 2.7
  */
