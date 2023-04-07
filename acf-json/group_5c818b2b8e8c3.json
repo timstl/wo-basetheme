@@ -1,0 +1,145 @@
+{
+    "key": "group_5c818b2b8e8c3",
+    "title": "Block: Button Group",
+    "fields": [
+        {
+            "key": "field_5c818b2f29190",
+            "label": "Buttons",
+            "name": "buttons",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Button",
+            "sub_fields": [
+                {
+                    "key": "field_5c818b3b29192",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_5c818b4129193",
+                    "label": "Style",
+                    "name": "style",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "btn-primary": "Primary",
+                        "btn-secondary": "Secondary",
+                        "btn-success": "Success",
+                        "btn-info": "Info",
+                        "btn-warning": "Warning",
+                        "btn-danger": "Danger",
+                        "btn-outline-primary": "Outlined (Primary)",
+                        "btn-outline-secondary": "Outlined (Secondary)",
+                        "btn-outline-success": "Outlined (Success)",
+                        "btn-outline-info": "Outlined (Info)",
+                        "btn-outline-warning": "Outlined (Warning)",
+                        "btn-outline-danger": "Outlined (Danger)",
+                        "btn-link": "Link"
+                    },
+                    "default_value": [
+                        "btn-primary"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5c818bca29194",
+                    "label": "Size",
+                    "name": "size",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "btn-size-standard": "Standard",
+                        "btn-lg": "Large",
+                        "btn-sm": "Small"
+                    },
+                    "default_value": [
+                        "btn-size-standard"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5d07f3e69e7e1",
+            "label": "Aria Label",
+            "name": "button_group_aria_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/buttongroup"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1573247070
+}

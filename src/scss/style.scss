@@ -1,0 +1,31 @@
+// Override bootstrap variables or define your own variables in _variables.scss
+@import "variables";
+
+// Many features of bootstrap are disabled to avoid loading unnecessary CSS.
+// Customize _bootstrap.scss to add additional features.
+@import "bootstrap";
+
+// Basetheme SCSS files. Add additional templates here.
+@import "mixins";
+
+// Common styles
+@import "common-frontend";
+@import "common";
+
+// Blocks and widgets
+@import "wordpress";
+@import "blocks";
+@import "widgets";
+@import "alertmessage";
+
+// Template parts and templates
+@import "site-header";
+@import "site-header-sticky";
+@import "site-footer";
+@import "blog";
+
+// Animations
+@import "animations";
+
+// Utilities
+@import "utilities";
