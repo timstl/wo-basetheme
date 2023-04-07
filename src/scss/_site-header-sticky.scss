@@ -5,26 +5,34 @@
 
 //Fallback rules for for no position:sticky; (IE11, mostly)
 #site-header {
-	position: fixed;
+	@include media-breakpoint-up(lg) {
+		position: fixed;
+	}
 }
 #site-main {
 	/*
 		Header height will vary at different viewports.
 		These numbers will also be inaccurate if logo changes, in many cases.
 	*/
-	padding-top: 70px;
 	@include media-breakpoint-up(lg) {
-		padding-top: 90px;
+		padding-top: 80px;
 	}
 }
 
 // Default behavior
 @supports (position: sticky) {
 	#site-header {
-		position: sticky;
+		@include media-breakpoint-up(lg) {
+			position: sticky;
+		}
+
+		.admin-bar & {
+			@include media-breakpoint-up(lg) {
+				top: 32px;
+			}
+		}
 	}
 	#site-main {
-		padding-top: 0;
 		@include media-breakpoint-up(lg) {
 			padding-top: 0;
 		}

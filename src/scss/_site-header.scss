@@ -16,27 +16,34 @@ $nav-arrow-hover: str-replace(
 
 #site-header {
 	// Additional rules applied in _header-sticky.scss
-	background: #ddd;
-	padding: 10px 0;
+	background: #fff;
+	box-shadow: $box-shadow-sm;
 	top: 0;
 	width: 100%;
+	font-family: $font-family-serif-caps;
+	font-weight: 400;
+	position: relative;
 	z-index: 10002;
 	transition: height $speed $ease, padding $speed $ease,
-		background-color $speed $ease;
-
-	@include media-breakpoint-up(lg) {
-		padding: 20px 0;
-	}
+		background-color $speed $ease, box-shadow $speed $ease;
 
 	.logo {
 		display: inline-block;
-		margin-left: 2.5%;
-		height: 48.6px;
-		width: 209px;
-		transition: transform $speed $ease, margin $speed $ease;
+		height: auto;
+		width: 60px;
+		transition: transform $speed $ease, margin $speed $ease,
+			opacity $speed $ease;
 
 		@include media-breakpoint-up(lg) {
+			height: 60px;
+			width: 83px;
 			margin-left: 0;
+		}
+
+		.home & {
+			@include media-breakpoint-up(lg) {
+				opacity: 0;
+			}
 		}
 
 		> svg,
@@ -46,22 +53,37 @@ $nav-arrow-hover: str-replace(
 		}
 	}
 
-	&.scrolled {
-		background: rgba(#ddd, 0.9);
-		padding: 5px 0;
-
-		@include media-breakpoint-up(lg) {
-			padding: 10px 0;
-		}
-	}
-
 	> .container-wide,
+	> .container-full,
 	> .container {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		position: relative;
+		transition: height $speed $ease, padding $speed $ease,
+			background-color $speed $ease, box-shadow $speed $ease;
+
 		@include media-breakpoint-up(lg) {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
+		}
+	}
+
+	&.scrolled {
+		background: rgba($white, 0.9);
+
+		> .container-wide,
+		> .container-full,
+		> .container {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+
+		.logo {
+			.home & {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -116,17 +138,19 @@ $nav-arrow-hover: str-replace(
 	}
 
 	#site-header-navbar-container {
-		background: $gray-900;
+		background: $primary;
 		position: absolute;
 		padding: 0;
+		left: 0;
+		right: 0;
 		top: 100%;
-		width: 100%;
 
 		@include media-breakpoint-up(lg) {
 			background: transparent;
 			position: relative;
 			width: auto;
 			top: auto;
+			margin-left: auto;
 		}
 
 		.nav-container {
@@ -203,17 +227,19 @@ $nav-arrow-hover: str-replace(
 			}
 
 			> li {
-				font-size: rem-calc(18);
+				font-size: rem-calc(21);
 				vertical-align: middle;
+				border-bottom: 1px solid lighten($primary, 10%);
 				@include media-breakpoint-up(lg) {
-					font-size: rem-calc(14);
+					border-bottom: none;
+					font-size: rem-calc(21);
 					display: flex;
 					align-items: center;
 				}
 
 				+ li {
 					@include media-breakpoint-up(lg) {
-						margin-left: $grid-gutter-width;
+						margin-left: $grid-gutter-width * 2;
 					}
 				}
 
@@ -271,9 +297,9 @@ $nav-arrow-hover: str-replace(
 				}
 			}
 
-			.has-dropdown-menu-right {
+			.has-dropdown-menu-end {
 				.dropdown-menu {
-					@extend .dropdown-menu-right;
+					@extend .dropdown-menu-end;
 				}
 			}
 		}
@@ -289,31 +315,86 @@ $nav-arrow-hover: str-replace(
 		}
 
 		@include media-breakpoint-up(lg) {
-			align-items: flex-end;
+			align-items: center;
+			flex-direction: row;
+			justify-content: flex-end;
 		}
 	}
 
 	#site-header-main-nav-container {
-		order: 1;
-		@include media-breakpoint-up(lg) {
-			order: 2;
-		}
 	}
 
 	#site-header-utility-nav-container {
-		order: 2;
-
 		@include media-breakpoint-up(lg) {
-			margin-bottom: 10px;
-			order: 1;
+			margin-left: $grid-gutter-width;
+			border-left: 1px solid $gray-200;
+			padding-left: $grid-gutter-width;
 		}
+
 		.nav {
+			flex-direction: row;
+
 			> li {
-				font-size: rem-calc(14);
+				border-bottom: none;
+				padding: 0.5rem 2.5%;
+
 				@include media-breakpoint-up(lg) {
-					font-size: rem-calc(12);
+					padding: 0;
+				}
+
+				a {
+					@extend .btn, .btn-secondary;
+				}
+
+				+ li {
+					@include media-breakpoint-up(lg) {
+						margin-left: calc($grid-gutter-width / 2);
+					}
+
+					a {
+						@extend .btn-success;
+					}
+				}
+
+				&.current-menu-item,
+				&.current-menu-ancestor,
+				&.current-menu-parent {
+					> a {
+						color: #fff;
+
+						@include media-breakpoint-up(lg) {
+							color: #fff;
+						}
+					}
 				}
 			}
+		}
+	}
+
+	#cart-nav {
+		display: none;
+		color: #fff;
+		position: relative;
+		padding: 0.5rem 2.5%;
+
+		@include media-breakpoint-up(lg) {
+			color: $gray-700;
+			margin-left: calc($grid-gutter-width / 2);
+			padding: 0;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+
+			@include media-breakpoint-up(lg) {
+				color: $gray-700;
+			}
+		}
+
+		sup {
+			position: relative;
+			top: -1em;
 		}
 	}
 }

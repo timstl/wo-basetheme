@@ -1,0 +1,173 @@
+.woocommerce-order {
+	@extend .container, .container-spaced;
+
+	.woocommerce-thankyou-order-received {
+		@extend h1;
+		color: $success;
+		margin-bottom: 1em;
+	}
+
+	.woocommerce-order-overview {
+		background: $gray-100;
+		padding: 2em;
+	}
+}
+
+.crosssite-woo {
+	margin-bottom: 3rem;
+}
+
+.single-product {
+	.entry-summary {
+		font-size: $font-size-md;
+	}
+}
+
+.woocommerce {
+	.quantity .qty {
+		@extend .form-control;
+		width: 3.631em;
+	}
+
+	div.product {
+		form.cart {
+			.woocommerce-variation-add-to-cart,
+			&:not(.variations_form) {
+				background: $gray-100;
+				overflow: hidden;
+				padding: calc($grid-gutter-width / 2);
+			}
+
+			.button {
+				@extend .btn, .btn-success;
+			}
+
+			.variations {
+				table-layout: auto;
+
+				th.label {
+					width: 12%;
+					padding-right: 10px;
+				}
+
+				select {
+					@extend .form-select;
+					display: inline-block;
+					margin-bottom: 0;
+					width: auto;
+				}
+
+				label {
+					@extend .form-label;
+					margin-bottom: 0;
+				}
+			}
+
+			.cpw {
+				.cwp-input-wrapper {
+					display: flex;
+					gap: calc($grid-gutter-width / 2);
+					align-items: center;
+					flex-wrap: wrap;
+					margin-bottom: 0;
+
+					label {
+						@extend .form-label;
+						margin-bottom: 0;
+						font-weight: 400;
+						font-size: $font-size-base;
+						display: inline-block;
+						white-space: nowrap;
+					}
+
+					.cpw-input {
+						@extend .form-control;
+						margin-bottom: 0;
+						min-width: 2em;
+						width: auto;
+					}
+				}
+			}
+		}
+
+		p.price {
+			margin-bottom: calc($grid-gutter-width / 2);
+		}
+
+		.woocommerce-variation-price {
+			display: none;
+			margin-bottom: calc($grid-gutter-width / 2);
+		}
+	}
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+	#respond
+	input#submit.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+	a.button.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+	button.button.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+	input.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+	.woocommerce
+	#respond
+	input#submit.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+	.woocommerce
+	a.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+	.woocommerce
+	button.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles))
+	.woocommerce
+	input.button.alt {
+	@extend .btn, .btn-success, .btn-lg;
+}
+
+.woocommerce-checkout {
+	.container-spaced {
+		margin-bottom: $grid-gutter-width * 2;
+	}
+
+	form .form-row input.input-text,
+	form .form-row textarea {
+		@extend .form-control;
+	}
+
+	#customer_details {
+		margin-bottom: $grid-gutter-width;
+	}
+
+	.select2-container--default .select2-selection--single {
+		border-color: $gray-400;
+	}
+
+	.woocommerce-checkout-payment {
+		margin-bottom: $grid-gutter-width;
+
+		.form-row {
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		p.form-row {
+			padding: 1em;
+		}
+	}
+
+	/**
+	Hack to hide multiple place order buttons.
+	**/
+	#place_order ~ #place_order {
+		display: none;
+	}
+}
+
+.woo-product-disclaimer {
+	color: $gray-700;
+	font-size: $font-size-base;
+	font-style: italic;
+}

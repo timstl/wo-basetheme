@@ -1,0 +1,24 @@
+.wpcf7 {
+	label {
+		@extend .form-label;
+		font-family: $headings-font-family;
+		font-size: $font-size-md;
+		margin-bottom: 0.5em;
+		width: 100%;
+	}
+
+	input:not([type="submit"]),
+	textarea {
+		@extend .form-control;
+		font-family: $headings-font-family;
+	}
+
+	textarea {
+		width: 100%;
+	}
+
+	input[type="submit"],
+	button {
+		@extend .btn, .btn-success, .btn-lg;
+	}
+}

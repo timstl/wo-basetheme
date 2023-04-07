@@ -12,11 +12,15 @@
 @import "common-frontend";
 @import "common";
 
+// woocommerce
+@import "woocommerce";
+
 // Blocks and widgets
 @import "wordpress";
 @import "blocks";
 @import "widgets";
 @import "alertmessage";
+// @import "cf7";
 
 // Template parts and templates
 @import "site-header";

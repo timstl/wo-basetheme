@@ -1,17 +1,28 @@
 .wp-block-group {
-	&.is-style-container {
-		.wp-block-group__inner-container {
-			@extend .container;
+	&.is-style-flex-row {
+		@extend .titlegroup;
+	}
+
+	&.is-style-intro,
+	&.is-style-intro-alt {
+		padding-top: $grid-gutter-width;
+		position: relative;
+
+		&:before {
+			background: $secondary;
+			opacity: 0.75;
+			content: "";
+			height: 16px;
+			left: -100vw;
+			position: absolute;
+			right: 0;
+			top: -16px;
 		}
 	}
-	&.is-style-container-narrow {
-		.wp-block-group__inner-container {
-			@extend .container-narrow;
-		}
-	}
-	&.is-style-container-wide {
-		.wp-block-group__inner-container {
-			@extend .container-wide;
+
+	&.is-style-intro-alt {
+		&:before {
+			background-color: $success;
 		}
 	}
 }

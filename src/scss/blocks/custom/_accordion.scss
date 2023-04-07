@@ -1,67 +1,65 @@
 .accordion {
 	&-row {
-		border-top: 1px solid $gray-400;
-		padding: $grid-gutter-width 0;
+		border-bottom: 1px solid $gray-100;
+		padding-bottom: $grid-gutter-width;
+		margin-bottom: $grid-gutter-width;
 
 		&:last-child {
-			border-bottom: 1px solid $gray-400;
+			border-bottom: none;
 		}
 	}
 
 	&-heading {
-		@include font-bold();
 		margin: 0;
 
 		@include media-breakpoint-up(md) {
 		}
-	}
 
-	button.accordion-toggle {
-		border: none;
-		outline: none;
-		background: none;
-		flex-grow: 0;
-		padding: 10px;
+		button {
+			color: var(--bs-heading-color, inherit);
+			font-weight: $font-weight-bold;
+			border: none;
+			outline: none;
+			background: none;
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			transition: color $speed $ease;
+			gap: 2em;
+			text-align: left;
+			width: 100%;
 
-		svg {
-			transition: transform $ease $speed;
-
-			rect {
-				transition: opacity $ease $speed;
+			&:hover {
+				color: $link-hover-color;
 			}
-		}
 
-		&[aria-expanded="true"] {
-			/*
-			Add a + SVG to theme and add "plus-horz" class to line to transform into a -
-			svg {
-				transform: rotate(90deg);
+			i {
+				color: $success;
+				margin-top: 11px;
+				font-size: $font-size-base;
+				margin-left: auto;
+				transform: rotate(-90deg);
+				transition: transform $speed $ease;
+			}
 
-				.plus-horz {
-					opacity: 0;
+			&[aria-expanded="true"] {
+				i {
+					transform: rotate(0);
 				}
-			}*/
-		}
-	}
-
-	&-trigger {
-		cursor: pointer;
-
-		&[aria-expanded="true"] {
-			button.accordion-toggle {
-				/*svg {
-					transform: rotate(90deg);
-
-					.plus-horz {
-						opacity: 0;
-					}
-				}*/
 			}
 		}
 	}
 
 	.accordion-content {
 		.in {
+			padding-top: calc($grid-gutter-width / 2);
+
+			@include media-breakpoint-up(lg) {
+				max-width: 80%;
+			}
+
 			> *:last-child {
 				margin-bottom: 0;
 			}

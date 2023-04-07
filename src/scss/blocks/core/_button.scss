@@ -4,25 +4,19 @@
 	Bootstrap button styles are in Bootstrap core, _common.scss, and some variables in _variables.scss.
 */
 .wp-block-button {
-	a.wp-block-button__link {
-		@extend .btn;
-		@extend .btn-primary;
-	}
-}
-
-.wp-block-button__link {
-	@extend .btn;
-	@extend .btn-primary;
-}
-
-.wp-block-button {
 	.wp-block-button__link {
 		@extend .btn;
 	}
 
 	&:not(.is-style-outline) {
 		.wp-block-button__link {
-			@extend .btn-primary;
+			@extend .btn-secondary;
+		}
+
+		&.is-style-alt {
+			.wp-block-button__link {
+				@extend .btn-success;
+			}
 		}
 	}
 
@@ -45,13 +39,13 @@
 	&.btn-link {
 		.wp-block-button__link {
 			@extend .btn-link;
-			@extend a.btn-link!optional;
+			@extend a, .btn-link!optional;
 		}
 	}
 
 	&.is-style-outline {
 		.wp-block-button__link {
-			@extend .btn-outline-primary;
+			@extend .btn-outline-secondary;
 		}
 	}
 }

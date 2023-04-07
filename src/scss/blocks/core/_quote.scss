@@ -1,0 +1,39 @@
+.wp-block-quote {
+	border-left: none;
+	margin-bottom: 1.5em;
+	position: relative;
+
+	@include media-breakpoint-up(lg) {
+		padding-left: rem-calc(75);
+	}
+
+	&:before {
+		display: inline-block;
+		position: absolute;
+		font-size: rem-calc(75);
+		line-height: 1;
+		content: "\201C";
+		left: calc(rem-calc(75) / -4);
+		top: -0.15em;
+
+		@include media-breakpoint-up(lg) {
+			left: 0;
+			font-size: rem-calc(155);
+		}
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
+
+	cite {
+		font-size: $font-size-base;
+		font-weight: 700;
+
+		&:before {
+			content: "\2013";
+			display: inline-block;
+			margin-right: 0.25em;
+		}
+	}
+}

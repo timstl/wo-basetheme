@@ -6,9 +6,19 @@ hr.wp-block-separator {
 
 	&:not(.is-style-wide):not(.is-style-dots) {
 		max-width: none;
+
+		&.alignfull {
+			width: 100%;
+		}
 	}
 
 	&.is-style-transparent {
 		border-top: 1px solid transparent;
+	}
+
+	&.is-style-dots {
+		&:before {
+			font-size: 3em;
+		}
 	}
 }

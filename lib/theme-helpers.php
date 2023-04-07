@@ -28,8 +28,9 @@ if ( ! function_exists( 'bt_get_breakpoint' ) ) {
 			'xs' => '0',
 			'sm' => ( 576 + $adjust ) . $unit,
 			'md' => ( 768 + $adjust ) . $unit,
-			'lg' => ( 1024 + $adjust ) . $unit, // Changed from Bootstrap defaults to Kadence plugin.
+			'lg' => ( 992 + $adjust ) . $unit, // Changed from Bootstrap defaults to Kadence plugin.
 			'xl' => ( 1200 + $adjust ) . $unit,
+			'xl' => ( 1400 + $adjust ) . $unit,
 		);
 
 		return $breakpoint[ $size ];

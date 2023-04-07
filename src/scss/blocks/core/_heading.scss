@@ -1,23 +1,29 @@
-.is-style-h1 {
-	@extend .h1;
-}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	&.is-style-with-line {
+		@include media-breakpoint-up(md) {
+			display: flex;
+			align-items: center;
+			white-space: nowrap;
 
-.is-style-h2 {
-	@extend .h2;
-}
+			&:after {
+				background: $success;
+				content: "";
+				display: inline-block;
+				height: 1px;
+				margin-left: 0.5em;
+				width: 100%;
+			}
+		}
 
-.is-style-h3 {
-	@extend .h3;
-}
-
-.is-style-h4 {
-	@extend .h4;
-}
-
-.is-style-h5 {
-	@extend .h5;
-}
-
-.is-style-h6 {
-	@extend .h6;
+		&:first-child {
+			@include media-breakpoint-up(lg) {
+				margin-top: 1em;
+			}
+		}
+	}
 }

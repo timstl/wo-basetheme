@@ -1,7 +1,32 @@
 .wp-block-columns {
-	@extend .row;
+	&.is-style-with-dividers {
+		padding-top: 2em !important;
+		padding-bottom: 2em !important;
+		border-top: 1px solid $gray-300;
+		border-bottom: 1px solid $gray-300;
 
-	.wp-block-column {
-		@extend .col;
+		@include media-breakpoint-up(lg) {
+			padding-left: 2em !important;
+		}
+		> .wp-block-column {
+			@include media-breakpoint-up(lg) {
+				border-right: 1px solid $gray-100;
+				padding-right: 2em !important;
+				padding-top: 1em !important;
+				padding-bottom: 1em !important;
+
+				&:last-child {
+					border-right: none;
+				}
+			}
+		}
+	}
+
+	&.is-style-reverse-on-mobile {
+		flex-direction: column-reverse;
+
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+		}
 	}
 }

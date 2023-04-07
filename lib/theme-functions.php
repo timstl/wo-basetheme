@@ -17,23 +17,11 @@ if ( ! function_exists( 'bt_get_palette' ) ) {
 	 */
 	function bt_get_palette() {
 		return array(
-		/*
-			'Primary'   => '',
-			'Secondary' => '',
-			'Success'   => '',
-			'Info'      => '',
-			'Warning'   => '',
-			'Danger'    => '',
-			'Gray-100'  => '',
-			'Gray-200'  => '',
-			'Gray-300'  => '',
-			'Gray-400'  => '',
-			'Gray-500'  => '',
-			'Gray-600'  => '',
-			'Gray-700'  => '',
-			'Gray-800'  => '',
-			'Gray-900'  => '',
-		*/
+			'Primary'   => '#221f20',
+			'Secondary' => '#A93F55',
+			'Success'   => '#e8e0d6',
+			'Gray-200'  => '#e8e0d6',
+			'White'     => '#ffffff',
 		);
 	}
 }
@@ -43,13 +31,13 @@ if ( ! function_exists( 'bt_editor_add_theme_support' ) ) {
 	 * Setup Gutenberg theme support.
 	 */
 	function bt_editor_add_theme_support() {
-		add_theme_support( 'align-wide' );
+		add_theme_support( 'wp-block-styles' );
 
 		/**
 		 * Setup color pallete used in Gutenberg sidebar.
 		 * Add same hex colors from your Bootstrap variables.
 		 */
-		$palette = bt_get_palette();
+		/*$palette = bt_get_palette();
 
 		if ( ! empty( $palette ) ) {
 			$editor_palette = array();
@@ -65,7 +53,7 @@ if ( ! function_exists( 'bt_editor_add_theme_support' ) ) {
 			}
 
 			add_theme_support( 'editor-color-palette', $editor_palette );
-		}
+		}*/
 
 		/**
 		 * Setup font sizes.

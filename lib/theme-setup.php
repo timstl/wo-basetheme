@@ -39,7 +39,6 @@ if ( ! function_exists( 'bt_setup' ) ) {
 	 * Setup scripts, sidebars, menus, etc.
 	 */
 	function bt_setup() {
-
 		/**
 		 * Text domain
 		 */
@@ -75,9 +74,10 @@ if ( ! function_exists( 'bt_setup' ) ) {
 		 */
 		register_nav_menus(
 			array(
-				'site-header-utility-nav' => esc_attr__( 'Utility Navigation', 'basetheme' ),
 				'site-header-main-nav'    => esc_attr__( 'Main Navigation', 'basetheme' ),
+				'site-header-utility-nav' => esc_attr__( 'Utility Navigation', 'basetheme' ),
 				'site-footer-main-nav'    => esc_attr__( 'Footer Navigation', 'basetheme' ),
+				'site-footer-utility-nav'    => esc_attr__( 'Footer Utility Navigation', 'basetheme' ),
 			)
 		);
 
@@ -184,8 +184,8 @@ if ( ! function_exists( 'bt_enqueue' ) ) {
 		/**
 		 * Use latest jQuery.
 		 */
-		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', get_template_directory_uri() . '/dist/js/jquery.min.js', array(), '3.4.1', false );
+		//wp_deregister_script( 'jquery' );
+		//wp_register_script( 'jquery', get_template_directory_uri() . '/dist/js/jquery.min.js', array(), '3.4.1', false );
 		wp_enqueue_script( 'jquery' );
 
 		/**
@@ -205,13 +205,16 @@ if ( ! function_exists( 'bt_enqueue' ) ) {
 		 * Enqueue scripts in head.
 		 * This is a concatinated, minified file of scripts from ./src/js/head/
 		 */
-		wp_enqueue_script( 'bt-head', get_template_directory_uri() . '/dist/js/head.min.js', array(), '1.0', false );
+		//wp_enqueue_script( 'bt-head', get_template_directory_uri() . '/dist/js/head.min.js', array(), '1.0', false );
 
 		/**
 		 * Enqueue scripts in footer.
 		 * This is a concatinated, minified file of scripts from ./src/js/footer/
 		 */
-		wp_enqueue_script( 'bt-scripts', get_template_directory_uri() . '/dist/js/scripts.min.js', array(), '1.0', true );
+		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/dist/js/bootstrap.min.js', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'bt-scripts', get_template_directory_uri() . '/dist/js/theme.js', array('jquery', 'bootstrap'), '1.0', true );
+
+		wp_localize_script( 'bt-scripts', 'bt_params', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'bt_enqueue' );
