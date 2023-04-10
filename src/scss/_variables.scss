@@ -62,14 +62,14 @@ $paragraph-margin-bottom: 1.5em;
 	Update the color palette in theme-functions.php -> wo_editor_add_theme_support()
 */
 
-/*$primary: #000;
+$primary: #000;
 $secondary: #000;
 $success: #000;
 $info: #000;
 $warning: #000;
 $danger: #000;
 $gray-100: #f0f0f0;
-$gray-200: #eee;
+/*$gray-200: #eee;
 $gray-300: #ddd;
 $gray-400: #ccc;*/
 
@@ -90,3 +90,17 @@ $btn-white-space: nowrap;
  */
 $speed: 250ms;
 $ease: ease-in-out;
+
+/* 
+	Site Header
+*/
+$logo-width: 125px;
+$logo-width-lg: 250px;
+
+$header-bg-color: #fff;
+$header-navigation-font-family: $font-family-serif;
+$header-navigation-font-weight: 400;
+$header-toggler-color: $link-color;
+
+$header-utility-navigation-bg-color: $gray-100;
+$header-utility-font-family: $header-navigation-font-family;

@@ -22,6 +22,31 @@
 					"name": "Success"
 				},
 				{
+					"slug": "info",
+					"color": "var(--bs-info)",
+					"name": "Info"
+				},
+				{
+					"slug": "warning",
+					"color": "var(--bs-warning)",
+					"name": "Warning"
+				},
+				{
+					"slug": "danger",
+					"color": "var(--bs-danger)",
+					"name": "Danger"
+				},
+				{
+					"slug": "gray-400",
+					"color": "var(--bs-gray-400)",
+					"name": "Gray-400"
+				},
+				{
+					"slug": "gray-300",
+					"color": "var(--bs-gray-300)",
+					"name": "Gray-300"
+				},
+				{
 					"slug": "gray-200",
 					"color": "var(--bs-gray-200)",
 					"name": "Gray-200"

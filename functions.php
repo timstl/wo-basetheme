@@ -18,6 +18,11 @@ if ( ! defined( 'DISALLOW_FILE_EDIT' ) ) {
 }
 
 /**
+ * Theme Configuration
+ */
+define('WO_HEADER_TYPE', 'standard'); // standard, centered
+
+/**
  * Include theme files.
  * Functions and hooks should go in these files, not in functions.php.
  */

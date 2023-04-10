@@ -176,6 +176,12 @@ if ( ! function_exists( 'wo_enqueue_block_editor_assets' ) ) {
 		// Enqueue fonts.
 		wo_fonts();
 		wp_enqueue_style( 'wo-editor-styles', get_template_directory_uri() . '/dist/css/editor-styles.css', null, '1.0' );
+
+		wp_enqueue_script(
+			'wo-modify-core-blocks',
+			get_template_directory_uri() . '/src/js/admin/modify-core-blocks.js',
+			array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' )
+		);
 	}
 
 	add_action( 'enqueue_block_editor_assets', 'wo_enqueue_block_editor_assets' );
@@ -197,7 +203,7 @@ if ( ! function_exists( 'wo_override_mp6_tinymce_styles' ) ) {
 
 		return $mce_init;
 	}
-	add_filter( 'tiny_mce_before_init', 'wo_override_mp6_tinymce_styles' );
+	//add_filter( 'tiny_mce_before_init', 'wo_override_mp6_tinymce_styles' );
 }
 
 if ( ! function_exists( 'wo_yoasttobottom' ) ) {
@@ -209,18 +215,6 @@ if ( ! function_exists( 'wo_yoasttobottom' ) ) {
 	}
 	
 	add_filter( 'wpseo_metabox_prio', 'wo_yoasttobottom' );
-}
-
-if ( ! function_exists( 'wo_mime_types' ) ) {
-	/**
-	 * Allow upload of SVGs to media library.
-	 */
-	function wo_mime_types( $mimes ) {
-		$mimes['svg'] = 'image/svg+xml';
-		return $mimes;
-	}
-
-	// add_filter( 'upload_mimes', 'wo_mime_types' );
 }
 
 if ( ! function_exists( 'wo_custom_body_class' ) ) {

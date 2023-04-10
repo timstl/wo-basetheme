@@ -8,6 +8,25 @@
 	@include media-breakpoint-up(lg) {
 		position: fixed;
 	}
+
+	#site-header-logonav {
+		transition: height $speed $ease, padding $speed $ease,
+			background-color $speed $ease, box-shadow $speed $ease;
+	}
+
+	.logo {
+		transition: transform $speed $ease, margin $speed $ease,
+			opacity $speed $ease;
+	}
+
+	&.scrolled {
+		background: rgba($header-bg-color, 0.9);
+
+		#site-header-logonav {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
 }
 #site-main {
 	/*

@@ -1,8 +1,3 @@
-/*
-	An SVG used as a background image for nav items with a dropdown.
-	Replace $link-color with another CSS variable to adjust color.
-	Replace entire SVG if desired, but be sure to adjust the format to match.
-*/
 $nav-arrow: str-replace(
 	url("data:image/svg+xml;utf8,%3csvg width='11px' height='8px' viewBox='0 0 11 8' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3e%3cg transform='translate(-882.000000, -39.000000)' stroke='#{$link-color}' stroke-width='2'%3e%3cg transform='translate(605.000000, 33.000000)'%3e%3cpolyline points='278 7 282.5 12 287 7'%3e%3c/polyline%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e"),
 	"#",
@@ -15,35 +10,28 @@ $nav-arrow-hover: str-replace(
 );
 
 #site-header {
-	// Additional rules applied in _header-sticky.scss
-	background: #fff;
+	background: $header-bg-color;
 	box-shadow: $box-shadow-sm;
 	top: 0;
 	width: 100%;
-	font-family: $font-family-serif-caps;
-	font-weight: 400;
+	font-family: $header-navigation-font-family;
+	font-weight: $header-navigation-font-weight;
 	position: relative;
 	z-index: 10002;
-	transition: height $speed $ease, padding $speed $ease,
-		background-color $speed $ease, box-shadow $speed $ease;
+
+	#site-header-logonav {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		position: relative;
+	}
 
 	.logo {
 		display: inline-block;
 		height: auto;
-		width: 60px;
-		transition: transform $speed $ease, margin $speed $ease,
-			opacity $speed $ease;
+		width: $logo-width;
 
 		@include media-breakpoint-up(lg) {
-			height: 60px;
-			width: 83px;
-			margin-left: 0;
-		}
-
-		.home & {
-			@include media-breakpoint-up(lg) {
-				opacity: 0;
-			}
+			width: $logo-width-lg;
 		}
 
 		> svg,
@@ -52,349 +40,242 @@ $nav-arrow-hover: str-replace(
 			width: 100%;
 		}
 	}
+}
 
-	> .container-wide,
-	> .container-full,
-	> .container {
-		padding-top: 10px;
-		padding-bottom: 10px;
-		position: relative;
-		transition: height $speed $ease, padding $speed $ease,
-			background-color $speed $ease, box-shadow $speed $ease;
-
-		@include media-breakpoint-up(lg) {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
-		}
-	}
-
-	&.scrolled {
-		background: rgba($white, 0.9);
-
-		> .container-wide,
-		> .container-full,
-		> .container {
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
-
-		.logo {
-			.home & {
-				opacity: 1;
-			}
-		}
-	}
-
-	.navbar-toggler {
-		border: none;
-		padding: 0;
-		position: absolute;
-		right: 2.5%;
-		top: 50%;
-		transform: translateY(-50%);
-		transition: transform $speed $ease, fill $speed $ease;
-		outline: none;
-		z-index: 10002;
-
-		@include media-breakpoint-up(lg) {
-			display: none;
-		}
-
-		rect {
-			fill: $link-color;
-			transition: all $speed $ease;
-			transform: rotate(0deg);
-			transform-origin: center center;
-
-			&.navbar-bars-top {
-				transform: translateY(-9px) rotate(0deg);
-			}
-
-			&.navbar-bars-btm {
-				transform: translateY(9px) rotate(0deg);
-			}
-		}
-
-		&[aria-expanded="true"] {
-			//transform: translateX(calc(100vw - 55px));
-
-			rect {
-				&.navbar-bars-top {
-					transform: rotate(45deg);
-				}
-
-				&.navbar-bars-middle {
-					opacity: 0;
-					transform: translateX(-100%);
-				}
-
-				&.navbar-bars-btm {
-					transform: rotate(-45deg);
-				}
-			}
-		}
-	}
-
-	#site-header-navbar-container {
-		background: $primary;
-		position: absolute;
-		padding: 0;
-		left: 0;
-		right: 0;
-		top: 100%;
-
-		@include media-breakpoint-up(lg) {
-			background: transparent;
-			position: relative;
-			width: auto;
-			top: auto;
-			margin-left: auto;
-		}
-
-		.nav-container {
-			width: 100%;
-			@include media-breakpoint-up(lg) {
-				width: auto;
-			}
-		}
-
-		.nav {
-			padding: 10px 0;
-			width: 100%;
-
-			@include media-breakpoint-up(lg) {
-				padding: 0;
-				display: flex;
-				align-items: center;
-				width: auto;
-			}
-
-			a {
-				color: #fff;
-				text-decoration: none;
-				padding: 0.5rem 2.5%;
-				transition: border-color $ease $speed, color $ease $speed;
-				white-space: nowrap;
-
-				@include media-breakpoint-up(lg) {
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					color: $gray-700;
-					padding: 0;
-
-					&:hover {
-						color: $link-color;
-					}
-				}
-
-				&.dropdown-toggle {
-					@include media-breakpoint-up(lg) {
-						padding-right: 18px;
-					}
-
-					&:after {
-						border: none;
-						background: $nav-arrow no-repeat center center;
-						background-size: 100% 100%;
-						display: inline-block;
-						margin: 0 0 0 12px;
-						height: 8px;
-						position: relative;
-						width: 11px;
-						top: 3px;
-						right: 0;
-
-						@include media-breakpoint-up(lg) {
-							margin-left: 0;
-							margin-top: -3px;
-							position: absolute;
-							top: 50%;
-						}
-					}
-
-					&[aria-expanded="true"] {
-					}
-
-					&:hover {
-						&:after {
-							background-image: $nav-arrow-hover;
-						}
-					}
-				}
-			}
-
-			> li {
-				font-size: rem-calc(21);
-				vertical-align: middle;
-				border-bottom: 1px solid lighten($primary, 10%);
-				@include media-breakpoint-up(lg) {
-					border-bottom: none;
-					font-size: rem-calc(21);
-					display: flex;
-					align-items: center;
-				}
-
-				+ li {
-					@include media-breakpoint-up(lg) {
-						margin-left: $grid-gutter-width * 2;
-					}
-				}
-
-				&.current-menu-item,
-				&.current-menu-ancestor,
-				&.current-menu-parent {
-					> a {
-						color: $link-color;
-
-						@include media-breakpoint-up(lg) {
-							color: $link-color;
-						}
-					}
-				}
-			}
-
-			.dropdown-menu {
-				background: transparent;
-				border: none;
-				border-radius: 0;
-				padding: 0;
-				text-transform: none;
-				flex-shrink: 0;
-				width: 100%;
-
-				@include media-breakpoint-up(lg) {
-					background: #fff;
-					padding-top: 0;
-					padding-bottom: 0;
-					font-size: rem-calc(14);
-					top: calc(100% + 2px);
-					width: auto;
-				}
-
-				a {
-					padding-left: 3rem;
-					@include media-breakpoint-up(lg) {
-						background: #fff;
-						border-bottom: none;
-						padding: 0.5rem 0.75rem;
-
-						&:hover,
-						&:active {
-							background-color: $gray-100;
-						}
-					}
-				}
-
-				.current-menu-item,
-				.current-menu-ancestor,
-				.current-menu-parent {
-					> a {
-						color: $link-color;
-					}
-				}
-			}
-
-			.has-dropdown-menu-end {
-				.dropdown-menu {
-					@extend .dropdown-menu-end;
-				}
-			}
-		}
-	}
-
-	#site-header-nav-menus {
+#site-header-logonav-container {
+	@include media-breakpoint-up(lg) {
 		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-
-		&.collapse:not(.show) {
-			display: none;
-		}
-
-		@include media-breakpoint-up(lg) {
-			align-items: center;
-			flex-direction: row;
-			justify-content: flex-end;
-		}
+		flex-direction: row;
+		justify-content: space-between;
 	}
+}
 
-	#site-header-main-nav-container {
-	}
+#site-header-navbar-container {
+	background: $primary;
+	position: absolute;
+	padding: 0;
+	left: 0;
+	right: 0;
+	top: 100%;
 
-	#site-header-utility-nav-container {
-		@include media-breakpoint-up(lg) {
-			margin-left: $grid-gutter-width;
-			border-left: 1px solid $gray-200;
-			padding-left: $grid-gutter-width;
-		}
-
-		.nav {
-			flex-direction: row;
-
-			> li {
-				border-bottom: none;
-				padding: 0.5rem 2.5%;
-
-				@include media-breakpoint-up(lg) {
-					padding: 0;
-				}
-
-				a {
-					@extend .btn, .btn-secondary;
-				}
-
-				+ li {
-					@include media-breakpoint-up(lg) {
-						margin-left: calc($grid-gutter-width / 2);
-					}
-
-					a {
-						@extend .btn-success;
-					}
-				}
-
-				&.current-menu-item,
-				&.current-menu-ancestor,
-				&.current-menu-parent {
-					> a {
-						color: #fff;
-
-						@include media-breakpoint-up(lg) {
-							color: #fff;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	#cart-nav {
-		display: none;
-		color: #fff;
+	@include media-breakpoint-up(lg) {
+		background: transparent;
 		position: relative;
-		padding: 0.5rem 2.5%;
+		width: auto;
+		top: auto;
+		margin-left: auto;
+	}
+
+	.nav-container {
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			width: auto;
+		}
+	}
+
+	.nav {
+		padding: 10px 0;
+		width: 100%;
 
 		@include media-breakpoint-up(lg) {
-			color: $gray-700;
-			margin-left: calc($grid-gutter-width / 2);
 			padding: 0;
+			display: flex;
+			align-items: center;
+			width: auto;
 		}
 
 		a {
 			color: #fff;
 			text-decoration: none;
+			padding: 0.5rem 2.5%;
+			transition: border-color $ease $speed, color $ease $speed;
+			white-space: nowrap;
 
 			@include media-breakpoint-up(lg) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
 				color: $gray-700;
+				padding: 0;
+
+				&:hover {
+					color: $link-color;
+				}
+			}
+
+			&.dropdown-toggle {
+				@include media-breakpoint-up(lg) {
+					padding-right: 18px;
+				}
+
+				&:after {
+					border: none;
+					background: $nav-arrow no-repeat center center;
+					background-size: 100% 100%;
+					display: inline-block;
+					margin: 0 0 0 12px;
+					height: 8px;
+					position: relative;
+					width: 11px;
+					top: 3px;
+					right: 0;
+
+					@include media-breakpoint-up(lg) {
+						margin-left: 0;
+						margin-top: -3px;
+						position: absolute;
+						top: 50%;
+					}
+				}
+
+				&[aria-expanded="true"] {
+				}
+
+				&:hover {
+					&:after {
+						background-image: $nav-arrow-hover;
+					}
+				}
 			}
 		}
 
-		sup {
-			position: relative;
-			top: -1em;
+		> li {
+			font-size: rem-calc(21);
+			border-bottom: 1px solid lighten($primary, 10%);
+
+			@include media-breakpoint-up(lg) {
+				font-size: rem-calc(18);
+				border-bottom: none;
+				display: flex;
+				align-items: center;
+			}
+
+			+ li {
+				@include media-breakpoint-up(lg) {
+					margin-left: $grid-gutter-width;
+				}
+			}
+
+			&.current-menu-item,
+			&.current-menu-ancestor,
+			&.current-menu-parent {
+				> a {
+					color: $link-color;
+
+					@include media-breakpoint-up(lg) {
+						color: $link-color;
+					}
+				}
+			}
+		}
+
+		.dropdown-menu {
+			background: transparent;
+			border: none;
+			border-radius: 0;
+			padding: 0;
+			text-transform: none;
+			flex-shrink: 0;
+			width: 100%;
+
+			@include media-breakpoint-up(lg) {
+				background: #fff;
+				padding-top: 0;
+				padding-bottom: 0;
+				font-size: rem-calc(14);
+				top: calc(100% + 2px);
+				width: auto;
+			}
+
+			a {
+				padding-left: 3rem;
+				@include media-breakpoint-up(lg) {
+					background: #fff;
+					border-bottom: none;
+					padding: 0.5rem 0.75rem;
+
+					&:hover,
+					&:active {
+						background-color: $gray-100;
+					}
+				}
+			}
+
+			.current-menu-item,
+			.current-menu-ancestor,
+			.current-menu-parent {
+				> a {
+					color: $link-color;
+				}
+			}
+		}
+
+		.has-dropdown-menu-end {
+			.dropdown-menu {
+				@extend .dropdown-menu-end;
+			}
 		}
 	}
 }
+
+#site-header-nav-menus {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	&.collapse:not(.show) {
+		display: none;
+	}
+
+	@include media-breakpoint-up(lg) {
+		align-items: center;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+}
+
+#site-header-utility-nav-container {
+	background: $header-utility-navigation-bg-color;
+
+	> .container-full {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	@include media-breakpoint-up(lg) {
+	}
+
+	.nav {
+		flex-direction: row;
+
+		> li {
+			border-bottom: none;
+			padding: 0.5rem 2.5%;
+
+			@include media-breakpoint-up(lg) {
+				padding: 0;
+			}
+
+			+ li {
+				@include media-breakpoint-up(lg) {
+					margin-left: calc($grid-gutter-width / 2);
+				}
+			}
+
+			&.current-menu-item,
+			&.current-menu-ancestor,
+			&.current-menu-parent {
+				> a {
+					color: $link-hover-color;
+
+					@include media-breakpoint-up(lg) {
+						color: $link-hover-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+@import "site-header/navbar-toggler";
+@import "site-header/sticky";

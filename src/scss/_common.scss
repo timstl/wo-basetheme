@@ -184,7 +184,7 @@ Add class 'has-btm-margin' to maintain a bottom margin on elements.
 	transition: color $speed $ease, background-color $speed $ease,
 		opacity $speed $ease, border-color $speed $ease, box-shadow $speed $ease,
 		transform $speed $ease;
-	font-family: $font-family-serif-caps;
+	font-family: $font-family-serif;
 
 	&-success {
 		color: $white;

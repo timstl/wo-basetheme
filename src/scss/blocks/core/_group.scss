@@ -2,27 +2,4 @@
 	&.is-style-flex-row {
 		@extend .titlegroup;
 	}
-
-	&.is-style-intro,
-	&.is-style-intro-alt {
-		padding-top: $grid-gutter-width;
-		position: relative;
-
-		&:before {
-			background: $secondary;
-			opacity: 0.75;
-			content: "";
-			height: 16px;
-			left: -100vw;
-			position: absolute;
-			right: 0;
-			top: -16px;
-		}
-	}
-
-	&.is-style-intro-alt {
-		&:before {
-			background-color: $success;
-		}
-	}
 }

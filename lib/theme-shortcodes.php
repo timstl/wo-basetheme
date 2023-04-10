@@ -9,11 +9,11 @@
  * @since 1.0
  * @version 2.7
  */
-if ( ! function_exists( 'bt_social_accounts_shortcode' ) ) {
+if ( ! function_exists( 'wo_social_accounts_shortcode' ) ) {
 	/**
 	 * Social links shortcode
 	 */
-	function bt_social_accounts_shortcode( $pid = 'options' ) {
+	function wo_social_accounts_shortcode( $pid = 'options' ) {
 		$html = '';
 		if ( function_exists( 'have_rows' ) && have_rows( 'social_accounts', $pid ) ) {
 			$html .= '<ul class="social">';
@@ -33,5 +33,5 @@ if ( ! function_exists( 'bt_social_accounts_shortcode' ) ) {
 		return $html;
 	}
 	
-	add_shortcode( 'sociallinks', 'bt_social_accounts_shortcode' );
+	add_shortcode( 'sociallinks', 'wo_social_accounts_shortcode' );
 }

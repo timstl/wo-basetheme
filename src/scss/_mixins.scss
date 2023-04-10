@@ -9,15 +9,14 @@
 /// Strip.
 ///
 @function strip($value) {
-    @if meta.type-of($value) != "number" {
-        @error "Invalid `#{meta.type-of($value)}` type. Choose a number type instead.";
-    } @else if meta.type-of($value) == "number" and not math.is-unitless($value) {
-        @return math.div($value, ($value * 0 + 1));
-    }
+	@if meta.type-of($value) != "number" {
+		@error "Invalid `#{meta.type-of($value)}` type. Choose a number type instead.";
+	} @else if meta.type-of($value) == "number" and not math.is-unitless($value) {
+		@return math.div($value, ($value * 0 + 1));
+	}
 
-    @return $value;
+	@return $value;
 }
-
 
 /*
 	With some fonts, we may need to return a different font here.
