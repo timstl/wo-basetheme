@@ -13,8 +13,6 @@
 	}
 
 	.social {
-		display: flex;
-		font-size: $font-size-md;
 		margin-bottom: calc($grid-gutter-width / 2);
 
 		@include media-breakpoint-up(lg) {

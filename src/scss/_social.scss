@@ -1,0 +1,12 @@
+.social {
+	@include resetlist();
+
+	display: flex;
+	flex-direction: row;
+	gap: $grid-gutter-width / 2;
+	font-size: $font-size-md;
+
+	a {
+		text-decoration: none;
+	}
+}

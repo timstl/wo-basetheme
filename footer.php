@@ -13,37 +13,37 @@
  */
 
 ?>
-	</main>
-	<footer role="contentinfo" id="site-footer">
-		<div class="container">
-			<?php
-			$footer_nav = wp_nav_menu(
-				array(
-					'echo'            => false,
-					'theme_location'  => 'site-footer-main-nav',
-					'depth'           => 1,
-					'container'       => 'nav',
-					'container_class' => 'nav-container',
-					'container_id'    => 'site-footer-main-nav-container',
-					'menu_class'      => 'nav',
-					'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-					'walker'          => new WP_Bootstrap_Navwalker(),
-				)
-			);
-			?>
-			<?php if ( $footer_nav ) : ?>
-			<div role="navigation" id="site-footer-navbar-container">
-				<?php echo $footer_nav; ?>
-			</div>
-			<?php endif; ?>
+    </main>
+    <footer role="contentinfo" id="site-footer">
+        <div class="container">
+            <?php
+            $footer_nav = wp_nav_menu(
+                array(
+                    'echo'            => false,
+                    'theme_location'  => 'site-footer-main-nav',
+                    'depth'           => 1,
+                    'container'       => 'nav',
+                    'container_class' => 'nav-container',
+                    'container_id'    => 'site-footer-main-nav-container',
+                    'menu_class'      => 'nav',
+                    'fallback_cb'     => 'bootstrap_5_wp_nav_menu_walker::fallback',
+                    'walker'          => new bootstrap_5_wp_nav_menu_walker(),
+                )
+            );
+            ?>
+            <?php if ($footer_nav) : ?>
+            <div role="navigation" id="site-footer-navbar-container">
+                <?php echo $footer_nav; ?>
+            </div>
+            <?php endif; ?>
 
-			<?php get_template_part( 'template-parts/footer/part', 'content' ); ?>
-			
-			<?php get_template_part( 'template-parts/part', 'socialaccounts' ); ?>
-			
-			<?php get_template_part( 'template-parts/footer/part', 'copyright' ); ?>
-		</div>
-	</footer>
+            <?php get_template_part('template-parts/footer/part', 'content'); ?>
+            
+            <?php get_template_part('template-parts/part', 'socialaccounts'); ?>
+            
+            <?php get_template_part('template-parts/footer/part', 'copyright'); ?>
+        </div>
+    </footer>
 <?php wp_footer(); ?>
 </div>
 </body>

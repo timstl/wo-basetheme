@@ -1,7 +1,9 @@
 const mix = require("laravel-mix");
 
 mix
-	.js("src/**/*.js", "dist/js/theme.js")
+	.sourceMaps(false, "source-map")
+	.webpackConfig({ devtool: "source-map" })
+	.js("src/js/**/*.js", "dist/js/theme.js")
 	.sass("src/scss/style.scss", "dist/css/")
 	.sass("src/scss/editor-styles.scss", "dist/css/")
 	.browserSync({

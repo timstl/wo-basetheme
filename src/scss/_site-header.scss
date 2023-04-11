@@ -240,9 +240,8 @@ $nav-arrow-hover: str-replace(
 	> .container-full {
 		display: flex;
 		justify-content: flex-end;
-	}
-
-	@include media-breakpoint-up(lg) {
+		align-items: center;
+		gap: $grid-gutter-width;
 	}
 
 	.nav {

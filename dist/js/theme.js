@@ -1,50 +1,6 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/admin/modify-core-blocks.js":
-/*!********************************************!*\
-  !*** ./src/js/admin/modify-core-blocks.js ***!
-  \********************************************/
-/***/ (function() {
-
-/**
- * Remove squared button
- */
-/*wp.domReady(function() {
-	wp.blocks.unregisterBlockStyle("core/button", "squared");
-});*/
-
-/**
- * Add list style.
- */
-/*wp.blocks.registerBlockStyle("core/list", {
-	name: "checkmarks",
-	label: "Checkmarks"
-});*/
-
-/**
- * Unregister / Register separator styles example.
- */
-wp.domReady(function () {
-  //wp.blocks.unregisterBlockStyle("core/separator", "dots");
-  wp.blocks.unregisterBlockStyle("core/separator", "wide");
-});
-wp.blocks.registerBlockStyle("core/columns", {
-  name: "reverse-on-mobile",
-  label: "Reverse on Mobile"
-});
-wp.blocks.registerBlockStyle("core/group", {
-  name: "flex-row",
-  label: "Row (No Wrap)"
-});
-
-/*wp.blocks.registerBlockStyle("core/button", {
-	name: "alt",
-	label: "Alternate Color",
-});*/
-
-/***/ }),
-
 /***/ "./src/js/custom/console.js":
 /*!**********************************!*\
   !*** ./src/js/custom/console.js ***!
@@ -278,7 +234,6 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["dist/css/editor-styles","dist/css/style"], function() { return __webpack_require__("./src/js/admin/modify-core-blocks.js"); })
 /******/ 	__webpack_require__.O(undefined, ["dist/css/editor-styles","dist/css/style"], function() { return __webpack_require__("./src/js/custom/console.js"); })
 /******/ 	__webpack_require__.O(undefined, ["dist/css/editor-styles","dist/css/style"], function() { return __webpack_require__("./src/js/custom/header-scrolled.js"); })
 /******/ 	__webpack_require__.O(undefined, ["dist/css/editor-styles","dist/css/style"], function() { return __webpack_require__("./src/scss/style.scss"); })
@@ -287,3 +242,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
+//# sourceMappingURL=theme.js.map

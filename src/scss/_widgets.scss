@@ -1,6 +1,6 @@
 .widgets,
 .widget-container {
-	@include zerolist();
+	@include resetlist();
 }
 
 .widget-container {
@@ -8,7 +8,7 @@
 
 	ul,
 	li {
-		@include zerolist();
+		@include resetlist();
 	}
 
 	li {

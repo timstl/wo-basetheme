@@ -19,19 +19,19 @@
 wp.domReady(function () {
 	//wp.blocks.unregisterBlockStyle("core/separator", "dots");
 	wp.blocks.unregisterBlockStyle("core/separator", "wide");
-});
 
-wp.blocks.registerBlockStyle("core/columns", {
-	name: "reverse-on-mobile",
-	label: "Reverse on Mobile",
-});
+	wp.blocks.registerBlockStyle("core/columns", {
+		name: "reverse-on-mobile",
+		label: "Reverse on Mobile",
+	});
 
-wp.blocks.registerBlockStyle("core/group", {
-	name: "flex-row",
-	label: "Row (No Wrap)",
-});
+	wp.blocks.registerBlockStyle("core/group", {
+		name: "flex-row",
+		label: "Row (No Wrap)",
+	});
 
-/*wp.blocks.registerBlockStyle("core/button", {
+	/*wp.blocks.registerBlockStyle("core/button", {
 	name: "alt",
 	label: "Alternate Color",
 });*/
+});
