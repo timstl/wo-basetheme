@@ -40,6 +40,10 @@ $nav-arrow-hover: str-replace(
 			width: 100%;
 		}
 	}
+
+	.nav {
+		flex-wrap: nowrap;
+	}
 }
 
 #site-header-logonav-container {
@@ -160,7 +164,7 @@ $nav-arrow-hover: str-replace(
 			&.current-menu-ancestor,
 			&.current-menu-parent {
 				> a {
-					color: $link-color;
+					color: #fff;
 
 					@include media-breakpoint-up(lg) {
 						color: $link-color;
@@ -171,8 +175,8 @@ $nav-arrow-hover: str-replace(
 
 		.dropdown-menu {
 			background: transparent;
+			box-shadow: var(--bs-dropdown-box-shadow);
 			border: none;
-			border-radius: 0;
 			padding: 0;
 			text-transform: none;
 			flex-shrink: 0;
@@ -185,6 +189,12 @@ $nav-arrow-hover: str-replace(
 				font-size: rem-calc(14);
 				top: calc(100% + 2px);
 				width: auto;
+			}
+
+			li {
+				+ li {
+					border-top: 1px solid $gray-100;
+				}
 			}
 
 			a {
@@ -238,18 +248,34 @@ $nav-arrow-hover: str-replace(
 	background: $header-utility-navigation-bg-color;
 
 	> .container-full {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		gap: $grid-gutter-width;
+		/*
+			For 2 column utility nav
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		*/
+	}
+
+	.nav-container {
+		display: block;
 	}
 
 	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		flex-direction: row;
+		gap: calc($grid-gutter-width / 2);
+
+		@include media-breakpoint-up(md) {
+			justify-content: flex-end;
+		}
 
 		> li {
+			font-size: $font-size-base;
+			display: inline-block;
 			border-bottom: none;
-			padding: 0.5rem 2.5%;
+			padding: 0.25rem;
 
 			@include media-breakpoint-up(lg) {
 				padding: 0;

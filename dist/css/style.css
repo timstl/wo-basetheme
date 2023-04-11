@@ -11914,7 +11914,7 @@ hr.wp-block-separator.is-style-dots:before {
 #site-header .logo {
   display: inline-block;
   height: auto;
-  width: 125px;
+  width: 160px;
 }
 @media (min-width: 992px) {
   #site-header .logo {
@@ -11925,6 +11925,9 @@ hr.wp-block-separator.is-style-dots:before {
 #site-header .logo > img {
   height: 100%;
   width: 100%;
+}
+#site-header .nav {
+  flex-wrap: nowrap;
 }
 
 @media (min-width: 992px) {
@@ -12037,7 +12040,7 @@ hr.wp-block-separator.is-style-dots:before {
   }
 }
 #site-header-navbar-container .nav > li.current-menu-item > a, #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-item > .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-item > .wp-block-button__link, #site-header-navbar-container .nav > li.current-menu-ancestor > a, #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-ancestor > .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-ancestor > .wp-block-button__link, #site-header-navbar-container .nav > li.current-menu-parent > a, #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-parent > .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-parent > .wp-block-button__link {
-  color: #000;
+  color: #fff;
 }
 @media (min-width: 992px) {
   #site-header-navbar-container .nav > li.current-menu-item > a, #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-item > .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-item > .wp-block-button__link, #site-header-navbar-container .nav > li.current-menu-ancestor > a, #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-ancestor > .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-ancestor > .wp-block-button__link, #site-header-navbar-container .nav > li.current-menu-parent > a, #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-parent > .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-parent > .wp-block-button__link {
@@ -12046,8 +12049,8 @@ hr.wp-block-separator.is-style-dots:before {
 }
 #site-header-navbar-container .nav .dropdown-menu {
   background: transparent;
+  box-shadow: var(--bs-dropdown-box-shadow);
   border: none;
-  border-radius: 0;
   padding: 0;
   text-transform: none;
   flex-shrink: 0;
@@ -12062,6 +12065,9 @@ hr.wp-block-separator.is-style-dots:before {
     top: calc(100% + 2px);
     width: auto;
   }
+}
+#site-header-navbar-container .nav .dropdown-menu li + li {
+  border-top: 1px solid #f0f0f0;
 }
 #site-header-navbar-container .nav .dropdown-menu a, #site-header-navbar-container .nav .dropdown-menu .wp-block-button.btn-link .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav .dropdown-menu .wp-block-button__link {
   padding-left: 3rem;
@@ -12105,17 +12111,33 @@ hr.wp-block-separator.is-style-dots:before {
   background: #f0f0f0;
 }
 #site-header-utility-nav-container > .container-full {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.5rem;
+  /*
+  	For 2 column utility nav
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  */
+}
+#site-header-utility-nav-container .nav-container {
+  display: block;
 }
 #site-header-utility-nav-container .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  #site-header-utility-nav-container .nav {
+    justify-content: flex-end;
+  }
 }
 #site-header-utility-nav-container .nav > li {
+  font-size: 1rem;
+  display: inline-block;
   border-bottom: none;
-  padding: 0.5rem 2.5%;
+  padding: 0.25rem;
 }
 @media (min-width: 992px) {
   #site-header-utility-nav-container .nav > li {

@@ -14693,7 +14693,7 @@ body.acf_content #site-header .logo,
 .editor-styles-wrapper #site-header .logo {
   display: inline-block;
   height: auto;
-  width: 125px;
+  width: 160px;
 }
 @media (min-width: 992px) {
   body.acf_content #site-header .logo,
@@ -14707,6 +14707,10 @@ body.acf_content #site-header .logo > img,
 .editor-styles-wrapper #site-header .logo > img {
   height: 100%;
   width: 100%;
+}
+body.acf_content #site-header .nav,
+.editor-styles-wrapper #site-header .nav {
+  flex-wrap: nowrap;
 }
 @media (min-width: 992px) {
   body.acf_content #site-header-logonav-container,
@@ -14857,7 +14861,7 @@ body.acf_content #site-header-navbar-container .nav > li.current-menu-item > a, 
 .editor-styles-wrapper #site-header-navbar-container .nav > li.current-menu-parent > a,
 .editor-styles-wrapper #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-parent > .wp-block-button__link,
 .editor-styles-wrapper .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-parent > .wp-block-button__link {
-  color: #000;
+  color: #fff;
 }
 @media (min-width: 992px) {
   body.acf_content #site-header-navbar-container .nav > li.current-menu-item > a, body.acf_content #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-item > .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-item > .wp-block-button__link, body.acf_content #site-header-navbar-container .nav > li.current-menu-ancestor > a, body.acf_content #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-ancestor > .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-ancestor > .wp-block-button__link, body.acf_content #site-header-navbar-container .nav > li.current-menu-parent > a, body.acf_content #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-parent > .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-parent > .wp-block-button__link,
@@ -14876,8 +14880,8 @@ body.acf_content #site-header-navbar-container .nav > li.current-menu-item > a, 
 body.acf_content #site-header-navbar-container .nav .dropdown-menu,
 .editor-styles-wrapper #site-header-navbar-container .nav .dropdown-menu {
   background: transparent;
+  box-shadow: var(--bs-dropdown-box-shadow);
   border: none;
-  border-radius: 0;
   padding: 0;
   text-transform: none;
   flex-shrink: 0;
@@ -14893,6 +14897,10 @@ body.acf_content #site-header-navbar-container .nav .dropdown-menu,
     top: calc(100% + 2px);
     width: auto;
   }
+}
+body.acf_content #site-header-navbar-container .nav .dropdown-menu li + li,
+.editor-styles-wrapper #site-header-navbar-container .nav .dropdown-menu li + li {
+  border-top: 1px solid #f0f0f0;
 }
 body.acf_content #site-header-navbar-container .nav .dropdown-menu a, body.acf_content #site-header-navbar-container .nav .dropdown-menu .wp-block-button.btn-link .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header-navbar-container .nav .dropdown-menu .wp-block-button__link,
 .editor-styles-wrapper #site-header-navbar-container .nav .dropdown-menu a,
@@ -14961,19 +14969,37 @@ body.acf_content #site-header-utility-nav-container,
 }
 body.acf_content #site-header-utility-nav-container > .container-full,
 .editor-styles-wrapper #site-header-utility-nav-container > .container-full {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.5rem;
+  /*
+  	For 2 column utility nav
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  */
+}
+body.acf_content #site-header-utility-nav-container .nav-container,
+.editor-styles-wrapper #site-header-utility-nav-container .nav-container {
+  display: block;
 }
 body.acf_content #site-header-utility-nav-container .nav,
 .editor-styles-wrapper #site-header-utility-nav-container .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  body.acf_content #site-header-utility-nav-container .nav,
+  .editor-styles-wrapper #site-header-utility-nav-container .nav {
+    justify-content: flex-end;
+  }
 }
 body.acf_content #site-header-utility-nav-container .nav > li,
 .editor-styles-wrapper #site-header-utility-nav-container .nav > li {
+  font-size: 1rem;
+  display: inline-block;
   border-bottom: none;
-  padding: 0.5rem 2.5%;
+  padding: 0.25rem;
 }
 @media (min-width: 992px) {
   body.acf_content #site-header-utility-nav-container .nav > li,
