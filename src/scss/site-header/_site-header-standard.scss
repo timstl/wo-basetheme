@@ -1,0 +1,13 @@
+#site-header-logonav-container {
+	@include media-breakpoint-up(lg) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+#site-header-navbar-container {
+	@include media-breakpoint-up(lg) {
+		margin-left: auto;
+	}
+}

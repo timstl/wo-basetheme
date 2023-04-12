@@ -1,7 +1,9 @@
 <?php
-// bootstrap 5 wp_nav_menu walker
 class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 {
+    private $centered;
+    private $break_point;
+    private $displayed;
     private $current_item;
     private $dropdown_menu_alignment_values = [
     'dropdown-menu-start',
@@ -18,6 +20,11 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
     'dropdown-menu-xxl-end'
     ];
 
+    public function __construct($centered = false)
+    {
+        $this->centered = $centered;
+    }
+
     function start_lvl(&$output, $depth = 0, $args = null)
     {
         $dropdown_menu_class[] = '';
@@ -33,6 +40,23 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 
     function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
     {
+        if ($this->centered) {
+            if (!isset($this->break_point)) {
+                $menu_elements = wp_get_nav_menu_items($args->menu);
+                $top_level_elements = 0;
+
+                foreach ($menu_elements as $el) {
+                    if ($el->menu_item_parent === '0') {
+                        $top_level_elements++;
+                    }
+                }
+                $this->break_point = ceil($top_level_elements / 2);
+            }
+            if ($depth === 0 && $this->break_point == $this->displayed) {
+                $output .= '<li class="menu-item menu-item-logo">' . $this->inject_logo() . '</li>';
+            }
+        }
+
         $this->current_item = $item;
 
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
@@ -73,6 +97,19 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
         $item_output .= $args->after;
 
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+
+        if ($item->menu_item_parent === '0') {
+            $this->displayed++;
+        }
+    }
+
+    private function inject_logo()
+    {
+        ob_start();
+        get_template_part('template-parts/header/part', 'logo');
+        $logo = ob_get_contents();
+        ob_end_clean();
+        return $logo;
     }
 }
 // register a new menu

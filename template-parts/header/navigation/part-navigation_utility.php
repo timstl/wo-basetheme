@@ -14,7 +14,7 @@ $utility_nav = wp_nav_menu(
 );
 
 if ($utility_nav) : ?>
-<div id="site-header-utility-nav-container">
+<div id="site-header-utility-nav-container" class="site-header-utility-nav--<?php echo wo_should_center_nav_logo() ? 'centered' : 'standard'; ?>">
 <div class="container-full">
     <?php echo $utility_nav; ?>
     <?php //get_template_part('template-parts/part', 'socialaccounts'); ?>

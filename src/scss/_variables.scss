@@ -95,6 +95,7 @@ $ease: ease-in-out;
 	Site Header
 */
 $logo-width: 160px;
+$logo-width-md: 250px;
 $logo-width-lg: 250px;
 
 $header-bg-color: #fff;
@@ -104,3 +105,7 @@ $header-toggler-color: $link-color;
 
 $header-utility-navigation-bg-color: $gray-100;
 $header-utility-font-family: $header-navigation-font-family;
+
+$dropdown-padding-x: 0.75rem;
+$dropdown-padding-x-sm: 2.5rem;
+$dropdown-padding-y: 0.5rem;

@@ -13,14 +13,14 @@
 /**
  * Disable the theme editor.
  */
-if ( ! defined( 'DISALLOW_FILE_EDIT' ) ) {
-	define( 'DISALLOW_FILE_EDIT', true );
+if (! defined('DISALLOW_FILE_EDIT')) {
+    define('DISALLOW_FILE_EDIT', true);
 }
 
 /**
  * Theme Configuration
  */
-define('WO_HEADER_TYPE', 'standard'); // standard, centered
+define('WO_HEADER_TYPE', 'standard'); // standard, centered, centered_home
 
 /**
  * Include theme files.

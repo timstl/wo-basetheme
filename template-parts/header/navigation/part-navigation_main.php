@@ -9,7 +9,7 @@ $main_nav = wp_nav_menu(
         'container_id'    => 'site-header-main-nav-container',
         'menu_class'      => 'nav navbar-nav',
         'fallback_cb'     => null,
-        'walker'          => new bootstrap_5_wp_nav_menu_walker(),
+        'walker'          => new bootstrap_5_wp_nav_menu_walker(wo_should_center_nav_logo()),
     )
 );
 ?>

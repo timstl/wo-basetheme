@@ -3762,7 +3762,7 @@ fieldset:disabled .search-form button,
 .dropdown-menu {
   --bs-dropdown-zindex: 1000;
   --bs-dropdown-min-width: 10rem;
-  --bs-dropdown-padding-x: 0;
+  --bs-dropdown-padding-x: 0.75rem;
   --bs-dropdown-padding-y: 0.5rem;
   --bs-dropdown-spacer: 0.125rem;
   --bs-dropdown-font-size: 1rem;
@@ -11916,6 +11916,11 @@ hr.wp-block-separator.is-style-dots:before {
   height: auto;
   width: 160px;
 }
+@media (min-width: 768px) {
+  #site-header .logo {
+    width: 250px;
+  }
+}
 @media (min-width: 992px) {
   #site-header .logo {
     width: 250px;
@@ -11928,14 +11933,6 @@ hr.wp-block-separator.is-style-dots:before {
 }
 #site-header .nav {
   flex-wrap: nowrap;
-}
-
-@media (min-width: 992px) {
-  #site-header-logonav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 
 #site-header-navbar-container {
@@ -11952,7 +11949,6 @@ hr.wp-block-separator.is-style-dots:before {
     position: relative;
     width: auto;
     top: auto;
-    margin-left: auto;
   }
 }
 #site-header-navbar-container .nav-container {
@@ -11973,6 +11969,7 @@ hr.wp-block-separator.is-style-dots:before {
     display: flex;
     align-items: center;
     width: auto;
+    gap: 1.5rem;
   }
 }
 #site-header-navbar-container .nav a, #site-header-navbar-container .nav .wp-block-button.btn-link .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav .wp-block-button__link {
@@ -12034,11 +12031,6 @@ hr.wp-block-separator.is-style-dots:before {
     align-items: center;
   }
 }
-@media (min-width: 992px) {
-  #site-header-navbar-container .nav > li + li {
-    margin-left: 1.5rem;
-  }
-}
 #site-header-navbar-container .nav > li.current-menu-item > a, #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-item > .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-item > .wp-block-button__link, #site-header-navbar-container .nav > li.current-menu-ancestor > a, #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-ancestor > .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-ancestor > .wp-block-button__link, #site-header-navbar-container .nav > li.current-menu-parent > a, #site-header-navbar-container .wp-block-button.btn-link .nav > li.current-menu-parent > .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav > li.current-menu-parent > .wp-block-button__link {
   color: #fff;
 }
@@ -12067,10 +12059,16 @@ hr.wp-block-separator.is-style-dots:before {
   }
 }
 #site-header-navbar-container .nav .dropdown-menu li + li {
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid #333333;
+}
+@media (min-width: 992px) {
+  #site-header-navbar-container .nav .dropdown-menu li + li {
+    border-top-color: #e9ecef;
+  }
 }
 #site-header-navbar-container .nav .dropdown-menu a, #site-header-navbar-container .nav .dropdown-menu .wp-block-button.btn-link .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav .dropdown-menu .wp-block-button__link {
-  padding-left: 3rem;
+  background: #1a1a1a;
+  padding-left: 2.5rem;
 }
 @media (min-width: 992px) {
   #site-header-navbar-container .nav .dropdown-menu a, #site-header-navbar-container .nav .dropdown-menu .wp-block-button.btn-link .wp-block-button__link, .wp-block-button.btn-link #site-header-navbar-container .nav .dropdown-menu .wp-block-button__link {
@@ -12124,8 +12122,8 @@ hr.wp-block-separator.is-style-dots:before {
 #site-header-utility-nav-container .nav {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: row;
+  justify-content: center;
   gap: 0.75rem;
 }
 @media (min-width: 768px) {
@@ -12195,6 +12193,20 @@ hr.wp-block-separator.is-style-dots:before {
 }
 #site-header .navbar-toggler[aria-expanded=true] rect.navbar-bars-btm {
   transform: rotate(-45deg);
+}
+
+@media (min-width: 992px) {
+  #site-header-logonav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 992px) {
+  #site-header-navbar-container {
+    margin-left: auto;
+  }
 }
 
 /*

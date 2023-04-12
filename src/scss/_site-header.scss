@@ -30,6 +30,10 @@ $nav-arrow-hover: str-replace(
 		height: auto;
 		width: $logo-width;
 
+		@include media-breakpoint-up(md) {
+			width: $logo-width-md;
+		}
+
 		@include media-breakpoint-up(lg) {
 			width: $logo-width-lg;
 		}
@@ -46,14 +50,6 @@ $nav-arrow-hover: str-replace(
 	}
 }
 
-#site-header-logonav-container {
-	@include media-breakpoint-up(lg) {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-}
-
 #site-header-navbar-container {
 	background: $primary;
 	position: absolute;
@@ -67,7 +63,6 @@ $nav-arrow-hover: str-replace(
 		position: relative;
 		width: auto;
 		top: auto;
-		margin-left: auto;
 	}
 
 	.nav-container {
@@ -86,6 +81,7 @@ $nav-arrow-hover: str-replace(
 			display: flex;
 			align-items: center;
 			width: auto;
+			gap: $grid-gutter-width;
 		}
 
 		a {
@@ -154,12 +150,6 @@ $nav-arrow-hover: str-replace(
 				align-items: center;
 			}
 
-			+ li {
-				@include media-breakpoint-up(lg) {
-					margin-left: $grid-gutter-width;
-				}
-			}
-
 			&.current-menu-item,
 			&.current-menu-ancestor,
 			&.current-menu-parent {
@@ -193,16 +183,22 @@ $nav-arrow-hover: str-replace(
 
 			li {
 				+ li {
-					border-top: 1px solid $gray-100;
+					border-top: 1px solid lighten($primary, 20%);
+
+					@include media-breakpoint-up(lg) {
+						border-top-color: $gray-200;
+					}
 				}
 			}
 
 			a {
-				padding-left: 3rem;
+				background: lighten($primary, 10%);
+				padding-left: $dropdown-padding-x-sm;
+
 				@include media-breakpoint-up(lg) {
 					background: #fff;
 					border-bottom: none;
-					padding: 0.5rem 0.75rem;
+					padding: $dropdown-padding-y $dropdown-padding-x;
 
 					&:hover,
 					&:active {
@@ -263,8 +259,8 @@ $nav-arrow-hover: str-replace(
 	.nav {
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		flex-direction: row;
+		justify-content: center;
 		gap: calc($grid-gutter-width / 2);
 
 		@include media-breakpoint-up(md) {
@@ -303,4 +299,6 @@ $nav-arrow-hover: str-replace(
 }
 
 @import "site-header/navbar-toggler";
+@import "site-header/site-header-standard";
+//@import "site-header/site-header-centered";
 @import "site-header/sticky";
