@@ -1,0 +1,1 @@
+This is a beta WordPress basetheme using Bootstrap 5. Requires ACF. Uses Laravel Mix/Webpack.
