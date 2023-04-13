@@ -15202,17 +15202,17 @@ body.acf_content #site-footer .site-footer__content,
 .editor-styles-wrapper #site-footer .site-footer__content {
   font-size: 0.75rem;
 }
+body.acf_content #site-footer .site-footer__content--b,
+.editor-styles-wrapper #site-footer .site-footer__content--b {
+  font-size: 0.75rem;
+}
 @media (min-width: 992px) {
-  body.acf_content #site-footer .site-footer__content,
-  .editor-styles-wrapper #site-footer .site-footer__content {
+  body.acf_content #site-footer .site-footer__content--b,
+  .editor-styles-wrapper #site-footer .site-footer__content--b {
     display: flex;
     justify-content: flex-end;
     text-align: right;
   }
-}
-body.acf_content #site-footer .site-footer__address,
-.editor-styles-wrapper #site-footer .site-footer__address {
-  font-size: 0.75rem;
 }
 body.acf_content #site-footer .site-footer__sub,
 .editor-styles-wrapper #site-footer .site-footer__sub {

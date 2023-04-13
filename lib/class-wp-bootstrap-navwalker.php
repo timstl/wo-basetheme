@@ -66,10 +66,10 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 
         $classes = empty($item->classes) ? array() : (array) $item->classes;
 
-        $classes[] = ($args->walker->has_children) ? 'dropdown' : '';
+        $classes[] = ($args->depth > 1 && $args->walker->has_children) ? 'dropdown' : '';
         $classes[] = 'nav-item';
         $classes[] = 'nav-item-' . $item->ID;
-        if ($depth && $args->walker->has_children) {
+        if ($depth && $args->depth > 1 && $args->walker->has_children) {
             $classes[] = 'dropdown-menu dropdown-menu-end';
         }
 
@@ -88,7 +88,7 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 
         $active_class = ($item->current || $item->current_item_ancestor || in_array("current_page_parent", $item->classes, true) || in_array("current-post-ancestor", $item->classes, true)) ? 'active' : '';
         $nav_link_class = ( $depth > 0 ) ? 'dropdown-item ' : 'nav-link ';
-        $attributes .= ( $args->walker->has_children ) ? ' class="'. $nav_link_class . $active_class . ' dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ' class="'. $nav_link_class . $active_class . '"';
+        $attributes .= ( $args->depth > 1 && $args->walker->has_children ) ? ' class="'. $nav_link_class . $active_class . ' dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : ' class="'. $nav_link_class . $active_class . '"';
 
         $item_output = $args->before;
         $item_output .= '<a' . $attributes . '>';

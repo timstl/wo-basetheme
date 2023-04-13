@@ -29,15 +29,15 @@
 
 	.site-footer__content {
 		font-size: $font-size-sm;
+	}
+
+	.site-footer__content--b {
+		font-size: $font-size-sm;
 		@include media-breakpoint-up(lg) {
 			display: flex;
 			justify-content: flex-end;
 			text-align: right;
 		}
-	}
-
-	.site-footer__address {
-		font-size: $font-size-sm;
 	}
 
 	.site-footer__sub {
