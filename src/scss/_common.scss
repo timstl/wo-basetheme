@@ -243,18 +243,6 @@ Add class 'has-btm-margin' to maintain a bottom margin on elements.
 	}
 }
 
-/*
-	404
-*/
-.no-results-404 {
-	.no-results {
-		padding: $grid-gutter-width * 2 0;
-		@include media-breakpoint-up(md) {
-			padding: 100px 0;
-		}
-	}
-}
-
 .titlegroup {
 	display: flex;
 	flex-direction: row;
@@ -270,17 +258,17 @@ Add class 'has-btm-margin' to maintain a bottom margin on elements.
 	}
 
 	> h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p {
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6,
+	> p {
 		margin-bottom: 0;
 	}
 }
 
-.flexline {
+.flexgroup {
 	display: flex;
 	gap: calc($grid-gutter-width / 2);
 	margin-bottom: 0.5em;
@@ -298,7 +286,7 @@ Add class 'has-btm-margin' to maintain a bottom margin on elements.
 }
 
 .grecaptcha-badge {
-	display: none;
+	//display: none;
 	.has-recaptcha & {
 		display: block;
 	}

@@ -11687,18 +11687,6 @@ Add class 'has-btm-margin' to maintain a bottom margin on elements.
 .search-form input[type=search] {
   border: 1px solid #dee2e6;
 }
-/*
-	404
-*/
-.no-results-404 .no-results {
-  padding: 3rem 0;
-}
-@media (min-width: 768px) {
-  .no-results-404 .no-results {
-    padding: 100px 0;
-  }
-}
-
 .titlegroup, .wp-block-group.is-style-flex-row {
   display: flex;
   flex-direction: row;
@@ -11713,32 +11701,32 @@ Add class 'has-btm-margin' to maintain a bottom margin on elements.
   margin-right: 0 !important;
 }
 .titlegroup > h1, .wp-block-group.is-style-flex-row > h1, .titlegroup > .h1, .wp-block-group.is-style-flex-row > .h1,
-.titlegroup h2,
-.wp-block-group.is-style-flex-row h2,
-.titlegroup .h2,
-.wp-block-group.is-style-flex-row .h2,
-.titlegroup h3,
-.wp-block-group.is-style-flex-row h3,
-.titlegroup .h3,
-.wp-block-group.is-style-flex-row .h3,
-.titlegroup h4,
-.wp-block-group.is-style-flex-row h4,
-.titlegroup .h4,
-.wp-block-group.is-style-flex-row .h4,
-.titlegroup h5,
-.wp-block-group.is-style-flex-row h5,
-.titlegroup .h5,
-.wp-block-group.is-style-flex-row .h5,
-.titlegroup h6,
-.wp-block-group.is-style-flex-row h6,
-.titlegroup .h6,
-.wp-block-group.is-style-flex-row .h6,
-.titlegroup p,
-.wp-block-group.is-style-flex-row p {
+.titlegroup > h2,
+.wp-block-group.is-style-flex-row > h2,
+.titlegroup > .h2,
+.wp-block-group.is-style-flex-row > .h2,
+.titlegroup > h3,
+.wp-block-group.is-style-flex-row > h3,
+.titlegroup > .h3,
+.wp-block-group.is-style-flex-row > .h3,
+.titlegroup > h4,
+.wp-block-group.is-style-flex-row > h4,
+.titlegroup > .h4,
+.wp-block-group.is-style-flex-row > .h4,
+.titlegroup > h5,
+.wp-block-group.is-style-flex-row > h5,
+.titlegroup > .h5,
+.wp-block-group.is-style-flex-row > .h5,
+.titlegroup > h6,
+.wp-block-group.is-style-flex-row > h6,
+.titlegroup > .h6,
+.wp-block-group.is-style-flex-row > .h6,
+.titlegroup > p,
+.wp-block-group.is-style-flex-row > p {
   margin-bottom: 0;
 }
 
-.flexline {
+.flexgroup {
   display: flex;
   gap: 0.75rem;
   margin-bottom: 0.5em;
@@ -11747,7 +11735,7 @@ Add class 'has-btm-margin' to maintain a bottom margin on elements.
   justify-content: flex-start;
 }
 @media (min-width: 992px) {
-  .flexline {
+  .flexgroup {
     flex-direction: row;
     align-items: center;
   }
@@ -11757,9 +11745,6 @@ Add class 'has-btm-margin' to maintain a bottom margin on elements.
   overflow: hidden;
 }
 
-.grecaptcha-badge {
-  display: none;
-}
 .has-recaptcha .grecaptcha-badge {
   display: block;
 }
@@ -12308,7 +12293,7 @@ hr.wp-block-separator.is-style-dots:before {
   font-size: 0.75rem;
   margin-top: 1.5rem;
 }
-#site-footer .site-footer__sub .flexline {
+#site-footer .site-footer__sub .flexgroup {
   justify-content: space-between;
 }
 

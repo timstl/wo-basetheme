@@ -61,7 +61,7 @@
         </div>
         <div class="site-footer__sub">
             <div class="container">
-                <div class="flexline">
+                <div class="flexgroup">
                     <?php get_template_part('template-parts/footer/part', 'copyright'); ?>
                     <?php if ($footer_nav_utility) : ?>
                     <div role="navigation" id="site-footer-utility-navbar-container">
