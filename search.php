@@ -38,7 +38,7 @@ get_header(); ?>
                 array(
                     'prev_text'          => esc_attr__('Previous page', 'basetheme'),
                     'next_text'          => esc_attr__('Next page', 'basetheme'),
-                    'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_attr__('Page', 'basetheme') . ' </span>',
+                    'before_page_number' => '<span class="meta-nav visually-hidden visually-hidden-focusable">' . esc_attr__('Page', 'basetheme') . ' </span>',
                 )
             );
 

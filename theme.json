@@ -72,14 +72,9 @@
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\"Helvetica Neue\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\"Segoe UI Symbol\"",
+					"fontFamily": "var(--bs-font-sans-serif)",
 					"slug": "sans-serif",
 					"name": "Sans Serif"
-				},
-				{
-					"fontFamily": "serif",
-					"slug": "serif",
-					"name": "Serif"
 				}
 			],
 			"fontSizes": [
@@ -90,7 +85,7 @@
 				},
 				{
 					"slug": "base",
-					"size": "1rem",
+					"size": "var(--bs-body-font-size)",
 					"name": "Normal"
 				},
 				{

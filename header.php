@@ -16,9 +16,9 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta charset="<?php bloginfo('charset'); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -26,12 +26,12 @@
 /**
  * Output "Custom Scripts (after body tag)" from the admin Site Settings.
  */
-get_template_part( 'template-parts/header/part', 'bodyscripts' );
+get_template_part('template-parts/header/part', 'bodyscripts');
 ?>
 <div id="wrapper">
-	<a href="#site-main" class="visually-hidden visually-hidden-focusable skipnav"><?php esc_attr_e( 'Skip to main content', 'wo' ); ?></a>
-	<?php get_template_part( 'template-parts/header/part', 'alert' ); ?>
-	<header id="site-header">
-		<?php get_template_part( 'template-parts/header/part', 'logo_navigation' ); ?>
-	</header>
-	<main id="site-main">
+    <a href="#site-main" class="visually-hidden visually-hidden-focusable"><?php esc_attr_e('Skip to main content', 'wo'); ?></a>
+    <?php get_template_part('template-parts/header/part', 'alert'); ?>
+    <header id="site-header">
+        <?php get_template_part('template-parts/header/part', 'logo_navigation'); ?>
+    </header>
+    <main id="site-main">

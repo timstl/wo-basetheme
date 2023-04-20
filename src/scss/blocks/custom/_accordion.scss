@@ -27,7 +27,7 @@
 			align-items: flex-start;
 			justify-content: space-between;
 			transition: color $speed $ease;
-			gap: 2em;
+			gap: $grid-gutter-width-half;
 			text-align: left;
 			width: 100%;
 
@@ -54,7 +54,7 @@
 
 	.accordion-content {
 		.in {
-			padding-top: calc($grid-gutter-width / 2);
+			padding-top: $grid-gutter-width-half;
 
 			@include media-breakpoint-up(lg) {
 				max-width: 80%;

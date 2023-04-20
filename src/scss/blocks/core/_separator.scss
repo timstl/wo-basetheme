@@ -1,7 +1,7 @@
 hr,
 hr.wp-block-separator {
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
+	margin-top: $paragraph-margin-bottom;
+	margin-bottom: $paragraph-margin-bottom;
 	max-width: none;
 
 	&:not(.is-style-wide):not(.is-style-dots) {
@@ -14,7 +14,7 @@ hr.wp-block-separator {
 
 	&.is-style-dots {
 		&:before {
-			font-size: 3em;
+			font-size: $font-size-lg;
 		}
 	}
 }

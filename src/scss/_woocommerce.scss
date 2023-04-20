@@ -35,7 +35,7 @@
 			&:not(.variations_form) {
 				background: $gray-100;
 				overflow: hidden;
-				padding: calc($grid-gutter-width / 2);
+				padding: $grid-gutter-width-half;
 			}
 
 			.button {
@@ -65,12 +65,12 @@
 		}
 
 		p.price {
-			margin-bottom: calc($grid-gutter-width / 2);
+			margin-bottom: $grid-gutter-width-half;
 		}
 
 		.woocommerce-variation-price {
 			display: none;
-			margin-bottom: calc($grid-gutter-width / 2);
+			margin-bottom: $grid-gutter-width-half;
 		}
 	}
 }

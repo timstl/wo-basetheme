@@ -1,6 +1,6 @@
 .wp-block-image {
 	figcaption {
-		@include font-italic(); // See mixins.scss
+		font-style: italic;
 	}
 
 	> a > img,

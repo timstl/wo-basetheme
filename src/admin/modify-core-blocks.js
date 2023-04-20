@@ -30,8 +30,13 @@ wp.domReady(function () {
 		label: "Row (No Wrap)",
 	});
 
-	/*wp.blocks.registerBlockStyle("core/button", {
-	name: "alt",
-	label: "Alternate Color",
-});*/
+	wp.blocks.registerBlockStyle("core/button", {
+		name: "alt",
+		label: "Alternate Color",
+	});
+
+	wp.blocks.registerBlockStyle("core/table", {
+		name: "striped",
+		label: "Striped",
+	});
 });

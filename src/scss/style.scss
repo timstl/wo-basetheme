@@ -9,19 +9,17 @@
 @import "mixins";
 
 // Common styles
+@import "utilities";
 @import "common-frontend";
 @import "common";
 @import "social";
 
-// woocommerce
-// @import "woocommerce";
-
 // Blocks and widgets
-@import "wordpress";
 @import "blocks";
-@import "widgets";
+// @import "widgets";
 @import "alertmessage";
 // @import "cf7";
+// @import "woocommerce";
 
 // Template parts and templates
 @import "site-header";
@@ -30,6 +28,3 @@
 
 // Animations
 @import "animations";
-
-// Utilities
-@import "utilities";

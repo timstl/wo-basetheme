@@ -1,13 +1,9 @@
-// ============================================================================================= //
-//                                           FUNCTIONS                                           //
-// ============================================================================================= //
-
 @use "sass:math";
 @use "sass:meta";
 
-///
-/// Strip.
-///
+/**
+	Strip
+**/
 @function strip($value) {
 	@if meta.type-of($value) != "number" {
 		@error "Invalid `#{meta.type-of($value)}` type. Choose a number type instead.";
@@ -19,35 +15,10 @@
 }
 
 /*
-	With some fonts, we may need to return a different font here.
-	With others we just return font-style or font-weight.
-
-	Usage: @include font-italic();
-*/
-@mixin font-italic() {
-	font-style: italic;
-}
-
-@mixin font-bold() {
-	font-weight: $font-weight-bold;
-}
-
-/*
-  Mixin to zero-out ULs, OLs, LIs.
-*/
-@mixin resetlist() {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-/*
 	Make caluclating REMs from Pixels much easier.
 	Usage: font-size: rem-calc(24);
 */
-/*
-	Bootstrap 4 uses 1rem for the HTML element
-*/
+
 $rem-base: 16px;
 
 @function convert-to-rem($value, $base-value: $rem-base) {

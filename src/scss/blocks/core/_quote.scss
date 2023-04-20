@@ -1,34 +1,37 @@
+$quote-size-px: rem-calc(155);
+$quote-size-px-sm: calc($quote-size-px / 2);
+
 .wp-block-quote {
 	border-left: none;
-	margin-bottom: 1.5em;
+	margin-bottom: $paragraph-margin-bottom;
 	position: relative;
 
 	@include media-breakpoint-up(lg) {
-		padding-left: rem-calc(75);
+		padding-left: $quote-size-px-sm;
 	}
 
 	&:before {
 		display: inline-block;
 		position: absolute;
-		font-size: rem-calc(75);
+		font-size: $quote-size-px-sm;
 		line-height: 1;
 		content: "\201C";
-		left: calc(rem-calc(75) / -4);
+		left: calc($quote-size-px-sm / -4);
 		top: -0.15em;
 
 		@include media-breakpoint-up(lg) {
 			left: 0;
-			font-size: rem-calc(155);
+			font-size: rem-calc($quote-size-px);
 		}
 	}
 
 	p {
-		margin-bottom: 1em;
+		margin-bottom: $paragraph-margin-bottom * 0.6666;
 	}
 
 	cite {
 		font-size: $font-size-base;
-		font-weight: 700;
+		font-weight: $font-weight-bold;
 
 		&:before {
 			content: "\2013";

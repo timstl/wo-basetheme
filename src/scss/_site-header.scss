@@ -261,7 +261,7 @@ $nav-arrow-hover: str-replace(
 		align-items: center;
 		flex-direction: row;
 		justify-content: center;
-		gap: calc($grid-gutter-width / 2);
+		gap: $grid-gutter-width-half;
 
 		@include media-breakpoint-up(md) {
 			justify-content: flex-end;
@@ -279,7 +279,7 @@ $nav-arrow-hover: str-replace(
 
 			+ li {
 				@include media-breakpoint-up(lg) {
-					margin-left: calc($grid-gutter-width / 2);
+					margin-left: $grid-gutter-width-half;
 				}
 			}
 

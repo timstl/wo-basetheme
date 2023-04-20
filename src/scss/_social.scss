@@ -1,9 +1,9 @@
 .social {
-	@include resetlist();
+	@extend %resetlist;
 
 	display: flex;
 	flex-direction: row;
-	gap: $grid-gutter-width / 2;
+	gap: $grid-gutter-width-half;
 	font-size: $font-size-md;
 
 	a {

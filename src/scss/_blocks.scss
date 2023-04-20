@@ -5,16 +5,15 @@
 @import "blocks/align";
 @import "blocks/core/button";
 @import "blocks/core/columns";
-//@import "blocks/core/gallery";
+@import "blocks/core/gallery";
 @import "blocks/core/group";
-//@import "blocks/core/heading";
-//@import "blocks/core/image";
-//@import "blocks/core/media_and_text";
+@import "blocks/core/heading";
+@import "blocks/core/image";
+@import "blocks/core/media_and_text";
 @import "blocks/core/quote";
 @import "blocks/core/separator";
-//@import "blocks/core/table";
-//@import "blocks/core/video";
-//@import "blocks/core/widgets";
+@import "blocks/core/table";
+@import "blocks/core/video";
 
 // Add custom blocks here.
-// @import "blocks/custom/accordion";
+@import "blocks/custom/accordion";

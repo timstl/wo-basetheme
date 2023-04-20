@@ -10,12 +10,12 @@
 
 	&:not(.is-style-outline) {
 		.wp-block-button__link {
-			@extend .btn-secondary;
+			@extend .btn-primary;
 		}
 
 		&.is-style-alt {
 			.wp-block-button__link {
-				@extend .btn-success;
+				@extend .btn-secondary;
 			}
 		}
 	}
@@ -45,7 +45,7 @@
 
 	&.is-style-outline {
 		.wp-block-button__link {
-			@extend .btn-outline-secondary;
+			@extend .btn-outline-primary;
 		}
 	}
 }

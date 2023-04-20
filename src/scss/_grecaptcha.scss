@@ -1,0 +1,10 @@
+.grecaptcha-badge {
+	display: none;
+
+	/**
+		Add class has-recaptcha to page body.
+	**/
+	.has-recaptcha & {
+		display: block;
+	}
+}

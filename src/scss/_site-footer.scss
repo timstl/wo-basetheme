@@ -13,7 +13,7 @@
 	}
 
 	.social {
-		margin-bottom: calc($grid-gutter-width / 2);
+		margin-bottom: $grid-gutter-width-half;
 
 		@include media-breakpoint-up(lg) {
 			justify-content: flex-end;
@@ -43,7 +43,7 @@
 	.site-footer__sub {
 		background: darken($primary, 10%);
 		color: $gray-300;
-		padding: calc($grid-gutter-width / 2) 0;
+		padding: $grid-gutter-width-half 0;
 		font-size: $font-size-sm;
 		margin-top: $grid-gutter-width;
 
@@ -58,7 +58,7 @@
 	padding: 0;
 
 	.nav {
-		margin-bottom: calc($grid-gutter-width / 2);
+		margin-bottom: $grid-gutter-width-half;
 
 		li {
 			+ li {
