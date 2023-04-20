@@ -1,14 +1,39 @@
 hr,
 hr.wp-block-separator {
-	margin-top: $paragraph-margin-bottom;
-	margin-bottom: $paragraph-margin-bottom;
+	border-bottom-width: 1px;
+	position: relative;
+	margin-top: $grid-gutter-width;
+	margin-bottom: $grid-gutter-width;
 	max-width: none;
 
+	@include media-breakpoint-up(lg) {
+		margin-top: $grid-gutter-width * 2;
+		margin-bottom: $grid-gutter-width * 2;
+	}
+
 	&:not(.is-style-wide):not(.is-style-dots) {
-		max-width: none;
+		width: 100%;
+
+		&.has-background {
+			height: 1px;
+		}
+
+		&:not(.alignfull):not(.aligncenter) {
+			@extend .container;
+		}
+
+		&:not(.alignwide):not(.alignfull):not(.aligncenter) {
+			@include media-breakpoint-up(lg) {
+				max-width: map-get($container-max-widths, "lg");
+			}
+		}
 
 		&.alignfull {
-			width: 100%;
+			max-width: none;
+		}
+
+		&.aligncenter {
+			max-width: 100px;
 		}
 	}
 
