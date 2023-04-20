@@ -788,7 +788,7 @@ body.acf_content .figure-caption,
   color: #6c757d;
 }
 body.acf_content .container, body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
 body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
 body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
 .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -803,6 +803,7 @@ body.acf_content .container-sm,
 .editor-styles-wrapper .container,
 .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
 .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
+.editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
 .editor-styles-wrapper .wp-block-group:not(.alignfull),
 .editor-styles-wrapper .wp-block-columns:not(.alignfull),
 .editor-styles-wrapper .alignwide,
@@ -828,7 +829,7 @@ body.acf_content .container-sm,
 }
 @media (min-width: 576px) {
   body.acf_content .container-sm, body.acf_content .container, body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -838,6 +839,7 @@ body.acf_content .container-sm,
   .editor-styles-wrapper .container,
   .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
   .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
+  .editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
   .editor-styles-wrapper .wp-block-group:not(.alignfull),
   .editor-styles-wrapper .wp-block-columns:not(.alignfull),
   .editor-styles-wrapper .alignwide,
@@ -852,7 +854,7 @@ body.acf_content .container-sm,
 }
 @media (min-width: 768px) {
   body.acf_content .container-md, body.acf_content .container-sm, body.acf_content .container, body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -863,6 +865,7 @@ body.acf_content .container-sm,
   .editor-styles-wrapper .container,
   .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
   .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
+  .editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
   .editor-styles-wrapper .wp-block-group:not(.alignfull),
   .editor-styles-wrapper .wp-block-columns:not(.alignfull),
   .editor-styles-wrapper .alignwide,
@@ -877,7 +880,7 @@ body.acf_content .container-sm,
 }
 @media (min-width: 992px) {
   body.acf_content .container-lg, body.acf_content .container-md, body.acf_content .container-sm, body.acf_content .container, body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -889,6 +892,7 @@ body.acf_content .container-sm,
   .editor-styles-wrapper .container,
   .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
   .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
+  .editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
   .editor-styles-wrapper .wp-block-group:not(.alignfull),
   .editor-styles-wrapper .wp-block-columns:not(.alignfull),
   .editor-styles-wrapper .alignwide,
@@ -903,7 +907,7 @@ body.acf_content .container-sm,
 }
 @media (min-width: 1200px) {
   body.acf_content .container-xl, body.acf_content .container-lg, body.acf_content .container-md, body.acf_content .container-sm, body.acf_content .container, body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -916,6 +920,7 @@ body.acf_content .container-sm,
   .editor-styles-wrapper .container,
   .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
   .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
+  .editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
   .editor-styles-wrapper .wp-block-group:not(.alignfull),
   .editor-styles-wrapper .wp-block-columns:not(.alignfull),
   .editor-styles-wrapper .alignwide,
@@ -930,7 +935,7 @@ body.acf_content .container-sm,
 }
 @media (min-width: 1400px) {
   body.acf_content .container-xxl, body.acf_content .container-xl, body.acf_content .container-lg, body.acf_content .container-md, body.acf_content .container-sm, body.acf_content .container, body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -944,6 +949,7 @@ body.acf_content .container-sm,
   .editor-styles-wrapper .container,
   .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
   .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
+  .editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
   .editor-styles-wrapper .wp-block-group:not(.alignfull),
   .editor-styles-wrapper .wp-block-columns:not(.alignfull),
   .editor-styles-wrapper .alignwide,
@@ -5475,7 +5481,7 @@ body.acf_content .navbar,
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
-body.acf_content .navbar > .container, body.acf_content .navbar > hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .navbar > .wp-block-group:not(.alignfull), body.acf_content .navbar > .wp-block-columns:not(.alignfull), body.acf_content .navbar > .alignwide, body.acf_content .navbar > .container-narrow, body.acf_content .navbar > .container-wide, body.acf_content .navbar > .container-full, body.acf_content .navbar > hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+body.acf_content .navbar > .container, body.acf_content .navbar > hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .navbar > .wp-block-pullquote:not(.alignfull), body.acf_content .navbar > .wp-block-group:not(.alignfull), body.acf_content .navbar > .wp-block-columns:not(.alignfull), body.acf_content .navbar > .alignwide, body.acf_content .navbar > .container-narrow, body.acf_content .navbar > .container-wide, body.acf_content .navbar > .container-full, body.acf_content .navbar > hr:not(.is-style-wide):not(.is-style-dots).alignfull,
 body.acf_content .navbar > hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull, body.acf_content .navbar > .alignfull,
 body.acf_content .navbar > .container-fluid,
 body.acf_content .navbar > .container-sm,
@@ -5486,6 +5492,7 @@ body.acf_content .navbar > .container-xxl,
 .editor-styles-wrapper .navbar > .container,
 .editor-styles-wrapper .navbar > hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
 .editor-styles-wrapper .navbar > hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
+.editor-styles-wrapper .navbar > .wp-block-pullquote:not(.alignfull),
 .editor-styles-wrapper .navbar > .wp-block-group:not(.alignfull),
 .editor-styles-wrapper .navbar > .wp-block-columns:not(.alignfull),
 .editor-styles-wrapper .navbar > .alignwide,
@@ -12132,20 +12139,46 @@ body.acf_content .wp-block-image.alignfull > img,
   height: auto;
   width: 100%;
 }
-body.acf_content .wp-block-quote,
-.editor-styles-wrapper .wp-block-quote {
-  border-left: none;
-  margin-bottom: 1.5em;
+body.acf_content .wp-block-pullquote,
+.editor-styles-wrapper .wp-block-pullquote {
+  border-top: none;
+  border-bottom: none;
+  font-size: 1rem;
+  padding: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+@media (min-width: 992px) {
+  body.acf_content .wp-block-pullquote,
+  .editor-styles-wrapper .wp-block-pullquote {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  body.acf_content .wp-block-pullquote:not(.alignwide):not(.alignfull),
+  .editor-styles-wrapper .wp-block-pullquote:not(.alignwide):not(.alignfull) {
+    max-width: 960px;
+  }
+}
+body.acf_content .wp-block-pullquote.has-background,
+.editor-styles-wrapper .wp-block-pullquote.has-background {
+  padding: 0.75rem;
+}
+body.acf_content .wp-block-pullquote blockquote,
+.editor-styles-wrapper .wp-block-pullquote blockquote {
+  margin-bottom: 0;
   position: relative;
 }
 @media (min-width: 992px) {
-  body.acf_content .wp-block-quote,
-  .editor-styles-wrapper .wp-block-quote {
+  body.acf_content .wp-block-pullquote blockquote,
+  .editor-styles-wrapper .wp-block-pullquote blockquote {
     padding-left: 4.84375rem;
   }
 }
-body.acf_content .wp-block-quote:before,
-.editor-styles-wrapper .wp-block-quote:before {
+body.acf_content .wp-block-pullquote blockquote:before,
+.editor-styles-wrapper .wp-block-pullquote blockquote:before {
   display: inline-block;
   position: absolute;
   font-size: 4.84375rem;
@@ -12155,22 +12188,30 @@ body.acf_content .wp-block-quote:before,
   top: -0.15em;
 }
 @media (min-width: 992px) {
-  body.acf_content .wp-block-quote:before,
-  .editor-styles-wrapper .wp-block-quote:before {
+  body.acf_content .wp-block-pullquote blockquote:before,
+  .editor-styles-wrapper .wp-block-pullquote blockquote:before {
     left: 0;
-    font-size: 0.60546875rem;
+    font-size: 9.6875rem;
   }
 }
-body.acf_content .wp-block-quote p,
-.editor-styles-wrapper .wp-block-quote p {
+body.acf_content .wp-block-pullquote p,
+.editor-styles-wrapper .wp-block-pullquote p {
   margin-bottom: 0.9999em;
 }
+body.acf_content .wp-block-quote,
+.editor-styles-wrapper .wp-block-quote {
+  font-style: italic;
+}
+body.acf_content .wp-block-pullquote cite,
 body.acf_content .wp-block-quote cite,
+.editor-styles-wrapper .wp-block-pullquote cite,
 .editor-styles-wrapper .wp-block-quote cite {
   font-size: 1rem;
   font-weight: 700;
 }
+body.acf_content .wp-block-pullquote cite:before,
 body.acf_content .wp-block-quote cite:before,
+.editor-styles-wrapper .wp-block-pullquote cite:before,
 .editor-styles-wrapper .wp-block-quote cite:before {
   content: "–";
   display: inline-block;

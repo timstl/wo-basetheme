@@ -124,6 +124,11 @@
 						"bottom": "var(--bs-gutter)"
 					}
 				}
+			},
+			"core/pullquote": {
+				"supports": {
+					"align": false
+				}
 			}
 		}
 	}

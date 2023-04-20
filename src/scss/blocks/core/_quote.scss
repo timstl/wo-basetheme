@@ -1,34 +1,69 @@
 $quote-size-px: rem-calc(155);
 $quote-size-px-sm: calc($quote-size-px / 2);
 
-.wp-block-quote {
-	border-left: none;
-	margin-bottom: $paragraph-margin-bottom;
-	position: relative;
+.wp-block-pullquote {
+	border-top: none;
+	border-bottom: none;
+	font-size: $font-size-base;
+	padding: 0;
+	margin-top: $grid-gutter-width;
+	margin-bottom: $grid-gutter-width;
+	text-align: left;
 
 	@include media-breakpoint-up(lg) {
-		padding-left: $quote-size-px-sm;
+		margin-top: $grid-gutter-width * 2;
+		margin-bottom: $grid-gutter-width * 2;
 	}
 
-	&:before {
-		display: inline-block;
-		position: absolute;
-		font-size: $quote-size-px-sm;
-		line-height: 1;
-		content: "\201C";
-		left: calc($quote-size-px-sm / -4);
-		top: -0.15em;
+	&:not(.alignfull) {
+		@extend .container;
+	}
+
+	&:not(.alignwide):not(.alignfull) {
+		@include media-breakpoint-up(lg) {
+			max-width: map-get($container-max-widths, "lg");
+		}
+	}
+
+	&.has-background {
+		padding: $grid-gutter-width-half;
+	}
+
+	blockquote {
+		margin-bottom: 0;
+		position: relative;
 
 		@include media-breakpoint-up(lg) {
-			left: 0;
-			font-size: rem-calc($quote-size-px);
+			padding-left: $quote-size-px-sm;
+		}
+
+		&:before {
+			display: inline-block;
+			position: absolute;
+			font-size: $quote-size-px-sm;
+			line-height: 1;
+			content: "\201C";
+			left: calc($quote-size-px-sm / -4);
+			top: -0.15em;
+
+			@include media-breakpoint-up(lg) {
+				left: 0;
+				font-size: $quote-size-px;
+			}
 		}
 	}
 
 	p {
 		margin-bottom: $paragraph-margin-bottom * 0.6666;
 	}
+}
 
+.wp-block-quote {
+	font-style: italic;
+}
+
+.wp-block-pullquote,
+.wp-block-quote {
 	cite {
 		font-size: $font-size-base;
 		font-weight: $font-weight-bold;
