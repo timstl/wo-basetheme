@@ -12522,6 +12522,7 @@ body.acf_content #site-header-utility-nav-container .nav > li.has-btn + .has-btn
   body.acf_content #site-header-logonav-container,
   .editor-styles-wrapper #site-header-logonav-container {
     display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
   }

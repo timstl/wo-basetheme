@@ -10131,6 +10131,7 @@ hr.wp-block-separator.is-style-dots:before {
 @media (min-width: 992px) {
   #site-header-logonav-container {
     display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
   }
