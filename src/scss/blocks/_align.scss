@@ -1,11 +1,7 @@
 .alignwide {
-	&:not(.wp-block-separator) {
-		@extend .container;
-	}
+	@extend .container;
 }
 
 .alignfull {
-	&:not(.wp-block-separator) {
-		@extend .container-full;
-	}
+	@extend .container-full;
 }

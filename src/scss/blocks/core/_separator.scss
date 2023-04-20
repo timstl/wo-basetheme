@@ -29,7 +29,7 @@ hr.wp-block-separator {
 		}
 
 		&.alignfull {
-			max-width: none;
+			@extend .container-full;
 		}
 
 		&.aligncenter {
