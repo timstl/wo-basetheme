@@ -3,4 +3,8 @@
 	--bs-font-size-md: #{$font-size-md};
 	--bs-font-size-lg: #{$font-size-lg};
 	--bs-font-size-xl: #{$font-size-xl};
+
+	@if variable-exists(font-family-serif) {
+		--bs-font-serif: $font-family-serif;
+	}
 }

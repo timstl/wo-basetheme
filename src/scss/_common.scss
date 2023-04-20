@@ -172,3 +172,7 @@ b {
 		opacity $speed $ease, border-color $speed $ease, box-shadow $speed $ease,
 		transform $speed $ease;
 }
+
+a {
+	transition: color $ease $speed;
+}

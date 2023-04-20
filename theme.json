@@ -75,6 +75,11 @@
 					"fontFamily": "var(--bs-font-sans-serif)",
 					"slug": "sans-serif",
 					"name": "Sans Serif"
+				},
+				{
+					"fontFamily": "var(--bs-font-serif)",
+					"slug": "serif",
+					"name": "Serif"
 				}
 			],
 			"fontSizes": [
