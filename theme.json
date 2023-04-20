@@ -84,11 +84,6 @@
 					"name": "Small"
 				},
 				{
-					"slug": "base",
-					"size": "var(--bs-body-font-size)",
-					"name": "Normal"
-				},
-				{
 					"slug": "medium",
 					"size": "1.25rem",
 					"name": "Medium"
