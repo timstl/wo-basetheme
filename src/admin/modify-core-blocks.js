@@ -35,11 +35,6 @@ wp.domReady(function () {
 		label: "Alternate Color",
 	});
 
-	wp.blocks.registerBlockStyle("core/table", {
-		name: "striped",
-		label: "Striped",
-	});
-
 	wp.blocks.registerBlockStyle("core/list", {
 		name: "listgroup",
 		label: "List Group",

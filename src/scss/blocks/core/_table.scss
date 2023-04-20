@@ -1,6 +1,25 @@
 .wp-block-table {
+	&:not(.alignfull) {
+		@extend .container;
+	}
+
+	&:not(.alignwide):not(.alignfull) {
+		@include media-breakpoint-up(lg) {
+			max-width: map-get($container-max-widths, "lg");
+		}
+	}
+
 	table {
 		@extend .table;
+
+		thead,
+		tbody {
+			border-bottom: none;
+		}
+
+		tfoot {
+			border-top: none;
+		}
 	}
 
 	&.is-style-stripes {
