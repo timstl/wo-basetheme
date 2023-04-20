@@ -11,5 +11,7 @@
 		"mode": "auto",
 		"renderTemplate": "block-accordion.php"
 	},
-	"supports": {}
+	"supports": {
+		"align": false
+	}
 }

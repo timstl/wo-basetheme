@@ -11,5 +11,7 @@
 		"mode": "auto",
 		"renderTemplate": "block-sociallinks.php"
 	},
-	"supports": {}
+	"supports": {
+		"align": false
+	}
 }
