@@ -12095,7 +12095,6 @@ body.acf_content hr.wp-block-separator,
 .editor-styles-wrapper hr,
 .editor-styles-wrapper hr.wp-block-separator {
   border-bottom-width: 1px;
-  position: relative;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   max-width: none;
