@@ -80,22 +80,22 @@
 			"fontSizes": [
 				{
 					"slug": "small",
-					"size": "0.75rem",
+					"size": "var(--bs-font-size-sm)",
 					"name": "Small"
 				},
 				{
 					"slug": "medium",
-					"size": "1.25rem",
+					"size": "var(--bs-font-size-md)",
 					"name": "Medium"
 				},
 				{
 					"slug": "large",
-					"size": "2.25rem",
+					"size": "var(--bs-font-size-lg)",
 					"name": "Large"
 				},
 				{
 					"slug": "extra-large",
-					"size": "3rem",
+					"size": "var(--bs-font-size-xl)",
 					"name": "Extra large"
 				}
 			]

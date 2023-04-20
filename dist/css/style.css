@@ -35,6 +35,13 @@ $gray-400: #ccc;*/
 /* 
 	Site Header
 */
+:root {
+  --bs-font-size-sm: 0.75rem;
+  --bs-font-size-md: 1.25rem;
+  --bs-font-size-lg: 2.25rem;
+  --bs-font-size-xl: 3rem;
+}
+
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
