@@ -1,0 +1,10 @@
+.is-style-listgroup {
+	@extend .list-group;
+	@extend .list-group-flush;
+
+	margin-bottom: $grid-gutter-width;
+
+	li {
+		@extend .list-group-item;
+	}
+}

@@ -130,6 +130,11 @@ Type
 	}
 }
 
+ul,
+ol {
+	margin-bottom: $paragraph-margin-bottom;
+}
+
 p {
 	&.has-medium-font-size {
 		margin-bottom: $paragraph-margin-bottom * 0.6666;

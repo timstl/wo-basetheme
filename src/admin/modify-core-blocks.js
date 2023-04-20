@@ -39,4 +39,9 @@ wp.domReady(function () {
 		name: "striped",
 		label: "Striped",
 	});
+
+	wp.blocks.registerBlockStyle("core/list", {
+		name: "listgroup",
+		label: "List Group",
+	});
 });
