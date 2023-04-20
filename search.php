@@ -11,7 +11,7 @@
  */
 
 get_header(); ?>    
-        <div class="container container-spaced">
+        <div class="container padded">
 
         <?php if (have_posts()) : ?>
             <header class="page-header">

@@ -11,7 +11,7 @@
  */
 
 get_header(); ?>
-    <div class="no-results-404 container container-spaced">
+    <div class="no-results-404 container padded">
         <?php get_template_part('template-parts/content', 'none'); ?>
     </div>
 <?php

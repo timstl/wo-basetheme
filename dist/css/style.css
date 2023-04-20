@@ -9452,6 +9452,17 @@ textarea.form-control-lg {
   margin-bottom: 0;
 }
 
+.padded, .wp-block-group.has-background {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 992px) {
+  .padded, .wp-block-group.has-background {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
+
 .container-full, .alignfull {
   max-width: none;
 }
@@ -9465,32 +9476,6 @@ textarea.form-control-lg {
 @media (min-width: 992px) {
   .container-narrow {
     max-width: 720px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .container-sm-none {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: none;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .container-md-none {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: none;
-  }
-}
-
-.container-spaced {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-@media (min-width: 992px) {
-  .container-spaced {
-    padding-top: 3rem;
   }
 }
 

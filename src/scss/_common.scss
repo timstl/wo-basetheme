@@ -17,31 +17,6 @@
 	}
 }
 
-.container-sm-none {
-	@include media-breakpoint-down(sm) {
-		padding-left: 0;
-		padding-right: 0;
-		max-width: none;
-	}
-}
-
-.container-md-none {
-	@include media-breakpoint-down(md) {
-		padding-left: 0;
-		padding-right: 0;
-		max-width: none;
-	}
-}
-
-.container-spaced {
-	padding-top: $grid-gutter-width;
-	padding-bottom: $grid-gutter-width;
-
-	@include media-breakpoint-up(lg) {
-		padding-top: $grid-gutter-width * 2;
-	}
-}
-
 /*
 	Add default bottom margin to columns.
 	Remove that bottom margin if column is changed at different breakpoints.

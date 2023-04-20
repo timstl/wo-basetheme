@@ -8,6 +8,8 @@
 	}
 
 	&.has-background {
+		@extend .padded;
+
 		> *:last-child {
 			margin-bottom: 0;
 		}

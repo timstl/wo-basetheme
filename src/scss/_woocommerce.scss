@@ -1,5 +1,5 @@
 .woocommerce-order {
-	@extend .container, .container-spaced;
+	@extend .container, .padded;
 
 	.woocommerce-thankyou-order-received {
 		@extend h1;
@@ -101,7 +101,7 @@
 }
 
 .woocommerce-checkout {
-	.container-spaced {
+	.padded {
 		margin-bottom: $grid-gutter-width * 2;
 	}
 

@@ -141,66 +141,65 @@ body.acf_content,
   /*
   	Make caluclating REMs from Pixels much easier.
   	Usage: font-size: rem-calc(24);
-  */
-  /*
-  	Add default bottom margin to columns.
-  	Remove that bottom margin if column is changed at different breakpoints.
-  	Add class 'has-btm-margin' to maintain a bottom margin on elements.
+  */ /*
+	Add default bottom margin to columns.
+	Remove that bottom margin if column is changed at different breakpoints.
+	Add class 'has-btm-margin' to maintain a bottom margin on elements.
 
-  .col {
-  	margin-bottom: $grid-gutter-width;
+.col {
+	margin-bottom: $grid-gutter-width;
 
-  	&[class*="col-sm-"]:not(.has-btm-margin) {
-  		@include media-breakpoint-up(sm) {
-  			margin-bottom: 0;
-  		}
-  	}
+	&[class*="col-sm-"]:not(.has-btm-margin) {
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 0;
+		}
+	}
 
-  	&[class*="col-md-"]:not(.has-btm-margin) {
-  		@include media-breakpoint-up(md) {
-  			margin-bottom: 0;
-  		}
-  	}
+	&[class*="col-md-"]:not(.has-btm-margin) {
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+		}
+	}
 
-  	&[class*="col-lg-"]:not(.has-btm-margin) {
-  		@include media-breakpoint-up(lg) {
-  			margin-bottom: 0;
-  		}
-  	}
+	&[class*="col-lg-"]:not(.has-btm-margin) {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+	}
 
-  	&[class*="col-xl-"]:not(.has-btm-margin) {
-  		@include media-breakpoint-up(xl) {
-  			margin-bottom: 0;
-  		}
-  	}
+	&[class*="col-xl-"]:not(.has-btm-margin) {
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 0;
+		}
+	}
 
-  	&.nobtm {
-  		margin-bottom: 0;
-  	}
+	&.nobtm {
+		margin-bottom: 0;
+	}
 
-  	> img,
-  	> p > img,
-  	> a > img {
-  		height: auto;
-  		max-width: 100%;
-  		width: auto;
-  	}
+	> img,
+	> p > img,
+	> a > img {
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
 
-  	&-md-col {
-  		@include media-breakpoint-up(md) {
-  			flex: 1 0 0%;
-  			width: 100%;
-  		}
-  	}
+	&-md-col {
+		@include media-breakpoint-up(md) {
+			flex: 1 0 0%;
+			width: 100%;
+		}
+	}
 
-  	&-lg-col {
-  		@include media-breakpoint-up(lg) {
-  			flex: 1 0 0%;
-  			width: 100%;
-  		}
-  	}
-  }
-  */
+	&-lg-col {
+		@include media-breakpoint-up(lg) {
+			flex: 1 0 0%;
+			width: 100%;
+		}
+	}
+}
+*/
   /*
   Type 
   */
@@ -11729,6 +11728,20 @@ body.acf_content .titlegroup > p,
 .editor-styles-wrapper .titlegroup > p {
   margin-bottom: 0;
 }
+body.acf_content .padded, body.acf_content .wp-block-group.has-background,
+.editor-styles-wrapper .padded,
+.editor-styles-wrapper .wp-block-group.has-background {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 992px) {
+  body.acf_content .padded, body.acf_content .wp-block-group.has-background,
+  .editor-styles-wrapper .padded,
+  .editor-styles-wrapper .wp-block-group.has-background {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
 body.acf_content .container-full, body.acf_content .alignfull,
 .editor-styles-wrapper .container-full,
 .editor-styles-wrapper .alignfull {
@@ -11744,33 +11757,6 @@ body.acf_content .container-full, body.acf_content .alignfull,
   body.acf_content .container-narrow,
   .editor-styles-wrapper .container-narrow {
     max-width: 720px;
-  }
-}
-@media (max-width: 575.98px) {
-  body.acf_content .container-sm-none,
-  .editor-styles-wrapper .container-sm-none {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: none;
-  }
-}
-@media (max-width: 767.98px) {
-  body.acf_content .container-md-none,
-  .editor-styles-wrapper .container-md-none {
-    padding-left: 0;
-    padding-right: 0;
-    max-width: none;
-  }
-}
-body.acf_content .container-spaced,
-.editor-styles-wrapper .container-spaced {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-@media (min-width: 992px) {
-  body.acf_content .container-spaced,
-  .editor-styles-wrapper .container-spaced {
-    padding-top: 3rem;
   }
 }
 body.acf_content h1,
