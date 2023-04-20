@@ -584,8 +584,7 @@ progress {
   content: "— ";
 }
 
-.container, .wp-block-table:not(.alignfull), hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), .wp-block-pullquote:not(.alignfull), .wp-block-group:not(.alignfull), .wp-block-gallery:not(.alignfull), .wp-block-columns:not(.alignfull), .wp-block-buttons:not(.alignfull), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+.container, .wp-block-table:not(.alignfull):not(.aligncenter), hr:not(.alignfull):not(.aligncenter):not(.is-style-wide):not(.is-style-dots), .wp-block-pullquote:not(.alignfull):not(.aligncenter), .wp-block-group:not(.alignfull):not(.aligncenter), .wp-block-gallery:not(.alignfull):not(.aligncenter), .wp-block-columns:not(.alignfull):not(.aligncenter), .wp-block-buttons:not(.alignfull):not(.aligncenter), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
 hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull, .alignfull,
 .container-fluid,
 .container-xxl,
@@ -603,36 +602,31 @@ hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull, .alignf
 }
 
 @media (min-width: 576px) {
-  .container-sm, .container, .wp-block-table:not(.alignfull), hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), .wp-block-pullquote:not(.alignfull), .wp-block-group:not(.alignfull), .wp-block-gallery:not(.alignfull), .wp-block-columns:not(.alignfull), .wp-block-buttons:not(.alignfull), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  .container-sm, .container, .wp-block-table:not(.alignfull):not(.aligncenter), hr:not(.alignfull):not(.aligncenter):not(.is-style-wide):not(.is-style-dots), .wp-block-pullquote:not(.alignfull):not(.aligncenter), .wp-block-group:not(.alignfull):not(.aligncenter), .wp-block-gallery:not(.alignfull):not(.aligncenter), .wp-block-columns:not(.alignfull):not(.aligncenter), .wp-block-buttons:not(.alignfull):not(.aligncenter), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull, .alignfull {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container, .wp-block-table:not(.alignfull), hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), .wp-block-pullquote:not(.alignfull), .wp-block-group:not(.alignfull), .wp-block-gallery:not(.alignfull), .wp-block-columns:not(.alignfull), .wp-block-buttons:not(.alignfull), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  .container-md, .container-sm, .container, .wp-block-table:not(.alignfull):not(.aligncenter), hr:not(.alignfull):not(.aligncenter):not(.is-style-wide):not(.is-style-dots), .wp-block-pullquote:not(.alignfull):not(.aligncenter), .wp-block-group:not(.alignfull):not(.aligncenter), .wp-block-gallery:not(.alignfull):not(.aligncenter), .wp-block-columns:not(.alignfull):not(.aligncenter), .wp-block-buttons:not(.alignfull):not(.aligncenter), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull, .alignfull {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container, .wp-block-table:not(.alignfull), hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), .wp-block-pullquote:not(.alignfull), .wp-block-group:not(.alignfull), .wp-block-gallery:not(.alignfull), .wp-block-columns:not(.alignfull), .wp-block-buttons:not(.alignfull), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  .container-lg, .container-md, .container-sm, .container, .wp-block-table:not(.alignfull):not(.aligncenter), hr:not(.alignfull):not(.aligncenter):not(.is-style-wide):not(.is-style-dots), .wp-block-pullquote:not(.alignfull):not(.aligncenter), .wp-block-group:not(.alignfull):not(.aligncenter), .wp-block-gallery:not(.alignfull):not(.aligncenter), .wp-block-columns:not(.alignfull):not(.aligncenter), .wp-block-buttons:not(.alignfull):not(.aligncenter), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull, .alignfull {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container, .wp-block-table:not(.alignfull), hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), .wp-block-pullquote:not(.alignfull), .wp-block-group:not(.alignfull), .wp-block-gallery:not(.alignfull), .wp-block-columns:not(.alignfull), .wp-block-buttons:not(.alignfull), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  .container-xl, .container-lg, .container-md, .container-sm, .container, .wp-block-table:not(.alignfull):not(.aligncenter), hr:not(.alignfull):not(.aligncenter):not(.is-style-wide):not(.is-style-dots), .wp-block-pullquote:not(.alignfull):not(.aligncenter), .wp-block-group:not(.alignfull):not(.aligncenter), .wp-block-gallery:not(.alignfull):not(.aligncenter), .wp-block-columns:not(.alignfull):not(.aligncenter), .wp-block-buttons:not(.alignfull):not(.aligncenter), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull, .alignfull {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, .wp-block-table:not(.alignfull), hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), .wp-block-pullquote:not(.alignfull), .wp-block-group:not(.alignfull), .wp-block-gallery:not(.alignfull), .wp-block-columns:not(.alignfull), .wp-block-buttons:not(.alignfull), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, .wp-block-table:not(.alignfull):not(.aligncenter), hr:not(.alignfull):not(.aligncenter):not(.is-style-wide):not(.is-style-dots), .wp-block-pullquote:not(.alignfull):not(.aligncenter), .wp-block-group:not(.alignfull):not(.aligncenter), .wp-block-gallery:not(.alignfull):not(.aligncenter), .wp-block-columns:not(.alignfull):not(.aligncenter), .wp-block-buttons:not(.alignfull):not(.aligncenter), .alignwide, .container-narrow, .container-wide, .container-full, hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull, .alignfull {
     max-width: 1320px;
   }
@@ -4161,8 +4155,7 @@ textarea.form-control-lg {
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
-.navbar > .container, .navbar > .wp-block-table:not(.alignfull), .navbar > hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), .navbar > .wp-block-pullquote:not(.alignfull), .navbar > .wp-block-group:not(.alignfull), .navbar > .wp-block-gallery:not(.alignfull), .navbar > .wp-block-columns:not(.alignfull), .navbar > .wp-block-buttons:not(.alignfull), .navbar > .alignwide, .navbar > .container-narrow, .navbar > .container-wide, .navbar > .container-full, .navbar > hr:not(.is-style-wide):not(.is-style-dots).alignfull,
-.navbar > hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull, .navbar > .alignfull,
+.navbar > .container, .navbar > .wp-block-table:not(.alignfull):not(.aligncenter), .navbar > hr:not(.alignfull):not(.aligncenter):not(.is-style-wide):not(.is-style-dots), .navbar > .wp-block-pullquote:not(.alignfull):not(.aligncenter), .navbar > .wp-block-group:not(.alignfull):not(.aligncenter), .navbar > .wp-block-gallery:not(.alignfull):not(.aligncenter), .navbar > .wp-block-columns:not(.alignfull):not(.aligncenter), .navbar > .wp-block-buttons:not(.alignfull):not(.aligncenter), .navbar > .alignwide, .navbar > .container-narrow, .navbar > .container-wide, .navbar > .container-full, .navbar > hr:not(.is-style-wide):not(.is-style-dots).alignfull, .navbar > .alignfull,
 .navbar > .container-fluid,
 .navbar > .container-sm,
 .navbar > .container-md,
@@ -9658,7 +9651,7 @@ a, .wp-block-button.btn-link .wp-block-button__link {
 	Does not include custom blocks, which have their own .css files.
 **/
 @media (min-width: 992px) {
-  .wp-block-buttons:not(.alignwide):not(.alignfull) {
+  .wp-block-table:not(.alignwide):not(.alignfull):not(.aligncenter), hr:not(.alignwide):not(.alignfull):not(.aligncenter):not(.is-style-wide):not(.is-style-dots), .wp-block-pullquote:not(.alignwide):not(.alignfull):not(.aligncenter), .wp-block-group:not(.alignwide):not(.alignfull):not(.aligncenter), .wp-block-gallery:not(.alignwide):not(.alignfull):not(.aligncenter), .wp-block-columns:not(.alignwide):not(.alignfull):not(.aligncenter), .wp-block-buttons:not(.alignwide):not(.alignfull):not(.aligncenter) {
     max-width: 960px;
   }
 }
@@ -9674,11 +9667,6 @@ a, .wp-block-button.btn-link .wp-block-button__link {
 .wp-block-button.btn-sm, .wp-block-button.btn-sm .wp-block-button.wp-block-button__link {
   padding: 0;
 }
-@media (min-width: 992px) {
-  .wp-block-columns:not(.alignwide):not(.alignfull) {
-    max-width: 960px;
-  }
-}
 .wp-block-columns > .wp-block-column > *:last-child {
   margin-bottom: 0;
 }
@@ -9693,17 +9681,6 @@ a, .wp-block-button.btn-link .wp-block-button__link {
 
 .is-style-listgroup {
   margin-bottom: 1.5rem;
-}
-@media (min-width: 992px) {
-  .wp-block-gallery:not(.alignwide):not(.alignfull) {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 992px) {
-  .wp-block-group:not(.alignwide):not(.alignfull) {
-    max-width: 960px;
-  }
 }
 .wp-block-group.has-background > *:last-child {
   margin-bottom: 0;
@@ -9738,11 +9715,6 @@ a, .wp-block-button.btn-link .wp-block-button__link {
   .wp-block-pullquote {
     margin-top: 3rem;
     margin-bottom: 3rem;
-  }
-}
-@media (min-width: 992px) {
-  .wp-block-pullquote:not(.alignwide):not(.alignfull) {
-    max-width: 960px;
   }
 }
 .wp-block-pullquote.has-background {
@@ -9814,12 +9786,6 @@ hr:not(.is-style-wide):not(.is-style-dots).has-background,
 hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).has-background {
   height: 1px;
 }
-@media (min-width: 992px) {
-  hr:not(.is-style-wide):not(.is-style-dots):not(.alignwide):not(.alignfull):not(.aligncenter),
-  hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignwide):not(.alignfull):not(.aligncenter) {
-    max-width: 960px;
-  }
-}
 hr:not(.is-style-wide):not(.is-style-dots).aligncenter,
 hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).aligncenter {
   max-width: 100px;
@@ -9829,11 +9795,6 @@ hr.wp-block-separator.is-style-dots:before {
   font-size: 2.25rem;
 }
 
-@media (min-width: 992px) {
-  .wp-block-table:not(.alignwide):not(.alignfull) {
-    max-width: 960px;
-  }
-}
 .wp-block-table table thead,
 .wp-block-table table tbody {
   border-bottom: none;

@@ -17,15 +17,7 @@ hr.wp-block-separator {
 			height: 1px;
 		}
 
-		&:not(.alignfull):not(.aligncenter) {
-			@extend .container;
-		}
-
-		&:not(.alignwide):not(.alignfull):not(.aligncenter) {
-			@include media-breakpoint-up(lg) {
-				max-width: map-get($container-max-widths, "lg");
-			}
-		}
+		@extend %aligncontainer;
 
 		&.alignfull {
 			@extend .container-full;

@@ -15,15 +15,7 @@ $quote-size-px-sm: calc($quote-size-px / 2);
 		margin-bottom: $grid-gutter-width * 2;
 	}
 
-	&:not(.alignfull) {
-		@extend .container;
-	}
-
-	&:not(.alignwide):not(.alignfull) {
-		@include media-breakpoint-up(lg) {
-			max-width: map-get($container-max-widths, "lg");
-		}
-	}
+	@extend %aligncontainer;
 
 	&.has-background {
 		padding: $grid-gutter-width-half;

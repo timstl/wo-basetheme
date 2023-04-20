@@ -1,11 +1,3 @@
 .wp-block-gallery {
-	&:not(.alignfull) {
-		@extend .container;
-	}
-
-	&:not(.alignwide):not(.alignfull) {
-		@include media-breakpoint-up(lg) {
-			max-width: map-get($container-max-widths, "lg");
-		}
-	}
+	@extend %aligncontainer;
 }
