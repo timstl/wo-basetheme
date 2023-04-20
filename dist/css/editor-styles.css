@@ -788,7 +788,7 @@ body.acf_content .figure-caption,
   color: #6c757d;
 }
 body.acf_content .container, body.acf_content .wp-block-table:not(.alignfull), body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-gallery:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .wp-block-buttons:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
 body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
 body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
 .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -806,7 +806,9 @@ body.acf_content .container-sm,
 .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
 .editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
 .editor-styles-wrapper .wp-block-group:not(.alignfull),
+.editor-styles-wrapper .wp-block-gallery:not(.alignfull),
 .editor-styles-wrapper .wp-block-columns:not(.alignfull),
+.editor-styles-wrapper .wp-block-buttons:not(.alignfull),
 .editor-styles-wrapper .alignwide,
 .editor-styles-wrapper .container-narrow,
 .editor-styles-wrapper .container-wide,
@@ -830,7 +832,7 @@ body.acf_content .container-sm,
 }
 @media (min-width: 576px) {
   body.acf_content .container-sm, body.acf_content .container, body.acf_content .wp-block-table:not(.alignfull), body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-gallery:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .wp-block-buttons:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -843,7 +845,9 @@ body.acf_content .container-sm,
   .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
   .editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
   .editor-styles-wrapper .wp-block-group:not(.alignfull),
+  .editor-styles-wrapper .wp-block-gallery:not(.alignfull),
   .editor-styles-wrapper .wp-block-columns:not(.alignfull),
+  .editor-styles-wrapper .wp-block-buttons:not(.alignfull),
   .editor-styles-wrapper .alignwide,
   .editor-styles-wrapper .container-narrow,
   .editor-styles-wrapper .container-wide,
@@ -856,7 +860,7 @@ body.acf_content .container-sm,
 }
 @media (min-width: 768px) {
   body.acf_content .container-md, body.acf_content .container-sm, body.acf_content .container, body.acf_content .wp-block-table:not(.alignfull), body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-gallery:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .wp-block-buttons:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -870,7 +874,9 @@ body.acf_content .container-sm,
   .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
   .editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
   .editor-styles-wrapper .wp-block-group:not(.alignfull),
+  .editor-styles-wrapper .wp-block-gallery:not(.alignfull),
   .editor-styles-wrapper .wp-block-columns:not(.alignfull),
+  .editor-styles-wrapper .wp-block-buttons:not(.alignfull),
   .editor-styles-wrapper .alignwide,
   .editor-styles-wrapper .container-narrow,
   .editor-styles-wrapper .container-wide,
@@ -883,7 +889,7 @@ body.acf_content .container-sm,
 }
 @media (min-width: 992px) {
   body.acf_content .container-lg, body.acf_content .container-md, body.acf_content .container-sm, body.acf_content .container, body.acf_content .wp-block-table:not(.alignfull), body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-gallery:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .wp-block-buttons:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -898,7 +904,9 @@ body.acf_content .container-sm,
   .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
   .editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
   .editor-styles-wrapper .wp-block-group:not(.alignfull),
+  .editor-styles-wrapper .wp-block-gallery:not(.alignfull),
   .editor-styles-wrapper .wp-block-columns:not(.alignfull),
+  .editor-styles-wrapper .wp-block-buttons:not(.alignfull),
   .editor-styles-wrapper .alignwide,
   .editor-styles-wrapper .container-narrow,
   .editor-styles-wrapper .container-wide,
@@ -911,7 +919,7 @@ body.acf_content .container-sm,
 }
 @media (min-width: 1200px) {
   body.acf_content .container-xl, body.acf_content .container-lg, body.acf_content .container-md, body.acf_content .container-sm, body.acf_content .container, body.acf_content .wp-block-table:not(.alignfull), body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-gallery:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .wp-block-buttons:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -927,7 +935,9 @@ body.acf_content .container-sm,
   .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
   .editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
   .editor-styles-wrapper .wp-block-group:not(.alignfull),
+  .editor-styles-wrapper .wp-block-gallery:not(.alignfull),
   .editor-styles-wrapper .wp-block-columns:not(.alignfull),
+  .editor-styles-wrapper .wp-block-buttons:not(.alignfull),
   .editor-styles-wrapper .alignwide,
   .editor-styles-wrapper .container-narrow,
   .editor-styles-wrapper .container-wide,
@@ -940,7 +950,7 @@ body.acf_content .container-sm,
 }
 @media (min-width: 1400px) {
   body.acf_content .container-xxl, body.acf_content .container-xl, body.acf_content .container-lg, body.acf_content .container-md, body.acf_content .container-sm, body.acf_content .container, body.acf_content .wp-block-table:not(.alignfull), body.acf_content hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
-  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+  body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .wp-block-pullquote:not(.alignfull), body.acf_content .wp-block-group:not(.alignfull), body.acf_content .wp-block-gallery:not(.alignfull), body.acf_content .wp-block-columns:not(.alignfull), body.acf_content .wp-block-buttons:not(.alignfull), body.acf_content .alignwide, body.acf_content .container-narrow, body.acf_content .container-wide, body.acf_content .container-full, body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull,
   body.acf_content .editor-styles-wrapper hr:not(.is-style-wide):not(.is-style-dots).alignfull,
   .editor-styles-wrapper body.acf_content hr:not(.is-style-wide):not(.is-style-dots).alignfull,
@@ -957,7 +967,9 @@ body.acf_content .container-sm,
   .editor-styles-wrapper hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
   .editor-styles-wrapper .wp-block-pullquote:not(.alignfull),
   .editor-styles-wrapper .wp-block-group:not(.alignfull),
+  .editor-styles-wrapper .wp-block-gallery:not(.alignfull),
   .editor-styles-wrapper .wp-block-columns:not(.alignfull),
+  .editor-styles-wrapper .wp-block-buttons:not(.alignfull),
   .editor-styles-wrapper .alignwide,
   .editor-styles-wrapper .container-narrow,
   .editor-styles-wrapper .container-wide,
@@ -5502,7 +5514,7 @@ body.acf_content .navbar,
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
-body.acf_content .navbar > .container, body.acf_content .navbar > .wp-block-table:not(.alignfull), body.acf_content .navbar > hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .navbar > .wp-block-pullquote:not(.alignfull), body.acf_content .navbar > .wp-block-group:not(.alignfull), body.acf_content .navbar > .wp-block-columns:not(.alignfull), body.acf_content .navbar > .alignwide, body.acf_content .navbar > .container-narrow, body.acf_content .navbar > .container-wide, body.acf_content .navbar > .container-full, body.acf_content .navbar > hr:not(.is-style-wide):not(.is-style-dots).alignfull,
+body.acf_content .navbar > .container, body.acf_content .navbar > .wp-block-table:not(.alignfull), body.acf_content .navbar > hr:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter), body.acf_content .navbar > .wp-block-pullquote:not(.alignfull), body.acf_content .navbar > .wp-block-group:not(.alignfull), body.acf_content .navbar > .wp-block-gallery:not(.alignfull), body.acf_content .navbar > .wp-block-columns:not(.alignfull), body.acf_content .navbar > .wp-block-buttons:not(.alignfull), body.acf_content .navbar > .alignwide, body.acf_content .navbar > .container-narrow, body.acf_content .navbar > .container-wide, body.acf_content .navbar > .container-full, body.acf_content .navbar > hr:not(.is-style-wide):not(.is-style-dots).alignfull,
 body.acf_content .navbar > hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots).alignfull, body.acf_content .navbar > .alignfull,
 body.acf_content .navbar > .container-fluid,
 body.acf_content .navbar > .container-sm,
@@ -5516,7 +5528,9 @@ body.acf_content .navbar > .container-xxl,
 .editor-styles-wrapper .navbar > hr.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignfull):not(.aligncenter),
 .editor-styles-wrapper .navbar > .wp-block-pullquote:not(.alignfull),
 .editor-styles-wrapper .navbar > .wp-block-group:not(.alignfull),
+.editor-styles-wrapper .navbar > .wp-block-gallery:not(.alignfull),
 .editor-styles-wrapper .navbar > .wp-block-columns:not(.alignfull),
+.editor-styles-wrapper .navbar > .wp-block-buttons:not(.alignfull),
 .editor-styles-wrapper .navbar > .alignwide,
 .editor-styles-wrapper .navbar > .container-narrow,
 .editor-styles-wrapper .navbar > .container-wide,
@@ -12093,6 +12107,12 @@ body.acf_content .social a, body.acf_content .social .wp-block-button.btn-link .
 .editor-styles-wrapper .wp-block-button.btn-link .social .wp-block-button__link {
   text-decoration: none;
 }
+@media (min-width: 992px) {
+  body.acf_content .wp-block-buttons:not(.alignwide):not(.alignfull),
+  .editor-styles-wrapper .wp-block-buttons:not(.alignwide):not(.alignfull) {
+    max-width: 960px;
+  }
+}
 body.acf_content .wp-block-button.btn-lg, body.acf_content .wp-block-button.btn-lg .wp-block-button.wp-block-button__link,
 .editor-styles-wrapper .wp-block-button.btn-lg,
 .editor-styles-wrapper .wp-block-button.btn-lg .wp-block-button.wp-block-button__link {
@@ -12126,6 +12146,12 @@ body.acf_content .wp-block-columns.is-style-reverse-on-mobile,
 body.acf_content .is-style-listgroup,
 .editor-styles-wrapper .is-style-listgroup {
   margin-bottom: 1.5rem;
+}
+@media (min-width: 992px) {
+  body.acf_content .wp-block-gallery:not(.alignwide):not(.alignfull),
+  .editor-styles-wrapper .wp-block-gallery:not(.alignwide):not(.alignfull) {
+    max-width: 960px;
+  }
 }
 @media (min-width: 992px) {
   body.acf_content .wp-block-group:not(.alignwide):not(.alignfull),
