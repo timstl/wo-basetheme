@@ -6,8 +6,7 @@
 .container-wide {
 	@extend .container;
 	@include media-breakpoint-up(lg) {
-		// wider than the normal $container-max-widths xxl value
-		max-width: map-get($grid-breakpoints, "xxl");
+		max-width: ceil(map-get($container-max-widths, "xxl") * 1.21212121);
 	}
 }
 

@@ -1,4 +1,18 @@
 .wp-block-group {
+	&:not(.alignfull) {
+		@extend .container;
+	}
+
+	&:not(.alignwide):not(.alignfull) {
+		max-width: map-get($container-max-widths, "lg");
+	}
+
+	&.has-background {
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 	&.is-style-flex-row {
 		@extend .flexgroup;
 	}

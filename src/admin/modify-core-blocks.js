@@ -27,7 +27,7 @@ wp.domReady(function () {
 
 	wp.blocks.registerBlockStyle("core/group", {
 		name: "flex-row",
-		label: "Row (No Wrap)",
+		label: "Row + Mobile Stack",
 	});
 
 	wp.blocks.registerBlockStyle("core/button", {

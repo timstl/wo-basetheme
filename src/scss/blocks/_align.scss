@@ -1,3 +1,7 @@
 .alignwide {
-	@extend .container-wide;
+	@extend .container;
+}
+
+.alignfull {
+	@extend .container-full;
 }

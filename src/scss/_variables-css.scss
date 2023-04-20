@@ -4,6 +4,9 @@
 	--bs-font-size-lg: #{$font-size-lg};
 	--bs-font-size-xl: #{$font-size-xl};
 
+	--bs-gutter: #{$grid-gutter-width};
+	--bs-gutter-half: #{$grid-gutter-width-half};
+
 	@if variable-exists(font-family-serif) {
 		--bs-font-serif: $font-family-serif;
 	}

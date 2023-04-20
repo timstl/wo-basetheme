@@ -106,13 +106,25 @@
 			]
 		},
 		"layout": {
-			"contentSize": "990px",
-			"wideSize": "1400px"
+			"contentSize": "960px",
+			"wideSize": "1320px"
 		},
 		"spacing": {
 			"padding": true,
 			"margin": true,
-			"units": ["px", "em", "rem", "vh", "vw", "%"]
+			"units": ["rem", "px", "vh", "vw", "%", "em"]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/group": {
+				"spacing": {
+					"padding": {
+						"top": "var(--bs-gutter)",
+						"bottom": "var(--bs-gutter)"
+					}
+				}
+			}
 		}
 	}
 }

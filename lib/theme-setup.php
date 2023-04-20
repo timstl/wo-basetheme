@@ -14,7 +14,7 @@
  * Set the content width.
  */
 if (! isset($content_width)) {
-    $content_width = 990;
+    $content_width = 960;
 }
 
 if (! function_exists('wo_setup_acf')) {
