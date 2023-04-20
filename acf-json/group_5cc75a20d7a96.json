@@ -3,9 +3,67 @@
     "title": "Block: Accordion",
     "fields": [
         {
+            "key": "field_644184dd05998",
+            "label": "Trigger Element",
+            "name": "trigger_element",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "h1",
+                "h2": "h2",
+                "h3": "h3",
+                "h4": "h4",
+                "h5": "h5",
+                "h6": "h6",
+                "div": "div"
+            },
+            "default_value": "div",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64418665499a4",
+            "label": "Behavior on Load",
+            "name": "behavior_on_load",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "first_open": "First Open",
+                "all_open": "All Open",
+                "all_closed": "All Closed"
+            },
+            "default_value": "first_open",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_5cc75a2adad08",
             "label": "Accordion Rows",
             "name": "accordion",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -20,35 +78,13 @@
             "max": 0,
             "layout": "block",
             "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
-                {
-                    "key": "field_5cc75a3ddad0a",
-                    "label": "Icon",
-                    "name": "icon",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
                 {
                     "key": "field_5cc75a38dad09",
                     "label": "Title",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -62,12 +98,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_5cc75a2adad08"
                 },
                 {
                     "key": "field_5cc75a4ddad0b",
                     "label": "Content",
                     "name": "content",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -81,7 +119,8 @@
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 0,
-                    "delay": 0
+                    "delay": 0,
+                    "parent_repeater": "field_5cc75a2adad08"
                 }
             ]
         }
@@ -101,7 +140,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1560783569
+    "show_in_rest": 0,
+    "modified": 1682016269
 }

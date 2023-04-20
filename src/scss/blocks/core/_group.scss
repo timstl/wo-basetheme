@@ -4,12 +4,12 @@
 	}
 
 	&:not(.alignwide):not(.alignfull) {
-		max-width: map-get($container-max-widths, "lg");
+		@include media-breakpoint-up(lg) {
+			max-width: map-get($container-max-widths, "lg");
+		}
 	}
 
 	&.has-background {
-		@extend .padded;
-
 		> *:last-child {
 			margin-bottom: 0;
 		}

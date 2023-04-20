@@ -1,4 +1,20 @@
 .wp-block-columns {
+	&:not(.alignfull) {
+		@extend .container;
+	}
+
+	&:not(.alignwide):not(.alignfull) {
+		@include media-breakpoint-up(lg) {
+			max-width: map-get($container-max-widths, "lg");
+		}
+	}
+
+	> .wp-block-column {
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 	&.is-style-reverse-on-mobile {
 		flex-direction: column-reverse;
 

@@ -112,6 +112,15 @@ if (! function_exists('wo_widgets_init')) {
     //add_action( 'widgets_init', 'wo_widgets_init' );
 }
 
+if (!function_exists('wo_load_blocks')) {
+    function wo_register_blocks()
+    {
+        register_block_type(get_template_directory() . '/template-parts/blocks/sociallinks');
+        register_block_type(get_template_directory() . '/template-parts/blocks/accordion');
+    }
+    add_action('init', 'wo_register_blocks');
+}
+
 if (! function_exists('wo_fonts')) {
     /**
      * Enqueue fonts by adding URLs to the $fonts array.

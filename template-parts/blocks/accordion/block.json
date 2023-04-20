@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "acf/accordion",
+	"title": "Accordion",
+	"description": "Output a set of accordion drawers.",
+	"style": [],
+	"category": "design",
+	"icon": "share-alt2",
+	"keywords": ["accordion", "faq"],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "block-accordion.php"
+	},
+	"supports": {}
+}

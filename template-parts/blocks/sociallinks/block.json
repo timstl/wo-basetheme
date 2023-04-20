@@ -1,9 +1,10 @@
 {
+	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"name": "acf/sociallinks",
 	"title": "Social Links",
 	"description": "Output social account links from Site Settings.",
 	"style": [],
-	"category": "formatting",
+	"category": "theme",
 	"icon": "share-alt2",
 	"keywords": ["social", "connect"],
 	"acf": {
