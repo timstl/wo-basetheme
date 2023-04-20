@@ -9748,61 +9748,6 @@ hr.wp-block-separator.is-style-dots:before {
   font-size: 2.25rem;
 }
 
-.accordion-row {
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-.accordion-row:last-child {
-  border-bottom: none;
-}
-.accordion-heading {
-  margin: 0;
-}
-.accordion-heading button {
-  color: var(--bs-heading-color, inherit);
-  font-weight: 700;
-  border: none;
-  outline: none;
-  background: none;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  transition: color 250ms ease-in-out;
-  gap: 0.75rem;
-  text-align: left;
-  width: 100%;
-}
-.accordion-heading button:hover {
-  color: #333;
-}
-.accordion-heading button svg,
-.accordion-heading button i {
-  color: #555;
-  margin-top: 11px;
-  font-size: 1rem;
-  margin-left: auto;
-  transform: rotate(-90deg);
-  transition: transform 250ms ease-in-out;
-}
-.accordion-heading button[aria-expanded=true] svg,
-.accordion-heading button[aria-expanded=true] i {
-  transform: rotate(0);
-}
-.accordion .accordion-content .in {
-  padding-top: 0.75rem;
-}
-@media (min-width: 992px) {
-  .accordion .accordion-content .in {
-    max-width: 80%;
-  }
-}
-.accordion .accordion-content .in > *:last-child {
-  margin-bottom: 0;
-}
-
 .alertmessage {
   border-radius: 0;
   border: none;
