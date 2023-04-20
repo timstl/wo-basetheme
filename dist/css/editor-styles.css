@@ -4489,13 +4489,13 @@ fieldset:disabled .editor-styles-wrapper .wp-block-button .wp-block-button__link
   border-color: var(--bs-btn-disabled-border-color);
   opacity: var(--bs-btn-disabled-opacity);
 }
-body.acf_content .btn-primary, body.acf_content #site-header .nav > li.has-btn a, body.acf_content #site-header .nav > li.has-btn .wp-block-button.btn-link .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header .nav > li.has-btn .wp-block-button__link,
-.editor-styles-wrapper #site-header .nav > li.has-btn body.acf_content a, body.acf_content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
+body.acf_content .btn-primary, body.acf_content #site-header .nav > li.has-btn.has-btn-primary a, body.acf_content #site-header .nav > li.has-btn.has-btn-primary .wp-block-button.btn-link .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-primary .wp-block-button__link,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-primary body.acf_content a, body.acf_content .wp-block-button:not(.is-style-outline) .wp-block-button__link,
 .editor-styles-wrapper .wp-block-button:not(.is-style-outline) body.acf_content .wp-block-button__link,
 .editor-styles-wrapper .btn-primary,
-.editor-styles-wrapper #site-header .nav > li.has-btn a,
-.editor-styles-wrapper #site-header .nav > li.has-btn .wp-block-button.btn-link .wp-block-button__link,
-.editor-styles-wrapper .wp-block-button.btn-link #site-header .nav > li.has-btn .wp-block-button__link,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-primary a,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-primary .wp-block-button.btn-link .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-primary .wp-block-button__link,
 .editor-styles-wrapper .wp-block-button:not(.is-style-outline) .wp-block-button__link {
   --bs-btn-color: #fff;
   --bs-btn-bg: #000;
@@ -4512,11 +4512,13 @@ body.acf_content .btn-primary, body.acf_content #site-header .nav > li.has-btn a
   --bs-btn-disabled-bg: #000;
   --bs-btn-disabled-border-color: #000;
 }
-body.acf_content .btn-secondary, body.acf_content #site-header .nav > li.has-btn.has-btn-secondary,
-.editor-styles-wrapper #site-header body.acf_content .nav > li.has-btn.has-btn-secondary, body.acf_content .wp-block-button:not(.is-style-outline).is-style-alt .wp-block-button__link,
+body.acf_content .btn-secondary, body.acf_content #site-header .nav > li.has-btn.has-btn-secondary a, body.acf_content #site-header .nav > li.has-btn.has-btn-secondary .wp-block-button.btn-link .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-secondary .wp-block-button__link,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-secondary body.acf_content a, body.acf_content .wp-block-button:not(.is-style-outline).is-style-alt .wp-block-button__link,
 .editor-styles-wrapper .wp-block-button:not(.is-style-outline).is-style-alt body.acf_content .wp-block-button__link,
 .editor-styles-wrapper .btn-secondary,
-.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-secondary,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-secondary a,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-secondary .wp-block-button.btn-link .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-secondary .wp-block-button__link,
 .editor-styles-wrapper .wp-block-button:not(.is-style-outline).is-style-alt .wp-block-button__link {
   --bs-btn-color: #fff;
   --bs-btn-bg: #333;
@@ -4533,10 +4535,12 @@ body.acf_content .btn-secondary, body.acf_content #site-header .nav > li.has-btn
   --bs-btn-disabled-bg: #333;
   --bs-btn-disabled-border-color: #333;
 }
-body.acf_content .btn-success, body.acf_content #site-header .nav > li.has-btn.has-btn-success,
-.editor-styles-wrapper #site-header body.acf_content .nav > li.has-btn.has-btn-success,
+body.acf_content .btn-success, body.acf_content #site-header .nav > li.has-btn.has-btn-success a, body.acf_content #site-header .nav > li.has-btn.has-btn-success .wp-block-button.btn-link .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-success .wp-block-button__link,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-success body.acf_content a,
 .editor-styles-wrapper .btn-success,
-.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-success {
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-success a,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-success .wp-block-button.btn-link .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-success .wp-block-button__link {
   --bs-btn-color: #fff;
   --bs-btn-bg: #555;
   --bs-btn-border-color: #555;
@@ -4552,10 +4556,12 @@ body.acf_content .btn-success, body.acf_content #site-header .nav > li.has-btn.h
   --bs-btn-disabled-bg: #555;
   --bs-btn-disabled-border-color: #555;
 }
-body.acf_content .btn-info, body.acf_content #site-header .nav > li.has-btn.has-btn-info,
-.editor-styles-wrapper #site-header body.acf_content .nav > li.has-btn.has-btn-info,
+body.acf_content .btn-info, body.acf_content #site-header .nav > li.has-btn.has-btn-info a, body.acf_content #site-header .nav > li.has-btn.has-btn-info .wp-block-button.btn-link .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-info .wp-block-button__link,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-info body.acf_content a,
 .editor-styles-wrapper .btn-info,
-.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-info {
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-info a,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-info .wp-block-button.btn-link .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-info .wp-block-button__link {
   --bs-btn-color: #000;
   --bs-btn-bg: #777;
   --bs-btn-border-color: #777;
@@ -4571,10 +4577,12 @@ body.acf_content .btn-info, body.acf_content #site-header .nav > li.has-btn.has-
   --bs-btn-disabled-bg: #777;
   --bs-btn-disabled-border-color: #777;
 }
-body.acf_content .btn-warning, body.acf_content #site-header .nav > li.has-btn.has-btn-warning,
-.editor-styles-wrapper #site-header body.acf_content .nav > li.has-btn.has-btn-warning,
+body.acf_content .btn-warning, body.acf_content #site-header .nav > li.has-btn.has-btn-warning a, body.acf_content #site-header .nav > li.has-btn.has-btn-warning .wp-block-button.btn-link .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-warning .wp-block-button__link,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-warning body.acf_content a,
 .editor-styles-wrapper .btn-warning,
-.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-warning {
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-warning a,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-warning .wp-block-button.btn-link .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-warning .wp-block-button__link {
   --bs-btn-color: #000;
   --bs-btn-bg: #999;
   --bs-btn-border-color: #999;
@@ -4590,10 +4598,12 @@ body.acf_content .btn-warning, body.acf_content #site-header .nav > li.has-btn.h
   --bs-btn-disabled-bg: #999;
   --bs-btn-disabled-border-color: #999;
 }
-body.acf_content .btn-danger, body.acf_content #site-header .nav > li.has-btn.has-btn-danger,
-.editor-styles-wrapper #site-header body.acf_content .nav > li.has-btn.has-btn-danger,
+body.acf_content .btn-danger, body.acf_content #site-header .nav > li.has-btn.has-btn-danger a, body.acf_content #site-header .nav > li.has-btn.has-btn-danger .wp-block-button.btn-link .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-danger .wp-block-button__link,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-danger body.acf_content a,
 .editor-styles-wrapper .btn-danger,
-.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-danger {
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-danger a,
+.editor-styles-wrapper #site-header .nav > li.has-btn.has-btn-danger .wp-block-button.btn-link .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.btn-link #site-header .nav > li.has-btn.has-btn-danger .wp-block-button__link {
   --bs-btn-color: #000;
   --bs-btn-bg: #aaa;
   --bs-btn-border-color: #aaa;
@@ -12371,6 +12381,20 @@ body.acf_content #site-header-navbar-container .nav > li.has-btn,
     padding: 0;
   }
 }
+body.acf_content #site-header-navbar-container .nav > li.has-btn a, body.acf_content #site-header-navbar-container .nav > li.has-btn .wp-block-button.btn-link .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header-navbar-container .nav > li.has-btn .wp-block-button__link,
+.editor-styles-wrapper #site-header-navbar-container .nav > li.has-btn a,
+.editor-styles-wrapper #site-header-navbar-container .nav > li.has-btn .wp-block-button.btn-link .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.btn-link #site-header-navbar-container .nav > li.has-btn .wp-block-button__link {
+  font-size: 1.3125rem;
+}
+@media (min-width: 992px) {
+  body.acf_content #site-header-navbar-container .nav > li.has-btn a, body.acf_content #site-header-navbar-container .nav > li.has-btn .wp-block-button.btn-link .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header-navbar-container .nav > li.has-btn .wp-block-button__link,
+  .editor-styles-wrapper #site-header-navbar-container .nav > li.has-btn a,
+  .editor-styles-wrapper #site-header-navbar-container .nav > li.has-btn .wp-block-button.btn-link .wp-block-button__link,
+  .editor-styles-wrapper .wp-block-button.btn-link #site-header-navbar-container .nav > li.has-btn .wp-block-button__link {
+    font-size: 1.125rem;
+  }
+}
 body.acf_content #site-header-navbar-container .nav > li.has-btn + .has-btn,
 .editor-styles-wrapper #site-header-navbar-container .nav > li.has-btn + .has-btn {
   padding-top: 0;
@@ -12545,6 +12569,12 @@ body.acf_content #site-header-utility-nav-container .nav > li.current-menu-item 
   .editor-styles-wrapper .wp-block-button.btn-link #site-header-utility-nav-container .nav > li.current-menu-parent > .wp-block-button__link {
     color: #333;
   }
+}
+body.acf_content #site-header-utility-nav-container .nav > li.has-btn a, body.acf_content #site-header-utility-nav-container .nav > li.has-btn .wp-block-button.btn-link .wp-block-button__link, body.acf_content .wp-block-button.btn-link #site-header-utility-nav-container .nav > li.has-btn .wp-block-button__link,
+.editor-styles-wrapper #site-header-utility-nav-container .nav > li.has-btn a,
+.editor-styles-wrapper #site-header-utility-nav-container .nav > li.has-btn .wp-block-button.btn-link .wp-block-button__link,
+.editor-styles-wrapper .wp-block-button.btn-link #site-header-utility-nav-container .nav > li.has-btn .wp-block-button__link {
+  font-size: 1rem;
 }
 body.acf_content #site-header-utility-nav-container .nav > li.has-btn + .has-btn,
 .editor-styles-wrapper #site-header-utility-nav-container .nav > li.has-btn + .has-btn {

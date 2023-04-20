@@ -17,27 +17,43 @@ $nav-arrow-hover: str-replace(
 			&.has-btn {
 				padding: 5px 0;
 				a {
-					@extend .btn, .btn-primary;
+					@extend .btn;
+				}
+
+				&.has-btn-primary {
+					a {
+						@extend .btn-primary;
+					}
 				}
 
 				&.has-btn-secondary {
-					@extend .btn-secondary;
+					a {
+						@extend .btn-secondary;
+					}
 				}
 
 				&.has-btn-success {
-					@extend .btn-success;
+					a {
+						@extend .btn-success;
+					}
 				}
 
 				&.has-btn-info {
-					@extend .btn-info;
+					a {
+						@extend .btn-info;
+					}
 				}
 
 				&.has-btn-warning {
-					@extend .btn-warning;
+					a {
+						@extend .btn-warning;
+					}
 				}
 
 				&.has-btn-danger {
-					@extend .btn-danger;
+					a {
+						@extend .btn-danger;
+					}
 				}
 			}
 		}
@@ -162,6 +178,13 @@ $nav-arrow-hover: str-replace(
 
 				@include media-breakpoint-up(lg) {
 					padding: 0;
+				}
+
+				a {
+					font-size: rem-calc(21);
+					@include media-breakpoint-up(lg) {
+						font-size: rem-calc(18);
+					}
 				}
 
 				+ .has-btn {
@@ -302,6 +325,10 @@ $nav-arrow-hover: str-replace(
 			}
 
 			&.has-btn {
+				a {
+					font-size: $font-size-base;
+				}
+
 				+ .has-btn {
 					margin-left: -$grid-gutter-width-half;
 				}

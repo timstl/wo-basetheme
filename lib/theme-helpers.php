@@ -198,3 +198,16 @@ if (! function_exists('wo_should_center_nav_logo')) {
         return false;
     }
 }
+
+if (!function_exists('wo_add_menu_item_classes')) {
+    function wo_add_menu_item_classes($classes, $item, $args)
+    {
+        if (get_field('button', $item)) {
+            $classes[] = 'has-btn';
+            $classes[] = esc_attr(get_field('button', $item));
+        }
+
+        return $classes;
+    }
+    add_filter('nav_menu_css_class', 'wo_add_menu_item_classes', 10, 3);
+}
