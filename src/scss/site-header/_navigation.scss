@@ -276,6 +276,8 @@ $nav-arrow-hover: str-replace(
 
 #site-header-utility-nav-container {
 	background: $header-utility-navigation-bg-color;
+	font-family: $header-utility-font-family;
+	font-weight: $header-utility-font-weight;
 	padding: 5px 0;
 
 	> .container-full {
