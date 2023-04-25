@@ -249,12 +249,6 @@ $nav-arrow-hover: str-replace(
 				}
 			}
 		}
-
-		.has-dropdown-menu-end {
-			.dropdown-menu {
-				@extend .dropdown-menu-end;
-			}
-		}
 	}
 }
 
