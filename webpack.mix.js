@@ -6,6 +6,9 @@ mix
 	.js("src/js/**/*.js", "dist/js/theme.js")
 	.sass("src/scss/style.scss", "dist/css/")
 	.sass("src/scss/editor-styles.scss", "dist/css/")
+	.options({
+		processCssUrls: false,
+	})
 	.browserSync({
 		proxy: "http://localhost",
 		port: 3000,
