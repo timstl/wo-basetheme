@@ -59,12 +59,7 @@
 
 	.nav {
 		margin-bottom: $grid-gutter-width-half;
-
-		li {
-			+ li {
-				margin-left: 1em;
-			}
-		}
+		gap: $grid-gutter-width;
 
 		a {
 			color: $white;
