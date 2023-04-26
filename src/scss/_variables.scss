@@ -111,6 +111,11 @@ $header-toggler-color: $link-color;
 $header-utility-navigation-bg-color: $gray-100;
 $header-utility-font-family: $header-navigation-font-family;
 $header-utility-font-weight: $header-navigation-font-weight;
+$header-utility-nav-link-color: #fff;
+$header-utility-nav-link-hover-color: darken(
+	$header-utility-nav-link-color,
+	10%
+);
 
 $dropdown-padding-x: 0.75rem;
 $dropdown-padding-x-sm: 2.5rem;

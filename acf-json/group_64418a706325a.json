@@ -1,55 +1,61 @@
 {
-    "key": "group_64418a706325a",
-    "title": "Navigation Button",
-    "fields": [
-        {
-            "key": "field_64418a70824b3",
-            "label": "Button",
-            "name": "button",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "has-btn-primary": "Primary",
-                "has-btn-secondary": "Secondary",
-                "has-btn-success": "Success",
-                "has-btn-info": "Info",
-                "has-btn-warning": "Warning",
-                "has-btn-danger": "Danger"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 1,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        }
-    ],
-    "location": [
-        [
-            {
-                "param": "nav_menu_item",
-                "operator": "==",
-                "value": "all"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": true,
-    "description": "",
-    "show_in_rest": 0,
-    "modified": 1682017010
+	"key": "group_64418a706325a",
+	"title": "Navigation Button",
+	"fields": [
+		{
+			"key": "field_64418a70824b3",
+			"label": "Button",
+			"name": "button",
+			"aria-label": "",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"has-btn-primary": "Primary",
+				"has-btn-secondary": "Secondary",
+				"has-btn-success": "Success",
+				"has-btn-info": "Info",
+				"has-btn-warning": "Warning",
+				"has-btn-danger": "Danger",
+				"has-btn-primary-outline": "Primary Outlined",
+				"has-btn-secondary-outline": "Secondary Outlined",
+				"has-btn-success-outline": "Success Outlined",
+				"has-btn-info-outline": "Info Outlined",
+				"has-btn-warning-outline": "Warning Outlined",
+				"has-btn-danger-outline": "Danger Outlined"
+			},
+			"default_value": false,
+			"return_format": "value",
+			"multiple": 0,
+			"allow_null": 1,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": ""
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "nav_menu_item",
+				"operator": "==",
+				"value": "all"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0,
+	"modified": 1682017010
 }

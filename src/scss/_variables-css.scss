@@ -11,3 +11,13 @@
 		--bs-font-serif: $font-family-serif;
 	}
 }
+
+body {
+	--wp--preset--spacing--20: #{calc($grid-gutter-width / 2.5)};
+	--wp--preset--spacing--30: #{calc($grid-gutter-width / 2)};
+	--wp--preset--spacing--40: #{calc($grid-gutter-width / 1.5)};
+	--wp--preset--spacing--50: #{$grid-gutter-width};
+	--wp--preset--spacing--60: #{calc($grid-gutter-width * 1.5)};
+	--wp--preset--spacing--70: #{calc($grid-gutter-width * 2)};
+	--wp--preset--spacing--80: #{calc($grid-gutter-width * 2.5)};
+}

@@ -55,6 +55,36 @@ $nav-arrow-hover: str-replace(
 						@extend .btn-danger;
 					}
 				}
+
+				&.has-btn-primary-outline {
+					a {
+						@extend .btn-outline-primary;
+					}
+				}
+
+				&.has-btn-secondary-outline {
+					a {
+						@extend .btn-outline-secondary;
+					}
+				}
+
+				&.has-btn-info-outline {
+					a {
+						@extend .btn-outline-info;
+					}
+				}
+
+				&.has-btn-warning-outline {
+					a {
+						@extend .btn-outline-warning;
+					}
+				}
+
+				&.has-btn-danger-outline {
+					a {
+						@extend .btn-outline-danger;
+					}
+				}
 			}
 		}
 	}
@@ -308,6 +338,15 @@ $nav-arrow-hover: str-replace(
 				padding: 0;
 			}
 
+			a {
+				color: $header-utility-nav-link-color;
+
+				&:hover {
+					color: $header-utility-nav-link-hover-color;
+					text-decoration: underline;
+				}
+			}
+
 			&.current-menu-item,
 			&.current-menu-ancestor,
 			&.current-menu-parent {
@@ -323,6 +362,10 @@ $nav-arrow-hover: str-replace(
 			&.has-btn {
 				a {
 					font-size: $font-size-base;
+
+					&:hover {
+						text-decoration: none;
+					}
 				}
 
 				+ .has-btn {
