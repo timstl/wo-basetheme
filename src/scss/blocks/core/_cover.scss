@@ -1,0 +1,11 @@
+.wp-block-cover {
+	@extend %aligncontainer;
+
+	/*.wp-block-heading {
+		.has-extra-large-font-size {
+			@include media-breakpoint-up(lg) {
+				font-size: $font-size-xl * 1.6666 !important;
+			}
+		}
+	}*/
+}

@@ -1,19 +1,4 @@
 /**
- * Remove squared button
- */
-/*wp.domReady(function() {
-	wp.blocks.unregisterBlockStyle("core/button", "squared");
-});*/
-
-/**
- * Add list style.
- */
-/*wp.blocks.registerBlockStyle("core/list", {
-	name: "checkmarks",
-	label: "Checkmarks"
-});*/
-
-/**
  * Unregister / Register separator styles example.
  */
 wp.domReady(function () {
@@ -32,11 +17,16 @@ wp.domReady(function () {
 
 	wp.blocks.registerBlockStyle("core/button", {
 		name: "alt",
-		label: "Alternate Color",
+		label: "Primary Color",
 	});
 
-	wp.blocks.registerBlockStyle("core/list", {
+	wp.blocks.registerBlockStyle("core/button", {
+		name: "link",
+		label: "Button Link",
+	});
+
+	/*wp.blocks.registerBlockStyle("core/list", {
 		name: "listgroup",
 		label: "List Group",
-	});
+	});*/
 });

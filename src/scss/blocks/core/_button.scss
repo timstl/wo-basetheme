@@ -2,54 +2,80 @@
 	@extend %aligncontainer;
 }
 
-/*
-	Extends the default WordPress block button to match Bootstrap's.
-	We also have a custom ACF Bootstrap button block, which is preferred, but some clients may use the WP button.
-	Bootstrap button styles are in Bootstrap core, _common.scss, and some variables in _variables.scss.
-*/
 .wp-block-button {
 	.wp-block-button__link {
 		@extend .btn;
 	}
 
-	&:not(.is-style-outline) {
-		.wp-block-button__link {
-			@extend .btn-primary;
+	&:not(.is-style-link) {
+		&.has-large-font-size,
+		&.has-extra-large-font-size {
+			.wp-block-button__link {
+				@extend .btn-lg;
+			}
 		}
 
-		&.is-style-alt {
+		&.has-small-font-size {
 			.wp-block-button__link {
-				@extend .btn-secondary;
+				@extend .btn-sm;
 			}
 		}
 	}
 
-	&.btn-lg {
-		padding: 0;
-
+	&:not(.is-style-outline) {
 		.wp-block-button__link {
-			@extend .btn-lg;
+			@extend .btn-secondary;
+		}
+
+		&.is-style-alt {
+			.wp-block-button__link {
+				@extend .btn-primary;
+			}
 		}
 	}
 
-	&.btn-sm {
-		padding: 0;
-
+	&.is-style-link {
+		font-size: $btn-font-size;
 		.wp-block-button__link {
-			@extend .btn-sm;
-		}
-	}
+			--bs-btn-color: #{$secondary};
+			--bs-btn-hover-color: #{$link-hover-color};
 
-	&.btn-link {
-		.wp-block-button__link {
+			background-color: transparent;
+			color: var(--bs-btn-color);
+			font-family: $btn-font-family;
+			padding: 0;
+
 			@extend .btn-link;
-			@extend a, .btn-link!optional;
 		}
 	}
 
 	&.is-style-outline {
 		.wp-block-button__link {
-			@extend .btn-outline-primary;
+			@extend .btn-outline-secondary;
+
+			&:not(.has-text-color) {
+				color: var(--bs-btn-color);
+
+				&:hover {
+					color: var(--bs-btn-hover-color);
+				}
+			}
 		}
+	}
+
+	&.has-large-font-size {
+		font-size: $btn-font-size-lg !important;
+	}
+
+	&.has-medium-font-size {
+		font-size: $btn-font-size-lg !important;
+	}
+
+	&.has-small-font-size {
+		font-size: $btn-font-size-sm !important;
+	}
+
+	&.has-extra-large-font-size {
+		font-size: $font-size-lg !important;
 	}
 }

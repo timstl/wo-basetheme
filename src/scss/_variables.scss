@@ -79,10 +79,15 @@ $link-hover-color: $secondary;
 /*
 	Buttons and inputs
 */
+$input-btn-font-size-sm: $font-size-sm;
+$input-btn-font-size-lg: $font-size-md;
+$input-btn-padding-x-lg: $font-size-base * 2;
+
 //$btn-border-radius: 50rem;
 //$btn-border-radius-lg: 50rem;
 //$btn-border-radius-sm: 25rem;
-// $btn-font-size-lg: $font-size-md;
+
+$btn-font-size-lg: $font-size-md;
 $btn-white-space: nowrap;
 
 /* 
