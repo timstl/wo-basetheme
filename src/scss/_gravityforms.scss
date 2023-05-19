@@ -1,6 +1,7 @@
 .gform_wrapper {
 	input,
-	textarea {
+	textarea,
+	select {
 		border: $input-border-width solid $input-border-color;
 	}
 
