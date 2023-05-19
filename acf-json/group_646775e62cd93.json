@@ -1,0 +1,77 @@
+{
+    "key": "group_646775e62cd93",
+    "title": "Block: Alert",
+    "fields": [
+        {
+            "key": "field_646775e6c4358",
+            "label": "Style",
+            "name": "alert_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "alert-primary": "Primary",
+                "alert-secondary": "Secondary",
+                "alert-success": "Success",
+                "alert-danger": "Danger",
+                "alert-warning": "Warning",
+                "alert-info": "Info",
+                "alert-light": "Light",
+                "alert-dark": "Dark"
+            },
+            "default_value": "alert-primary",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6467766cc4359",
+            "label": "Message",
+            "name": "message",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/alert"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1684502205
+}

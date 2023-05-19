@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "acf/alert",
+	"title": "Alert",
+	"description": "Output a bootstrap-style alert.",
+	"style": [],
+	"category": "theme",
+	"icon": "bell",
+	"keywords": ["alert", "message"],
+	"acf": {
+		"mode": "auto",
+		"renderTemplate": "block-alert.php"
+	},
+	"supports": {
+		"align": false
+	}
+}

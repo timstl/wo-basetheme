@@ -1,0 +1,10 @@
+.gform_wrapper {
+	input,
+	textarea {
+		border: $input-border-width solid $input-border-color;
+	}
+
+	.gform_button {
+		@extend .btn, .btn-secondary, .btn-lg;
+	}
+}
