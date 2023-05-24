@@ -1,8 +1,11 @@
-.gform_wrapper {
-	input,
-	textarea,
+body .gform_wrapper {
+	input:not([type="submit"]),
+	textarea {
+		@extend .form-control;
+	}
+
 	select {
-		border: $input-border-width solid $input-border-color;
+		@extend .form-select;
 	}
 
 	.gform_button {
