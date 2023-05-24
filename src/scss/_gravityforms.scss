@@ -1,7 +1,19 @@
 body .gform_wrapper {
-	input:not([type="submit"]),
+	input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not(
+			.ginput_total
+		),
 	textarea {
 		@extend .form-control;
+
+		&.ginput_quantity {
+			display: inline-block;
+			width: auto;
+		}
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		@extend .form-check-input;
 	}
 
 	select {
