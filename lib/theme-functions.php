@@ -9,3 +9,5 @@
  * @since 1.0
  * @version 2.7
  */
+
+//add_filter('gform_confirmation_anchor', '__return_true');
