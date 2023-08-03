@@ -4,7 +4,7 @@ mix
 	.sourceMaps(false, "source-map")
 	.webpackConfig({ devtool: "source-map" })
 	.js("src/js/**/*.js", "dist/js/theme.js")
-	.js("template-parts/blocks/**/*.js", "dist/js/blocks/")
+	//.js("template-parts/blocks/**/*.js", "dist/js/blocks/")
 	.sass("src/scss/style.scss", "dist/css/")
 	.sass("src/scss/editor-styles.scss", "dist/css/")
 	.options({
