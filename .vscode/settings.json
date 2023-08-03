@@ -1,0 +1,9 @@
+{
+	"phpsab.standard": "WordPress",
+	"phpsab.executablePathCBF": "/Users/tim/Projects/WordPress-Coding-Standards/vendor/squizlabs/php_codesniffer/bin/phpcbf",
+	"phpsab.executablePathCS": "/Users/tim/Projects/WordPress-Coding-Standards/vendor/squizlabs/php_codesniffer/bin/phpcs",
+	"phpsab.autoRulesetSearch": false,
+	"phpsab.snifferArguments": [
+		"--ignore=*/wp-admin/*,*/wp-includes/*"
+	]
+}

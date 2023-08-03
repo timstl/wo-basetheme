@@ -15,7 +15,7 @@ if ( get_field( 'alert_enable', 'options' ) && get_field( 'alert_message', 'opti
 			}
 		} elseif ( get_field( 'alert_display_pages', 'options' ) == 'specific' && get_field( 'alert_page_ids', 'options' ) ) {
 			$alert_page_ids = get_field( 'alert_page_ids', 'options' );
-			
+
 			if ( ! is_array( $alert_page_ids ) ) {
 				$page_ids = array( $alert_page_ids );
 			}

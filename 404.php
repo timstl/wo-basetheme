@@ -11,8 +11,8 @@
  */
 
 get_header(); ?>
-    <div class="no-results-404 container padded">
-        <?php get_template_part('template-parts/content', 'none'); ?>
-    </div>
+	<div class="no-results-404 container padded">
+		<?php get_template_part( 'template-parts/content', 'none' ); ?>
+	</div>
 <?php
 get_footer();

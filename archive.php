@@ -11,42 +11,42 @@
  */
 
 get_header(); ?>
-<?php if (have_posts()) : ?>
-    <header class="page-header">
-        <?php
-            the_archive_title('<h1 class="page-title">', '</h1>');
-            the_archive_description('<div class="taxonomy-description">', '</div>');
-        ?>
-    </header><!-- .page-header -->
+<?php if ( have_posts() ) : ?>
+	<header class="page-header">
+		<?php
+			the_archive_title( '<h1 class="page-title">', '</h1>' );
+			the_archive_description( '<div class="taxonomy-description">', '</div>' );
+		?>
+	</header><!-- .page-header -->
 
-    <?php
-    // Start the Loop.
-    while (have_posts()) :
-        the_post();
+	<?php
+	// Start the Loop.
+	while ( have_posts() ) :
+		the_post();
 
-        /*
-         * Include the Post-Format-specific template for the content.
-         * If you want to override this in a child theme, then include a file
-         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-         */
-        get_template_part('template-parts/content', get_post_format());
+		/*
+		 * Include the Post-Format-specific template for the content.
+		 * If you want to override this in a child theme, then include a file
+		 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+		 */
+		get_template_part( 'template-parts/content', get_post_format() );
 
-        // End the loop.
-    endwhile;
+		// End the loop.
+	endwhile;
 
-    // Previous/next page navigation.
-    the_posts_pagination(
-        array(
-            'prev_text'          => esc_attr__('Previous page', 'wo'),
-            'next_text'          => esc_attr__('Next page', 'wo'),
-            'before_page_number' => '<span class="meta-nav visually-hidden visually-hidden-focusable">' . esc_attr__('Page', 'wo') . ' </span>',
-        )
-    );
+	// Previous/next page navigation.
+	the_posts_pagination(
+		array(
+			'prev_text'          => esc_attr__( 'Previous page', 'wo' ),
+			'next_text'          => esc_attr__( 'Next page', 'wo' ),
+			'before_page_number' => '<span class="meta-nav visually-hidden visually-hidden-focusable">' . esc_attr__( 'Page', 'wo' ) . ' </span>',
+		)
+	);
 
-    // If no content, include the "No posts found" template.
+	// If no content, include the "No posts found" template.
 else :
-    get_template_part('template-parts/content', 'none');
+	get_template_part( 'template-parts/content', 'none' );
 endif;
 ?>
-    <?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 <?php get_footer(); ?>

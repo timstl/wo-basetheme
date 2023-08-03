@@ -40,7 +40,7 @@ if ( post_password_required() ) {
 				get_the_title()
 			);
 		}
-			?>
+		?>
 		</h2>
 
 		<?php the_comments_navigation(); ?>
@@ -64,7 +64,7 @@ if ( post_password_required() ) {
 	<?php
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
+		?>
 		<p class="no-comments"><?php esc_attr_e( 'Comments are closed.', 'wo' ); ?></p>
 	<?php endif; ?>
 
@@ -75,6 +75,6 @@ if ( post_password_required() ) {
 				'title_reply_after'  => '</h2>',
 			)
 		);
-	?>
+		?>
 
 </div><!-- .comments-area -->
