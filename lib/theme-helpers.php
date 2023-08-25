@@ -203,3 +203,26 @@ if ( ! function_exists( 'wo_add_menu_item_classes' ) ) {
 	}
 	add_filter( 'nav_menu_css_class', 'wo_add_menu_item_classes', 10, 3 );
 }
+
+/**
+ * Get a reusable block (pattern) and insert it into a template.
+ * Useful when overriding plugin template files like WooCommerce or Tribe Events.
+ */
+function wo_get_reusable_block( $block ) {
+	$query = new WP_Query(
+		array(
+			'post_type'      => 'wp_block',
+			'title'          => $block,
+			'post_status'    => 'published',
+			'posts_per_page' => 1,
+		)
+	);
+
+	if ( ! empty( $query->post ) ) {
+		$reusable_block         = $query->post;
+		$reusable_block_content = apply_filters( 'the_content', $reusable_block->post_content );
+		return $reusable_block_content;
+	} else {
+		return '';
+	}
+}
