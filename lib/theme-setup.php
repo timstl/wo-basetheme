@@ -257,3 +257,13 @@ if ( ! function_exists( 'wo_custom_oembed_filter' ) ) {
 
 	// add_filter( 'embed_oembed_html', 'wo_custom_oembed_filter', 10, 4 );
 }
+
+/**
+ * Add 'Manage Patterns' menu item under Appearance.
+ */
+add_action(
+	'admin_menu',
+	function() {
+		add_submenu_page( 'themes.php', 'Patterns', 'Manage Patterns', 'edit_posts', 'edit.php?post_type=wp_block' );
+	}
+);
