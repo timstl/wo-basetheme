@@ -16,7 +16,7 @@ if ( ! empty( $block['className'] ) ) {
 
 $links = '';
 if ( function_exists( 'wo_social_accounts_shortcode' ) ) {
-	$links = wo_social_accounts_shortcode();
+	$links = wo_social_accounts_shortcode( get_field( 'align' ) );
 }
 if ( $links ) : ?>
 	<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" id="<?php echo esc_attr( $block_id ); ?>">

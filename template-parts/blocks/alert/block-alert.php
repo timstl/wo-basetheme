@@ -5,7 +5,7 @@
 
 // Create id attribute for specific styling.
 $block_id = 'alert-' . $block['id'];
-$classes  = array( 'alert', get_field( 'alert_style' ), 'alert-block' );
+$classes  = array( 'alert', 'alert-block', get_field( 'alert_style' ), 'text-' . get_field( 'text_align' ) );
 
 /**
  * Custom classes added in admin.

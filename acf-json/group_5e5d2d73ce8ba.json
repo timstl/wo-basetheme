@@ -6,6 +6,7 @@
             "key": "field_5e5d2d7aeef2e",
             "label": "Social Links",
             "name": "",
+            "aria-label": "",
             "type": "message",
             "instructions": "",
             "required": 0,
@@ -18,6 +19,31 @@
             "message": "Social links are added in Site Settings.",
             "new_lines": "wpautop",
             "esc_html": 0
+        },
+        {
+            "key": "field_64e8c1bc093f2",
+            "label": "Align",
+            "name": "align",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "start": "Left",
+                "center": "Center"
+            },
+            "default_value": "start",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -37,5 +63,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1583164884
+    "show_in_rest": 0,
+    "modified": 1692975637
 }
