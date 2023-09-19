@@ -74,6 +74,12 @@ $nav-arrow-hover: str-replace(
 					}
 				}
 
+				&.has-btn-success-outline {
+					a {
+						@extend .btn-outline-success;
+					}
+				}
+
 				&.has-btn-warning-outline {
 					a {
 						@extend .btn-outline-warning;
